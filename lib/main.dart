@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/avatar.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/button.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/datepicker.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/dropdown.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/pininput.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/switch.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/textfield.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/timepicker.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -27,4 +35,18 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+List<String> type = [
+  'elevated-circle',
+  'filled-circle',
+  'outlined-circle',
+  'icon-circle',
+  'elevated-square',
+  'filled-square',
+  'outlined-square',
+  'icon-square',
+  'tonal',
+  'underlined-circle',
+  'underlined-square',
+];
 

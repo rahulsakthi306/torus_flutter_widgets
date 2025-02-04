@@ -1,0 +1,186 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.24.3",
+    "component": "Button",
+    "name": "Button",
+    "label": "",
+    "type": "",
+    "layout": [
+      {
+          "label": "length",
+          "name": "length",
+          "type": "string",
+          "default": "12",
+          "enum" : "",
+          "value": "",
+          "enabled": true
+      },
+      {
+          "label": "alignment",
+          "name": "alignment",
+          "type": "string",
+          "default": "center",
+          "enum": {
+              "label": "enum",
+              "type": "dropdown",
+              "mode": "single",
+              "selectedValue": [],
+              "selectionList": [
+                "topLeft",
+                "topCenter",
+                "topRight",
+                "centerLeft",
+                "center",
+                "centerRight",
+                "bottomLeft",
+                "bottomCenter",
+                "bottomRight"
+              ]
+          },
+          "enabled": true
+      }
+  ],
+    "props": [
+      {
+        "label": "type",
+        "name": "type",
+        "type": "string",
+        "default": "elevated-circle",
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "none",
+            "elevated-circle",
+            "filled-circle",
+            "outlined-circle",
+            "icon-circle",
+            "elevated-square",
+            "filled-square",
+            "outlined-square",
+            "icon-square",
+            "tonal"
+          ]
+        },
+        "value": "",
+        "enabled": true
+      },
+      {
+        "label": "variant",
+        "name": "variant",
+        "type": "string",
+        "default": "primary",
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "none",
+           "primary",
+           "success",
+           "error",
+           "warning",
+           "info"
+          ]
+        },
+        "value": "",
+        "enabled": true
+      },
+      {
+        "label": "size",
+        "name": "size",
+        "type": "string",
+        "default": "small",
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "none",
+            "small",
+            "medium",
+            "large",
+            "block"
+          ]
+        },
+        "value": "",
+        "enabled": true
+      },
+      {
+        "label": "isDisabled",
+        "name": "isDisabled",
+        "type": "boolean",
+        "default": false,
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "false",
+            "true"
+          ]
+        },
+        "value": "",
+        "enabled": true
+      },
+      {
+        "label": "icon",
+        "name": "icon",
+        "type": "string",
+        "default": "",
+        "enum": "",
+        "value": "",
+        "enabled": true
+      },
+      {
+        "label": "enableSpinner",
+        "name": "enableSpinner",
+        "type": "boolean",
+        "default": false,
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "false",
+            "true"
+          ]
+        },
+        "value": "",
+        "enabled": true
+      },
+      {
+        "label": "spinnerPosition",
+        "name": "spinnerPosition",
+        "type": "boolean",
+        "default": "left",
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "center",
+            "left",
+            "right"
+          ]
+        },
+        "value": "",
+        "enabled": true
+      }
+    ],
+    "events": [
+      {
+        "label": "onPressed",
+        "name": "onPressed",
+        "type": "Group",
+        "enabled": true
+      }
+    ]
+  }
