@@ -1,74 +1,51 @@
 import 'package:flutter/material.dart';
 
-class radioButton extends StatefulWidget {
-  final double size; 
-  final Color? selectedColor; 
-  final Color? unselectedColor; 
+class CustomRadioButton extends StatefulWidget {
+  final bool isDisable;
+  final bool isMultiple;
+  final void Function(int?)? onChanged;
 
-  const radioButton({
+  const CustomRadioButton({
     super.key,
-    this.size = 60.0,
-    this.selectedColor,
-    this.unselectedColor,
+    this.isDisable = false,
+    this.isMultiple = true, 
+    this.onChanged,
   });
 
   @override
-  _RadioProgressState createState() => _RadioProgressState();
+  State<CustomRadioButton> createState() => _CustomRadioButtonState();
 }
 
-class _RadioProgressState extends State<radioButton> {
-  double _selectedValue = 0.0;
+class _CustomRadioButtonState extends State<CustomRadioButton> {
+  int selectedIndex = 0; 
 
-  void _toggleSelection(double value) {
-    setState(() {
-      if (_selectedValue == value) {
-        _selectedValue = 0.0; 
-      } else {
-        _selectedValue = value; 
-      }
-    });
-  }
+  final List<String> options = ['Option 1', 'Option 2', 'Option 3'];
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: 
-      
-      
-       List.generate(5, (index) {
-        double value = index + 1.0; // Values from 1 to 5
-        return GestureDetector(
-          onTap: () => _toggleSelection(value),
-          child: Container(
-            margin: const EdgeInsets.all(4.0),
-            width: widget.size,
-            height: widget.size,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: _selectedValue == value
-                  ? widget.selectedColor ?? Colors.blue
-                  : widget.unselectedColor ?? Colors.grey.shade200,
-              border: Border.all(
-                color: _selectedValue == value
-                    ? widget.selectedColor ?? Colors.blue
-                    : Colors.transparent,
-                width: 2.0,
-              ),
-            ),
-            child: Center(
-              child: Text(
-                value.toString(),
-                style: TextStyle(
-                  color: _selectedValue == value
-                      ? Colors.white
-                      : Colors.black,
-                ),
-              ),
-            ),
+      children: <Widget>[
+          Column(
+            children: options.asMap().entries.map((entry) {
+              int index = entry.key;
+              String option = entry.value;
+              return Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Radio<int>(
+                    value: index,
+                    groupValue: selectedIndex,
+                    onChanged: widget.isDisable
+                        ? null
+                        : widget.onChanged
+                  ),
+                  Text(option),
+                ],
+              );
+            }).toList(),
           ),
-        );
-      }),
+      ],
     );
   }
 }

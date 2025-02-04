@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/avatar.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/button.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/datepicker.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/dropdown.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/pininput.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/switch.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/textfield.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/timepicker.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/customSwitch.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/checkbox.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/radio.dart';
 
 
 void main() {
+  
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int selectedIndex = 0; 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +32,14 @@ class MyApp extends StatelessWidget {
           title: Text('Custom Switch Example'),
         ),
         body: Center(
-          child: CustomRadioButton(),
+          child: CustomRadioButton(
+            onChanged: (int? value) {
+                            setState(() {
+                              selectedIndex = value!;
+                              print(value);
+                            });
+                          },
+          ),
         ),
       ),
     );
