@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/enums/enums.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/enums/avatar_enums.dart';
 
 class TAvatar extends StatelessWidget {
   final String? text;
