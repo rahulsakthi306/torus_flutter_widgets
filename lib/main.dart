@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/customSwitch.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/checkbox.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/radio.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/testarea.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/timeinput.dart';
 
 
 void main() {
-  
   runApp(const MyApp());
 }
 
@@ -17,7 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int selectedIndex = 0; 
+  // int selectedIndex = 0; 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,14 +31,15 @@ class _MyAppState extends State<MyApp> {
           title: Text('Custom Switch Example'),
         ),
         body: Center(
-          child: CustomRadioButton(
-            onChanged: (int? value) {
-                            setState(() {
-                              selectedIndex = value!;
-                              print(value);
-                            });
-                          },
-          ),
+          child: TTextArea(),
+          // child: CustomRadioButton(
+          //   onChanged: (int? value) {
+          //                   setState(() {
+          //                     selectedIndex = value!;
+          //                     print(value);
+          //                   });
+          //                 },
+          // ),
         ),
       ),
     );
