@@ -3,7 +3,6 @@ import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/avatar.da
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/button.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/datepicker.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/dropdown.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/pininput.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/switch.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/textfield.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/timepicker.dart';

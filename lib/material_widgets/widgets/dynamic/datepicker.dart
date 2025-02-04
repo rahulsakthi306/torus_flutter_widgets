@@ -30,12 +30,11 @@ class TDatePicker extends StatefulWidget {
 }
 
 class _TDatePickerState extends State<TDatePicker> {
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    // If a selectedDate is passed, format it for display
     if (widget.selectedDate != null) {
       _controller.text = _formatDate(widget.selectedDate!);
     }
@@ -249,7 +248,7 @@ class _TDatePickerState extends State<TDatePicker> {
 
   // Format date as a string
   String _formatDate(DateTime date) {
-    String format = widget.dateFormat ?? 'yyyy-MM-dd'; // Use provided date format or default
+    String format = widget.dateFormat ?? 'yyyy-MM-dd';
     return DateFormat(format).format(date);
   }
 
@@ -262,7 +261,7 @@ class _TDatePickerState extends State<TDatePicker> {
       case 'large':
         return Size(300, 56);
       case 'block':
-        return Size(double.infinity, 56); // block size
+        return Size(double.infinity, 56);
       default:
         return Size(200, 48);
     }
