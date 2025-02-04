@@ -91,20 +91,11 @@
             "enabled": true
         },
         {
-            "label": "needHintText",
-            "name": "needHintText",
-            "type": "boolean",
-            "default": false,
-            "enum": {
-                "label": "enum",
-                "type": "dropdown",
-                "mode": "single",
-                "selectedValue": [],
-                "selectionList": [
-                    "false",
-                    "true"
-                ]
-            },
+            "label": "hintText",
+            "name": "hintText",
+            "type": "string",
+            "default": "",
+            "enum": "",
             "value": "",
             "enabled": true
         },
