@@ -33,8 +33,10 @@ class Dateinput extends StatefulWidget {
   final void Function(String)? onChanged;
   final void Function(String)? onFieldSubmitted;
   final String? Function(String?)? validator;
-  const Dateinput({super.key,
-  this.type = 'outlined-square',
+
+  const Dateinput({
+    super.key,
+    this.type = 'outlined-square',
     this.size = 'large',
     this.hintText,
     this.isDisabled = false,

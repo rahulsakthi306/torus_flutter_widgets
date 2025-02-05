@@ -1,0 +1,363 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.24.3",
+    "component": "TextArea",
+    "name": "TextArea",
+    "label": "",
+    "type": "text",
+    "layout": [
+        {
+            "label": "length",
+            "name": "length",
+            "type": "string",
+            "default": "12",
+            "enum": "",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "alignment",
+            "name": "alignment",
+            "type": "string",
+            "default": "center",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "topLeft",
+                    "topCenter",
+                    "topRight",
+                    "centerLeft",
+                    "center",
+                    "centerRight",
+                    "bottomLeft",
+                    "bottomCenter",
+                    "bottomRight"
+                ]
+            },
+            "enabled": true
+        }
+    ],
+    "props": [
+        {
+            "label": "type",
+            "name": "type",
+            "type": "string",
+            "default": "outlined-square",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "none",
+                    "elevated-circle",
+                    "filled-circle",
+                    "outlined-circle",
+                    "icon-circle",
+                    "underlined-circle",
+                    "elevated-square",
+                    "filled-square",
+                    "outlined-square",
+                    "icon-square",
+                    "underlined-square",
+                    "tonal"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "size",
+            "name": "size",
+            "type": "string",
+            "default": "small",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "none",
+                    "small",
+                    "medium",
+                    "large",
+                    "block"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "hintText",
+            "name": "hintText",
+            "type": "string",
+            "default": "",
+            "enum": "",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "isDisabled",
+            "name": "isDisabled",
+            "type": "boolean",
+            "default": false,
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "false",
+                    "true"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "isReadOnly",
+            "name": "isReadOnly",
+            "type": "string",
+            "default": "",
+            "enum": "",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "textAlign",
+            "name": "textAlign",
+            "type": "string",
+            "default": "left",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "none",
+                    "start",
+                    "end",
+                    "center",
+                    "justify",
+                    "left",
+                    "right"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "textAlignVertical",
+            "name": "textAlignVertical",
+            "type": "string",
+            "default": "center",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "none",
+                    "top",
+                    "center",
+                    "bottom"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "showCursor",
+            "name": "showCursor",
+            "type": "boolean",
+            "default": true,
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "false",
+                    "true"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "isPassword",
+            "name": "isPassword",
+            "type": "boolean",
+            "default": false,
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "false",
+                    "true"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "helperText",
+            "name": "helperText",
+            "type": "string",
+            "default": "",
+            "enum": "",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "prefix",
+            "name": "prefix",
+            "type": "string",
+            "default": "",
+            "enum": "",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "suffix",
+            "name": "suffix",
+            "type": "string",
+            "default": "",
+            "enum": "",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "maxlines",
+            "name": "maxlines",
+            "type": "number",
+            "default": "",
+            "enum": "",
+            "value": "",
+            "enabled": true
+        }
+    ],
+    "events": [
+        {
+            "label": "onChanged",
+            "name": "onChanged",
+            "type": "Group",
+            "enabled": true
+        },
+        {
+            "label": "onFieldSubmitted",
+            "name": "onFieldSubmitted",
+            "type": "Group",
+            "enabled": true
+        }
+    ],
+    "validations": [
+        {
+            "label": "isRequired",
+            "name": "isRequired",
+            "type": "boolean",
+            "default": false,
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "false",
+                    "true"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "keyboardType",
+            "name": "inputType",
+            "type": "string",
+            "default": "name",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "none",
+                    "name",
+                    "emailAddress",
+                    "datetime",
+                    "number",
+                    "text",
+                    "multiline",
+                    "phone",
+                    "url"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "format",
+            "groupLabel": "validation",
+            "label": "format",
+            "type": "Group",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "none",
+                    "numeric",
+                    "email",
+                    "uppercase",
+                    "lowercase",
+                    "password",
+                    "ip",
+                    "iban",
+                    "creditCard",
+                    "ssn",
+                    "St_Code",
+                    "Alphabets With Space",
+                    "Alphanumeric With Space",
+                    "Numeric With Special Charecters",
+                    "Alphanumeric With Underscore Alone",
+                    "Alphanumeric With Specific Special Charecters",
+                    "Only Numbers With 1 Decimal Values",
+                    "Only Numbers With 2 Decimal Values",
+                    "Only Numbers With 3 Decimal Values",
+                    "Restrict Special Characters",
+                    "Email Domain Name With Atleast 2 Characters",
+                    "Restrict White Spaces",
+                    "Alphabets With Special Characters",
+                    "Alphabets With Underscore Alone",
+                    "Alphabets With Space And Dot",
+                    "First Letter Only Uppercase 0thers Lowercase"
+                ]
+            },
+            "enabled": "true"
+        },
+        {
+            "name": "range",
+            "groupLabel": "validation for number",
+            "label": "range",
+            "type": "Group",
+            "minValue": "",
+            "maxValue": "",
+            "enabled": "true"
+        },
+        {
+            "name": "length",
+            "groupLabel": "validation for string",
+            "label": "length",
+            "type": "Group",
+            "minLength": "",
+            "maxLength": "",
+            "enabled": "true"
+        }
+    ]
+}
