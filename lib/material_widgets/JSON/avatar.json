@@ -87,6 +87,25 @@
             "enum": "",
             "value": "",
             "enabled": true
+        },
+        {
+            "name": "textTheme",
+            "label": "textTheme",
+            "type": "string",
+            "default": "titleMedium",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                  "titleLarge",
+                  "titleMedium",
+                  "titleSmall"
+                ]
+            },
+            "value": "",
+            "enabled": true
         }
     ],
     "events": [
