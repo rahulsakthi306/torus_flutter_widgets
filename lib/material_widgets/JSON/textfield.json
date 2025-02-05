@@ -1,6 +1,6 @@
 {
     "frameWork": "Flutter",
-    "version": "3.24.3",
+    "version": "3.27.1",
     "component": "TextInput",
     "name": "TextInput",
     "label": "",
@@ -222,7 +222,38 @@
             "enum": "",
             "value": "",
             "enabled": true
-        }
+        },
+        {
+            "name": "textTheme",
+            "label": "textTheme",
+            "type": "string",
+            "default": "labelMedium",
+            "enum": {
+              "label": "enum",
+              "type": "dropdown",
+              "mode": "single",
+              "selectedValue": [],
+              "selectionList": [
+                "displayLarge",
+                "displayMedium",
+                "displaySmall",
+                "headlineLarge",
+                "headlineMedium",
+                "headlineSmall",
+                "titleLarge",
+                "titleMedium",
+                "titleSmall",
+                "labelLarge",
+                "labelMedium",
+                "labelSmall",
+                "bodyLarge",
+                "bodyMedium",
+                "bodySmall"
+              ]
+            },
+            "value": "",
+            "enabled": true
+          }
     ],
     "events": [
         {

@@ -1,62 +1,96 @@
+import 'package:expandable_datatable/expandable_datatable.dart';
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/radio.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/testarea.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/timeinput.dart';
+import 'package:flutter/services.dart';
+import 'dart:convert';
 
+import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/table.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  // int selectedIndex = 0; 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-      ),
-      home: Scaffold(
-         appBar: AppBar(
-          title: Text('Custom Switch Example'),
-        ),
-        body: Center(
-          child: TTextArea(),
-          // child: CustomRadioButton(
-          //   onChanged: (int? value) {
-          //                   setState(() {
-          //                     selectedIndex = value!;
-          //                     print(value);
-          //                   });
-          //                 },
-          // ),
+      home: const HomePage(),
+      theme: ThemeData.light(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final List<Map<String, dynamic>> data = [
+    {
+      "empid": 2005,
+      "empname": "Peer",
+      "department": "Senior Developer",
+      "grade": "O",
+      "experience": 10,
+      "totalclaims": 1200,
+      "email": "peer@gmail.com",
+      "status": "WaitingForApproval",
+      "process_id": "cxbbjyk5vdz2je10zh9g",
+    },
+    {
+      "empid": 2006,
+      "empname": "Alex",
+      "department": "Junior Developer",
+      "grade": "B",
+      "experience": 3,
+      "totalclaims": 800,
+      "email": "alex@gmail.com",
+      "status": "Approved",
+      "process_id": "cxbbjyk5vdz2je10zh9h",
+    },
+    {
+      "empid": 2006,
+      "empname": "Alex",
+      "department": "Junior Developer",
+      "grade": "B",
+      "experience": 3,
+      "totalclaims": 800,
+      "email": "alex@gmail.com",
+      "status": "Approved",
+      "process_id": "cxbbjyk5vdz2je10zh9h",
+    },
+    {
+      "empid": 2006,
+      "empname": "Alex",
+      "department": "Junior Developer",
+      "grade": "B",
+      "experience": 3,
+      "totalclaims": 800,
+      "email": "alex@gmail.com",
+      "status": "Approved",
+      "process_id": "cxbbjyk5vdz2je10zh9hgfhdgfhfdhfgjhgfhjhgjhgjghjhgjghjfhgjhgjgfhjghjghjfghjfghjfghj",
+    },
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Dynamic Expandable Table')),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Container(height: 700, child: ExpandableTable(data: data)),
+            SizedBox(
+              height: 12,
+            )
+          ],
         ),
       ),
     );
   }
 }
-
-List<String> type = [
-  'elevated-circle',
-  'filled-circle',
-  'outlined-circle',
-  'icon-circle',
-  'elevated-square',
-  'filled-square',
-  'outlined-square',
-  'icon-square',
-  'tonal',
-  'underlined-circle',
-  'underlined-square',
-];
-
