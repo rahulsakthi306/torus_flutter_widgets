@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 List<String> type = [
   'filled-circle',
   'outlined-circle',
-  'underlined-circle',
   'filled-square',
   'outlined-square',
-  'underlined-square',
+  'underlined',
 ];
 
 class TTextField extends StatefulWidget {
@@ -119,20 +118,6 @@ class _TTextFieldState extends State<TTextField> {
           suffixIcon: widget.suffix,
         );
         break;
-       case 'underlined-circle':
-        inputDecoration = InputDecoration(
-          filled: false,
-          border: UnderlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
-          ),
-          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Enter text here',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-          prefixIcon: widget.prefix,
-          suffixIcon: widget.suffix,
-        );
-        break;
       case 'outlined-square':
         inputDecoration = InputDecoration(
           filled: false,
@@ -148,7 +133,7 @@ class _TTextFieldState extends State<TTextField> {
           suffixIcon: widget.suffix,
         );
         break;
-      case 'underlined-square':
+      case 'underlined':
         inputDecoration = InputDecoration(
           filled: false,
           border: UnderlineInputBorder(

@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+List<String> type = [
+  'filled-circle',
+  'outlined-circle',
+  'filled-square',
+  'outlined-square',
+  'underlined',
+];
+
 class TDateTimePicker extends StatefulWidget {
   final String type;
   final String size;
@@ -55,20 +63,6 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
 
     InputDecoration inputDecoration;
     switch (widget.type) {
-      case 'elevated-circle':
-        inputDecoration = InputDecoration(
-          filled: true,
-          fillColor: Theme.of(context).primaryColor,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: borderRadius,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
-          labelText: widget.label ?? 'Select a date and time',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-        );
-        break;
       case 'filled-circle':
         inputDecoration = InputDecoration(
           filled: true,
@@ -77,7 +71,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select a date and time',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -90,35 +84,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
-          labelText: widget.label ?? 'Select a date and time',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-        );
-        break;
-      case 'icon-circle':
-        inputDecoration = InputDecoration(
-          prefixIcon: Icon(Icons.calendar_today),
-          filled: false,
-          border: OutlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
-            borderRadius: borderRadius,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
-          labelText: widget.label ?? 'Select a date and time',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-        );
-        break;
-      case 'elevated-square':
-        inputDecoration = InputDecoration(
-          filled: true,
-          fillColor: Theme.of(context).primaryColor,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.zero,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select a date and time',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -145,59 +111,19 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: BorderRadius.zero,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select a date and time',
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
         break;
-      case 'icon-square':
-        inputDecoration = InputDecoration(
-          prefixIcon: Icon(Icons.calendar_today),
-          filled: false,
-          border: OutlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
-            borderRadius: BorderRadius.zero,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
-          labelText: widget.label ?? 'Select a date and time',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-        );
-        break;
-      case 'tonal':
-        inputDecoration = InputDecoration(
-          filled: true,
-          fillColor: Colors.blueGrey.shade100,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
-          labelText: widget.label ?? 'Select a date and time',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-        );
-        break;
-      case 'underlined-circle':
+      case 'underlined':
         inputDecoration = InputDecoration(
           filled: false,
           border: UnderlineInputBorder(
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
-          labelText: widget.label ?? 'Select a date and time',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-        );
-        break;
-      case 'underlined-square':
-        inputDecoration = InputDecoration(
-          filled: false,
-          border: UnderlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select a date and time',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -210,7 +136,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select a date and time',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -219,7 +145,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
 
     return SizedBox(
       width: size.width,
-      height: size.height,
+      // height: size.height,
       child: TextFormField(
         controller: _controller,
         decoration: inputDecoration,

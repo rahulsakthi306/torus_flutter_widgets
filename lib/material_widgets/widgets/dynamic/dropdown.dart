@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 
 List<String> type = [
-  'elevated-circle',
-  'filled-circle',
+ 'filled-circle',
   'outlined-circle',
-  'icon-circle',
-  'elevated-square',
   'filled-square',
   'outlined-square',
-  'icon-square',
-  'tonal'
+  'underlined',
 ];
 
 List<String> size = ['small', 'medium', 'large', 'block'];
@@ -57,19 +53,6 @@ class _TDropdownState extends State<TDropdown> {
 
     InputDecoration inputDecoration;
     switch (widget.type) {
-      case 'elevated-circle':
-        inputDecoration = InputDecoration(
-          filled: true,
-          fillColor: Theme.of(context).primaryColor,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: borderRadius,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
-          labelText: widget.label ?? 'Select an option',
-          hintText: widget.hintText,
-        );
-        break;
       case 'filled-circle':
         inputDecoration = InputDecoration(
           filled: true,
@@ -78,7 +61,7 @@ class _TDropdownState extends State<TDropdown> {
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select an option',
           hintText: widget.hintText,
         );
@@ -90,37 +73,12 @@ class _TDropdownState extends State<TDropdown> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select an option',
           hintText: widget.hintText,
         );
         break;
-      case 'icon-circle':
-        inputDecoration = InputDecoration(
-          prefixIcon: Icon(Icons.arrow_drop_down),
-          filled: false,
-          border: OutlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
-            borderRadius: borderRadius,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
-          labelText: widget.label ?? 'Select an option',
-          hintText: widget.hintText,
-        );
-        break;
-      case 'elevated-square':
-        inputDecoration = InputDecoration(
-          filled: true,
-          fillColor: Theme.of(context).primaryColor,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.zero,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
-          labelText: widget.label ?? 'Select an option',
-          hintText: widget.hintText,
-        );
-        break;
+
       case 'filled-square':
         inputDecoration = InputDecoration(
           filled: true,
@@ -141,55 +99,18 @@ class _TDropdownState extends State<TDropdown> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: BorderRadius.zero,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select an option',
           hintText: widget.hintText,
         );
         break;
-      case 'icon-square':
-        inputDecoration = InputDecoration(
-          prefixIcon: Icon(Icons.arrow_drop_down),
-          filled: false,
-          border: OutlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
-            borderRadius: BorderRadius.zero,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
-          labelText: widget.label ?? 'Select an option',
-          hintText: widget.hintText,
-        );
-        break;
-      case 'tonal':
-        inputDecoration = InputDecoration(
-          filled: true,
-          fillColor: Colors.blueGrey.shade100,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
-          labelText: widget.label ?? 'Select an option',
-          hintText: widget.hintText,
-        );
-        break;
-      case 'underlined-circle':
+      case 'underlined':
         inputDecoration = InputDecoration(
           filled: false,
           border: UnderlineInputBorder(
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
-          labelText: widget.label ?? 'Select an option',
-          hintText: widget.hintText,
-        );
-        break;
-      case 'underlined-square':
-        inputDecoration = InputDecoration(
-          filled: false,
-          border: UnderlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select an option',
           hintText: widget.hintText,
         );
@@ -201,7 +122,7 @@ class _TDropdownState extends State<TDropdown> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? '-- Select --',
           hintText: widget.hintText,
         );
@@ -209,7 +130,7 @@ class _TDropdownState extends State<TDropdown> {
 
     return SizedBox(
       width: size.width,
-      height: size.height,
+      // height: size.height,
       child: DropdownButtonFormField<String>(
         decoration: inputDecoration,
         value: widget.selectedItem,
@@ -233,7 +154,7 @@ class _TDropdownState extends State<TDropdown> {
       case 'large':
         return Size(300, 56);
       case 'block':
-        return Size(double.infinity, 56); // block size
+        return Size(double.infinity, 56); 
       default:
         return Size(200, 48);
     }

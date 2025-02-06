@@ -7,7 +7,7 @@ class CustomSwitchButton extends StatefulWidget {
   const CustomSwitchButton({
     super.key,
     this.isDisable = false,
-    this.isMultiple = false,
+    this.isMultiple = true,
   });
 
   @override

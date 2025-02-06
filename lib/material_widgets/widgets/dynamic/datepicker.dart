@@ -4,10 +4,9 @@ import 'package:intl/intl.dart';
 List<String> type = [
   'filled-circle',
   'outlined-circle',
-  'underlined-circle',
   'filled-square',
   'outlined-square',
-  'underlined-square',
+  'underlined',
 ];
 
 
@@ -73,7 +72,7 @@ class _TDatePickerState extends State<TDatePicker> {
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+         contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select a date',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -86,7 +85,7 @@ class _TDatePickerState extends State<TDatePicker> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+         contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select a date',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -113,31 +112,19 @@ class _TDatePickerState extends State<TDatePicker> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: BorderRadius.zero,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+         contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select a date',
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
         break;
-      case 'underlined-circle':
+      case 'underlined':
         inputDecoration = InputDecoration(
           filled: false,
           border: UnderlineInputBorder(
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
-          labelText: widget.label ?? 'Select a date',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-        );
-        break;
-      case 'underlined-square':
-        inputDecoration = InputDecoration(
-          filled: false,
-          border: UnderlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+         contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select a date',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -150,7 +137,7 @@ class _TDatePickerState extends State<TDatePicker> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 8),
+         contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select a date',
           hintText: widget.hintText,
           helperText: widget.helperText,

@@ -52,18 +52,12 @@
                 "mode": "single",
                 "selectedValue": [],
                 "selectionList": [
-                    "none",
-                    "elevated-circle",
+                   "none",
                     "filled-circle",
                     "outlined-circle",
-                    "icon-circle",
-                    "underlined-circle",
-                    "elevated-square",
                     "filled-square",
                     "outlined-square",
-                    "icon-square",
-                    "underlined-square",
-                    "tonal"
+                    "underlined"
                 ]
             },
             "value": "",
