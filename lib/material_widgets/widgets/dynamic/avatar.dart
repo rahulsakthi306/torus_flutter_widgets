@@ -1,59 +1,88 @@
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/enums/avatar_enums.dart';
 
-class TAvatar extends StatelessWidget {
+class TAvatar extends StatefulWidget {
   final String? text;
-  final AvatarSize? size;
+  final String size;
   final String? imageUrl;
-  final TImageType? imageType;
   final IconData? icon;
 
-  const TAvatar({super.key, this.text, this.imageUrl, this.size, this.imageType, this.icon});
+  const TAvatar({
+    super.key,
+    this.text,
+    this.imageUrl,
+    this.size = 'small',
+    this.icon,
+  });
 
-  double _getRadius() {
-    switch (size) {
-      case AvatarSize.small:
-        return 30.0;
-      case AvatarSize.medium:
-        return 50.0;
-      case AvatarSize.large:
-        return 70.0;
+  @override
+  State<TAvatar> createState() => _TAvatarState();
+}
+
+class _TAvatarState extends State<TAvatar> {
+  
+  double _getRadius(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    switch (widget.size) {
+      case 'small':
+        return screenWidth * 0.06;
+      case 'medium':
+        return screenWidth * 0.08;
+      case 'large':
+        return screenWidth * 0.12;
       default:
-        return 30.0;
+        return screenWidth * 0.08;
+    }
+  }
+
+  TextStyle _getTextStyle(BuildContext context) {
+    switch (widget.size) {
+      case 'small':
+        return Theme.of(context).textTheme.headlineSmall!;  
+      case 'medium':
+        return Theme.of(context).textTheme.headlineMedium!; 
+      case 'large':
+        return Theme.of(context).textTheme.headlineLarge!; 
+      default:
+        return Theme.of(context).textTheme.headlineSmall!; 
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    List<String> words = text != null ? text!.split(' ') : [];
+    List<String> words = widget.text != null ? widget.text!.split(' ') : [];
     String initials = '';
-    
-    for (var word in words) {
-      if (word.isNotEmpty) {
-        initials += word[0].toUpperCase();
+
+    if (words.isNotEmpty) {
+      initials += words[0][0].toUpperCase();
+      
+      if (words.length > 1) {
+        initials += words.last[0].toUpperCase();
       }
     }
 
     ImageProvider? imageProvider;
-    if (imageUrl != null && imageType != null) {
-      if (imageType == TImageType.network) {
-        imageProvider = NetworkImage(imageUrl!);
-      } else if (imageType == TImageType.asset) {
-        imageProvider = AssetImage(imageUrl!);
-      }
+    if (widget.imageUrl != null) {
+      setState(() {
+        if (widget.imageUrl!.contains('http') || widget.imageUrl!.contains('https')) {
+          imageProvider = NetworkImage(widget.imageUrl!);
+        } else {
+          imageProvider = AssetImage(widget.imageUrl!);
+        }
+      });
     }
-
+    
     return GestureDetector(
       onTap: () {},
       child: CircleAvatar(
-        radius: _getRadius(),
+        radius: _getRadius(context),
         backgroundImage: imageProvider,
-        child : icon != null
-            ? Icon(icon)
+        child: widget.icon != null
+            ? Icon(widget.icon)
             : initials.isNotEmpty
                 ? Text(
                     initials,
-                    style: Theme.of(context).textTheme.labelLarge,
+                    style: _getTextStyle(context),
                   )
                 : null,
       ),
