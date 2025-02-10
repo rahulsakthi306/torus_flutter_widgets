@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 
 List<String> type = [
-  'elevated-circle',
   'filled-circle',
   'outlined-circle',
-  'icon-circle',
-  'elevated-square',
   'filled-square',
   'outlined-square',
-  'icon-square',
-  'tonal',
-  'underlined-circle',
-  'underlined-square',
+  'underlined',
 ];
+
 
 class TTextArea extends StatefulWidget {
   final String type;
@@ -79,22 +74,6 @@ class _TTextAreaState extends State<TTextArea> {
 
     InputDecoration inputDecoration;
     switch (widget.type) {
-      case 'elevated-circle':
-        inputDecoration = InputDecoration(
-          filled: true,
-          fillColor: Theme.of(context).primaryColor,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: borderRadius,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 0),
-          labelText: widget.label ?? 'Enter text here',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-          prefixIcon: widget.prefix,
-          suffixIcon: widget.suffix,
-        );
-        break;
       case 'filled-circle':
         inputDecoration = InputDecoration(
           filled: true,
@@ -119,37 +98,6 @@ class _TTextAreaState extends State<TTextArea> {
             borderRadius: borderRadius,
           ),
           contentPadding: EdgeInsets.symmetric(horizontal: 0),
-          labelText: widget.label ?? 'Enter text here',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-          prefixIcon: widget.prefix,
-          suffixIcon: widget.suffix,
-        );
-        break;
-      case 'icon-circle':
-        inputDecoration = InputDecoration(
-          prefixIcon: widget.prefix ?? Icon(Icons.search),
-          filled: false,
-          border: OutlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
-            borderRadius: borderRadius,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 0),
-          labelText: widget.label ?? 'Enter text here',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-          suffixIcon: widget.suffix,
-        );
-        break;
-      case 'elevated-square':
-        inputDecoration = InputDecoration(
-          filled: true,
-          fillColor: Theme.of(context).primaryColor,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.zero,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -188,52 +136,7 @@ class _TTextAreaState extends State<TTextArea> {
           suffixIcon: widget.suffix,
         );
         break;
-      case 'icon-square':
-        inputDecoration = InputDecoration(
-          prefixIcon: widget.prefix ?? Icon(Icons.search),
-          filled: false,
-          border: OutlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
-            borderRadius: BorderRadius.zero,
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 0),
-          labelText: widget.label ?? 'Enter text here',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-          suffixIcon: widget.suffix,
-        );
-        break;
-      case 'tonal':
-        inputDecoration = InputDecoration(
-          filled: true,
-          fillColor: Colors.blueGrey.shade100,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
-          labelText: widget.label ?? 'Enter text here',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-          prefixIcon: widget.prefix,
-          suffixIcon: widget.suffix,
-        );
-        break;
-      case 'underlined-circle':
-        inputDecoration = InputDecoration(
-          filled: false,
-          border: UnderlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
-          ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 0),
-          labelText: widget.label ?? 'Enter text here',
-          hintText: widget.hintText,
-          helperText: widget.helperText,
-          prefixIcon: widget.prefix,
-          suffixIcon: widget.suffix,
-        );
-        break;
-      case 'underlined-square':
+      case 'underlined':
         inputDecoration = InputDecoration(
           filled: false,
           border: UnderlineInputBorder(
@@ -265,7 +168,6 @@ class _TTextAreaState extends State<TTextArea> {
 
     return SizedBox(
       width: size.width,
-      height: size.height,
       child: TextFormField(
         controller: widget.controller,
         decoration: inputDecoration,
@@ -304,7 +206,7 @@ class _TTextAreaState extends State<TTextArea> {
       height = 48;
   }
 
-  double extendedHeight = height + (maxLines - 1) * 24; // Adjust the multiplier as needed
+  double extendedHeight = height + (maxLines - 1) * 24; 
   return Size(double.infinity, extendedHeight);
 }
 }

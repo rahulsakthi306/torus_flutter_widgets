@@ -63,9 +63,6 @@ class _ExpandtableState extends State<Expandtable> {
         child: Column(
           children: [
             Container(height: 700, child: ExpandableTable(data: data)),
-            SizedBox(
-              height: 12,
-            )
           ],
         ),
       ),

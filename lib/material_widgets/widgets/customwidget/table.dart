@@ -63,55 +63,55 @@ class _ExpandableTableState extends State<ExpandableTable> {
           paginationSelectedTextColor: Colors.white,
           expansionIcon: Icon(Icons.arrow_drop_down)),
       child: ExpandableDataTable(
-        headers: headers,
-        rows: rows,
-        pageSize: 2,
-        multipleExpansion: false,
-        isEditable: false,
-        onRowChanged: (newRow) {
-          print(newRow.cells[1].value);
+  headers: headers,
+  rows: rows,
+  pageSize: 2,
+  multipleExpansion: false,
+  isEditable: true,
+  onRowChanged: (newRow) {
+    print(newRow.cells[1].value);
+  },
+  renderEditDialog: (row, onSuccess) => _buildEditDialog(row, onSuccess),
+  visibleColumnCount: 3,
+  renderExpansionContent: (row) {
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Table(
+        border: TableBorder.all(color: Colors.grey, width: 0.5),
+        columnWidths: {
+          0: FixedColumnWidth(120),
+          1: FixedColumnWidth(200),
         },
-        renderEditDialog: (row, onSuccess) => _buildEditDialog(row, onSuccess),
-        visibleColumnCount: 3,
-        renderExpansionContent: (row) {
-          return Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Column(
-                children: List.generate(row.cells.length, (index) {
-                  final cell = row.cells[index];
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 4.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        // Column title
-                        Expanded(
-                          child: Text(
-                            cell.columnTitle,
-                            style: const TextStyle(fontWeight: FontWeight.bold),
-                            overflow: TextOverflow
-                                .ellipsis, // Handle overflow with ellipsis
-                            softWrap: true, // Allow soft wrapping
-                          ),
-                        ),
-                        // Cell value
-                        Expanded(
-                          child: Text(
-                            cell.value.toString(),
-                            style: const TextStyle(fontSize: 14),
-                            overflow: TextOverflow
-                                .ellipsis, // Handle overflow with ellipsis
-                            softWrap: true, // Allow soft wrapping
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                }),
-              ));
-        },
+        children: List.generate(row.cells.length, (index) {
+          final cell = row.cells[index];
+          return TableRow(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+                child: Text(
+                  cell.columnTitle,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                  overflow: TextOverflow.ellipsis,
+                  softWrap: true,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+                child: Text(
+                  cell.value.toString(),
+                  style: const TextStyle(fontSize: 14),
+                  overflow: TextOverflow.ellipsis,
+                  softWrap: true,
+                ),
+              ),
+            ],
+          );
+        }),
       ),
     );
+  },
+),
+ );
   }
 
   Widget _buildEditDialog(

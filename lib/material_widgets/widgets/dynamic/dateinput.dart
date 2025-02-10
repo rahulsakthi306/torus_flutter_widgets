@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
 
 List<String> type = [
-  'elevated-circle',
   'filled-circle',
   'outlined-circle',
-  'icon-circle',
-  'elevated-square',
   'filled-square',
   'outlined-square',
-  'icon-square',
-  'tonal',
-  'underlined-circle',
-  'underlined-square',
+  'underlined',
 ];
 
 class Dateinput extends StatefulWidget {
@@ -41,7 +35,7 @@ class Dateinput extends StatefulWidget {
     this.hintText,
     this.isDisabled = false,
     this.isReadOnly = false,
-    this.keyboardType,
+    this.keyboardType ,
     this.textAlign = TextAlign.start,
     this.textAlignVertical = TextAlignVertical.top,
     this.showCursor = true,
@@ -79,7 +73,6 @@ class _DateinputState extends State<Dateinput> {
 
     return SizedBox(
       width: size.width,
-      height: size.height,
       child: TextFormField(
         controller: widget.controller,
         decoration: inputDecoration,
@@ -107,11 +100,10 @@ class _DateinputState extends State<Dateinput> {
       helperText: widget.helperText,
       prefixIcon: widget.prefix,
       suffixIcon: widget.suffix,
-      contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+      contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
     );
 
     switch (widget.type) {
-      case 'elevated-circle':
       case 'filled-circle':
         return decoration.copyWith(
           filled: true,
@@ -122,7 +114,6 @@ class _DateinputState extends State<Dateinput> {
           ),
         );
       case 'outlined-circle':
-      case 'icon-circle':
         return decoration.copyWith(
           filled: false,
           border: OutlineInputBorder(
@@ -130,7 +121,6 @@ class _DateinputState extends State<Dateinput> {
             borderRadius: borderRadius,
           ),
         );
-      case 'elevated-square':
       case 'filled-square':
         return decoration.copyWith(
           filled: true,
@@ -141,7 +131,6 @@ class _DateinputState extends State<Dateinput> {
           ),
         );
       case 'outlined-square':
-      case 'icon-square':
         return decoration.copyWith(
           filled: false,
           border: OutlineInputBorder(
@@ -149,17 +138,7 @@ class _DateinputState extends State<Dateinput> {
             borderRadius: BorderRadius.zero,
           ),
         );
-      case 'tonal':
-        return decoration.copyWith(
-          filled: true,
-          fillColor: Colors.blueGrey.shade100,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.circular(8),
-          ),
-        );
-      case 'underlined-circle':
-      case 'underlined-square':
+      case 'underlined':
         return decoration.copyWith(
           filled: false,
           border: UnderlineInputBorder(

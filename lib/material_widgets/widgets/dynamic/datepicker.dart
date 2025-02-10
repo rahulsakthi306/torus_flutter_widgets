@@ -4,10 +4,9 @@ import 'package:intl/intl.dart';
 List<String> type = [
   'filled-circle',
   'outlined-circle',
-  'underlined-circle',
   'filled-square',
   'outlined-square',
-  'underlined-square',
+  'underlined',
 ];
 
 
@@ -119,7 +118,7 @@ class _TDatePickerState extends State<TDatePicker> {
           helperText: widget.helperText,
         );
         break;
-      case 'underlined-circle':
+      case 'underlined':
         inputDecoration = InputDecoration(
           filled: false,
           border: UnderlineInputBorder(
