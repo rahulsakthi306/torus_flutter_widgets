@@ -35,7 +35,7 @@ class Dateinput extends StatefulWidget {
     this.hintText,
     this.isDisabled = false,
     this.isReadOnly = false,
-    this.keyboardType,
+    this.keyboardType ,
     this.textAlign = TextAlign.start,
     this.textAlignVertical = TextAlignVertical.top,
     this.showCursor = true,

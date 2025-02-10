@@ -18,7 +18,7 @@ class TDateTimePicker extends StatefulWidget {
   final DateTime? selectedDateTime;
   final void Function(DateTime?)? onChanged;
   final String? helperText;
-  final String? dateFormat;
+  final String? datetimeFormat;
 
   const TDateTimePicker({
     super.key,
@@ -30,7 +30,7 @@ class TDateTimePicker extends StatefulWidget {
     this.selectedDateTime,
     this.onChanged,
     this.helperText,
-    this.dateFormat,
+    this.datetimeFormat,
   });
 
   @override
@@ -193,7 +193,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
 
  
   String _formatDateTime(DateTime dateTime) {
-    String format = widget.dateFormat ?? 'yyyy-MM-dd HH:mm a'; 
+    String format = widget.datetimeFormat ?? 'yyyy-MM-dd HH:mm a'; 
     return DateFormat(format).format(dateTime);
   }
 

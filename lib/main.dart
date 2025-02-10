@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/datetimepicker.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/switch.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/table.dart';
 
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(title: Text('Dynamic')),
       body: Center(
-        child: Expandtable(),
+        child: TDateTimePicker(),
       ),
     );
   }
