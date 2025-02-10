@@ -1,0 +1,46 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Appbar",
+    "name": "Appbar",
+    "label": "",
+    "type": "",
+    "props": [
+        {
+            "name": "needTorusAppSettings",
+            "label": "needTorusAppSettings",
+            "type": "string",
+            "default": "",
+            "enum": "",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "type",
+            "label": "type",
+            "type": "string",
+            "default": "",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                   "filled",
+                   "transparent"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "centerTitle",
+            "label": "centerTitle",
+            "type": "string",
+            "default": "",
+            "enum": "",
+            "value": "",
+            "enabled": true
+        }
+    ]
+}

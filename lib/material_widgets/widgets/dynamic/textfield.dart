@@ -148,13 +148,13 @@ class _TTextFieldState extends State<TTextField> {
           suffixIcon: widget.suffix,
         );
         break;
-      case 'underlined-square':
+      case 'underlined':
         inputDecoration = InputDecoration(
           filled: false,
           border: UnderlineInputBorder(
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
           ),
-          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
+          contentPadding: EdgeInsets.symmetric(vertical: 8,horizontal: 12),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
