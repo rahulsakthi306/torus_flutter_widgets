@@ -1,5 +1,5 @@
-import 'package:bloc/bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:bloc/bloc.dart';
 
 class ConnectivityCubit extends Cubit<ConnectivityResult> {
   final Connectivity _connectivity;
@@ -8,7 +8,7 @@ class ConnectivityCubit extends Cubit<ConnectivityResult> {
 
   void monitorConnectivity() {
     _connectivity.onConnectivityChanged.listen((connectivityResult ) {
-      emit(connectivityResult[0]); // Emit the new connectivity result
+      emit(connectivityResult[0]);
     });
   }
 }

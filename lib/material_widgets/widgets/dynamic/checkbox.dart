@@ -1,60 +1,79 @@
 import 'package:flutter/material.dart';
 
-class CustomCheckboxButton extends StatefulWidget {
-  final bool isDisable;
-  final bool selectedOptions;
+enum Position { left, right, top, bottom }
+enum CheckboxShape { rounded, squared }
 
-  const CustomCheckboxButton({
+class TCheckbox extends StatelessWidget {
+  final bool value;
+  final ValueChanged<bool?> onChanged;
+  final String label;
+  final bool isDisabled;
+  final Position contentPosition;
+  final CheckboxShape checkboxShape;
+
+  const TCheckbox({
     super.key,
-    this.isDisable = false,
-    this.selectedOptions = false,
+    required this.value,
+    required this.onChanged,
+    required this.label,
+    this.isDisabled = false,
+    this.contentPosition = Position.right,
+    this.checkboxShape = CheckboxShape.squared, // Default to squared
   });
 
   @override
-  State<CustomCheckboxButton> createState() => _CustomCheckboxButtonState();
-}
-
-class _CustomCheckboxButtonState extends State<CustomCheckboxButton> {
-  bool isChecked = true;
-  
-  List<bool> selectedOptions = [false]; 
-  
-  final List<String> options = ['Option 1', 'Option 2', 'Option 3']; 
-
-  @override
-  void initState() {
-    super.initState();
-    selectedOptions = List<bool>.filled(options.length, false);
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-          Column(
-            children: options.asMap().entries.map((entry) {
-              int index = entry.key;
-              String option = entry.value;
-              return Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Checkbox(
-                    value: selectedOptions[index],
-                    onChanged: widget.isDisable
-                        ? null
-                        : (bool? value) {
-                            setState(() {
-                              selectedOptions[index] = value!;
-                            });
-                          },
-                  ),
-                  Text(option),  
-                ],
-              );
-            }).toList(),
-          ),
-      ],
+    // Create a checkbox widget with different shapes
+    Widget checkboxWidget = Checkbox(
+      value: value,
+      onChanged: isDisabled ? null : onChanged,
+      shape: checkboxShape == CheckboxShape.rounded
+          ? RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
+          : null, // Default shape is square (no border radius)
     );
+
+    // Determine the layout based on contentPosition
+    switch (contentPosition) {
+      case Position.left:
+        return Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(label),
+            checkboxWidget,
+          ],
+        );
+      case Position.right:
+        return Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            checkboxWidget,
+            Text(label),
+          ],
+        );
+      case Position.top:
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(label),
+            checkboxWidget,
+          ],
+        );
+      case Position.bottom:
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            checkboxWidget,
+            Text(label),
+          ],
+        );
+      default:
+        return Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            checkboxWidget,
+            Text(label),
+          ],
+        );
+    }
   }
 }

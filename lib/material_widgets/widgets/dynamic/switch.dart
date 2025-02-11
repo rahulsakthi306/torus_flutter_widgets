@@ -1,38 +1,49 @@
 import 'package:flutter/material.dart';
 
+enum SwitchShape { rounded, squared }
+enum SwitchAlignment { horizontal, vertical }
 
-class SwitchExample extends StatefulWidget {
-  const SwitchExample({super.key});
+class TSwitch extends StatelessWidget {
+  final bool value;
+  final ValueChanged<bool> onChanged;
+  final String label;
+  final bool isDisabled;
+  final String leftContent;
+  final String rightContent;
+  final SwitchShape switchShape;
 
-  @override
-  State<SwitchExample> createState() => _SwitchExampleState();
-}
-
-class _SwitchExampleState extends State<SwitchExample> {
-  bool light = true;
-
-  static const WidgetStateProperty<Icon> thumbIcon =
-      WidgetStateProperty<Icon>.fromMap(
-    <WidgetStatesConstraint, Icon>{
-      WidgetState.selected: Icon(Icons.check),
-      WidgetState.any: Icon(Icons.close),
-    },
-  );
+  const TSwitch({
+    super.key,
+    required this.value,
+    required this.onChanged,
+    required this.label,
+    this.isDisabled = false,
+    this.leftContent = '',
+    this.rightContent = '',
+    this.switchShape = SwitchShape.squared, // Default to squared
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Switch(
-          thumbIcon: thumbIcon,
-          value: light,
-          onChanged: (bool value) {
-            setState(() {
-              light = value;
-            });
-          },
-        ),
+    // Create the switch widget with different shapes (rounded or squared)
+    Widget switchWidget = Switch(
+      value: value,
+      onChanged: isDisabled ? null : onChanged,
+    );
+
+    // Layout the content
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (leftContent.isNotEmpty) ...[
+          Text(leftContent),
+          SizedBox(width: 8.0),
+        ],
+        switchWidget,
+        if (rightContent.isNotEmpty) ...[
+          SizedBox(width: 8.0),
+          Text(rightContent),
+        ],
       ],
     );
   }
