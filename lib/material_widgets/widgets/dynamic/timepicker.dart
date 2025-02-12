@@ -67,7 +67,7 @@ class _TTimePickerState extends State<TTimePicker> {
       case 'filled-circle':
         inputDecoration = InputDecoration(
           filled: true,
-          fillColor: Theme.of(context).primaryColor,
+          fillColor: Colors.grey[200],
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
@@ -151,7 +151,7 @@ class _TTimePickerState extends State<TTimePicker> {
         controller: _controller,
         decoration: inputDecoration,
         readOnly: true,
-        onTap: _selectTime,
+        onTap: !widget.isDisabled ? _selectTime : (){},
       ),
     );
   }

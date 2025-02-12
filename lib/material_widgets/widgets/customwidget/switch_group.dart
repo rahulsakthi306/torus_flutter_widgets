@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/switch.dart';
 
+List<String> switchAlignment = [ 'horizontal', 'vertical' ];
+
 class CustomSwitchGroup extends StatefulWidget {
   final bool isDisable;
   final List<String> options;
   final List<String> leftContents;
   final List<String> rightContents;
-  final SwitchAlignment switchAlignment;
-  final SwitchShape switchShape;
+  final String switchAlignment;
+  final String switchShape;
 
   const CustomSwitchGroup({
     super.key,
@@ -15,8 +17,8 @@ class CustomSwitchGroup extends StatefulWidget {
     required this.options,
     required this.leftContents,
     required this.rightContents,
-    this.switchAlignment = SwitchAlignment.vertical,
-    this.switchShape = SwitchShape.squared, // Default to squared
+    this.switchAlignment = 'vertical',
+    this.switchShape = 'squared',
   });
 
   @override
@@ -29,7 +31,6 @@ class _CustomSwitchGroupState extends State<CustomSwitchGroup> {
   @override
   void initState() {
     super.initState();
-    // Initialize switchValues to false for each option
     switchValues = List<bool>.filled(widget.options.length, false);
   }
 
@@ -43,8 +44,7 @@ class _CustomSwitchGroupState extends State<CustomSwitchGroup> {
   Widget build(BuildContext context) {
     Widget switchGroup;
 
-    // Handle layout based on switchAlignment (horizontal or vertical)
-    if (widget.switchAlignment == SwitchAlignment.horizontal) {
+    if (widget.switchAlignment == 'horizontal') {
       switchGroup = Row(
         children: widget.options.asMap().entries.map((entry) {
           int index = entry.key;

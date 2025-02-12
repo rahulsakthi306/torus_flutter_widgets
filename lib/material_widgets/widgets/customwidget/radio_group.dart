@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/radio.dart';
 
+
+
 class CustomRadioButtonGroup extends StatefulWidget {
   final bool isDisable;
   final List<String> options;
-  final Position contentPosition;
-  final RadioAlignment radioAlignment;
-  final RadioShape radioShape;
+  final String contentPosition;
+  final String radioAlignment;
+  final String radioShape;
 
   const CustomRadioButtonGroup({
     super.key,
     this.isDisable = false,
     required this.options,
-    this.contentPosition = Position.right,
-    this.radioAlignment = RadioAlignment.vertical,
-    this.radioShape = RadioShape.squared, // Default to squared
+    this.contentPosition = 'right',
+    this.radioAlignment = 'vertical',
+    this.radioShape = 'squared',
   });
 
   @override
@@ -27,7 +29,7 @@ class _CustomRadioButtonGroupState extends State<CustomRadioButtonGroup> {
   @override
   void initState() {
     super.initState();
-    selectedValue = null; // Initially, no radio button is selected
+    selectedValue = null; 
   }
 
   void handleRadioChange(int? value) {
@@ -40,8 +42,7 @@ class _CustomRadioButtonGroupState extends State<CustomRadioButtonGroup> {
   Widget build(BuildContext context) {
     Widget radioGroup;
 
-    // Handle layout based on radioAlignment (horizontal or vertical)
-    if (widget.radioAlignment == RadioAlignment.horizontal) {
+    if (widget.radioAlignment == 'horizontal') {
       radioGroup = Row(
         children: widget.options.asMap().entries.map((entry) {
           int index = entry.key;
@@ -52,7 +53,7 @@ class _CustomRadioButtonGroupState extends State<CustomRadioButtonGroup> {
               value: selectedValue == index,
               onChanged: widget.isDisable
                   ? (bool? val){}
-                  : (bool? value) => handleRadioChange(index), // Pass index as value
+                  : (bool? value) => handleRadioChange(index),
               label: option,
               isDisabled: widget.isDisable,
               contentPosition: widget.contentPosition,
@@ -72,7 +73,7 @@ class _CustomRadioButtonGroupState extends State<CustomRadioButtonGroup> {
               value: selectedValue == index,
               onChanged: widget.isDisable
                   ? (bool? val){}
-                  : (bool? value) => handleRadioChange(index), // Pass index as value
+                  : (bool? value) => handleRadioChange(index),
               label: option,
               isDisabled: widget.isDisable,
               contentPosition: widget.contentPosition,

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class CustomProgress extends StatelessWidget {
+class TProgressbar extends StatelessWidget {
   final double value;
   final String sizeCategory;
   final Color color;
   final Color backgroundColor;
 
-  const CustomProgress({
+  const TProgressbar({
     super.key,
     this.value = 10.0,
     this.sizeCategory = 'medium', 

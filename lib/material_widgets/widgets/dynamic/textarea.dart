@@ -32,8 +32,8 @@ class TTextArea extends StatefulWidget {
 
   const TTextArea({
     super.key,
-    this.type = 'underlined-circle',
-    this.size = 'small',
+    this.type = 'outlined-squaree',
+    this.size = 'medium',
     this.hintText,
     this.isDisabled = false,
     this.isReadOnly = false,
@@ -65,7 +65,7 @@ class _TTextAreaState extends State<TTextArea> {
     BorderRadius borderRadius;
 
     if (widget.type.contains('circle')) {
-      borderRadius = BorderRadius.circular(30);
+      borderRadius = BorderRadius.circular(10);
     } else if (widget.type.contains('square')) {
       borderRadius = BorderRadius.zero;
     } else {
@@ -77,12 +77,12 @@ class _TTextAreaState extends State<TTextArea> {
       case 'filled-circle':
         inputDecoration = InputDecoration(
           filled: true,
-          fillColor: Theme.of(context).primaryColor,
+          fillColor: Colors.grey.shade200,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 0),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -97,7 +97,7 @@ class _TTextAreaState extends State<TTextArea> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 0),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -113,7 +113,7 @@ class _TTextAreaState extends State<TTextArea> {
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.zero,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
+          contentPadding: EdgeInsets.symmetric(vertical: 12,horizontal: 12),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -128,7 +128,7 @@ class _TTextAreaState extends State<TTextArea> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: BorderRadius.zero,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 0),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -142,7 +142,7 @@ class _TTextAreaState extends State<TTextArea> {
           border: UnderlineInputBorder(
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 0),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -157,7 +157,7 @@ class _TTextAreaState extends State<TTextArea> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 0),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -181,7 +181,7 @@ class _TTextAreaState extends State<TTextArea> {
         onChanged: widget.onChanged,
         onFieldSubmitted: widget.onFieldSubmitted,
         validator: widget.validator,
-        maxLines: 5,
+        maxLines: widget.maxlines,
       ),
     );
   }

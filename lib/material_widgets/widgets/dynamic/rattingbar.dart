@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class StarRating extends StatelessWidget {
+class TRatingBar extends StatelessWidget {
   final double rating; 
   final double size; 
   final Color? filledColor; 
   final Color? emptyColor; 
 
-  const StarRating({
+  const TRatingBar({
     super.key,
     this.rating = 5.0,
     this.size = 30.0,

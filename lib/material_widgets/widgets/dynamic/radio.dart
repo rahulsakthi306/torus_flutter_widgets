@@ -1,68 +1,66 @@
 import 'package:flutter/material.dart';
 
-enum Position { left, right, top, bottom }
-enum RadioShape { rounded, squared }
-enum RadioAlignment { horizontal, vertical }
+List<String> position = [ 'left', "right", "top", "bottom" ];
+List<String> radioShape = [ 'rounded', 'squared' ];
 
 class TRadio extends StatelessWidget {
-  final bool value;
-  final ValueChanged<bool?> onChanged;
-  final String label;
+  final bool? value;
+  final ValueChanged<bool?>? onChanged;
+  final String? label;
   final bool isDisabled;
-  final Position contentPosition;
-  final RadioShape radioShape;
+  final String contentPosition;
+  final String radioShape;
 
   const TRadio({
     super.key,
-    required this.value,
-    required this.onChanged,
-    required this.label,
+    this.value,
+    this.onChanged,
+    this.label,
     this.isDisabled = false,
-    this.contentPosition = Position.right,
-    this.radioShape = RadioShape.squared, // Default to squared
+    this.contentPosition = 'right',
+    this.radioShape = 'rounded',
   });
 
   @override
   Widget build(BuildContext context) {
-    // Create the radio button widget
     Widget radioButtonWidget = Radio<bool>(
-      value: true, // Each button has the value `true`
-      groupValue: value, // This controls the selected radio button
-      onChanged: isDisabled ? null : onChanged, // Call the passed callback
+      value: true, 
+      groupValue: value,
+      onChanged: isDisabled ? null : onChanged,
     );
 
-    // Determine the layout based on contentPosition
+    
     switch (contentPosition) {
-      case Position.left:
+      case 'left':
         return Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(label),
+            Text(label ?? 'Option'),
             radioButtonWidget,
           ],
         );
-      case Position.right:
+      case 'right':
         return Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             radioButtonWidget,
-            Text(label),
+            Text(label ?? 'Option'),
           ],
         );
-      case Position.top:
+      case 'top':
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(label),
+            Text(label ?? 'Option'),
             radioButtonWidget,
           ],
         );
-      case Position.bottom:
+      case 'bottom':
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             radioButtonWidget,
-            Text(label),
+            Text(label ?? 'Option'),
           ],
         );
       default:
@@ -70,7 +68,7 @@ class TRadio extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             radioButtonWidget,
-            Text(label),
+            Text(label ?? 'Option'),
           ],
         );
     }

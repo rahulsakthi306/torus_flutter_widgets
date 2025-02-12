@@ -15,11 +15,12 @@ dependencies:
 
 
   cupertino_icons: ^1.0.8
-  intl: ^0.20.2
+  intl: any
   timezone: ^0.10.0
   expandable_datatable: ^0.0.7
   connectivity_plus: ^6.1.3
   flutter_bloc: any
+  form_builder_validators: any
 
 dev_dependencies:
   flutter_test:

@@ -1,37 +1,35 @@
 import 'package:flutter/material.dart';
 
-enum SwitchShape { rounded, squared }
-enum SwitchAlignment { horizontal, vertical }
+List<String> switchShape = [ 'rounded', 'squared' ];
 
 class TSwitch extends StatelessWidget {
-  final bool value;
-  final ValueChanged<bool> onChanged;
-  final String label;
+  final bool? value;
+  final ValueChanged<bool>? onChanged;
+  final String? label;
   final bool isDisabled;
   final String leftContent;
   final String rightContent;
-  final SwitchShape switchShape;
+  final String switchShape;
 
   const TSwitch({
     super.key,
-    required this.value,
-    required this.onChanged,
-    required this.label,
+    this.value,
+    this.onChanged,
+    this.label,
     this.isDisabled = false,
     this.leftContent = '',
     this.rightContent = '',
-    this.switchShape = SwitchShape.squared, // Default to squared
+    this.switchShape = 'squared',
   });
 
   @override
   Widget build(BuildContext context) {
-    // Create the switch widget with different shapes (rounded or squared)
     Widget switchWidget = Switch(
-      value: value,
+      activeColor: Theme.of(context).primaryColor,
+      value: value ?? false,
       onChanged: isDisabled ? null : onChanged,
     );
 
-    // Layout the content
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
