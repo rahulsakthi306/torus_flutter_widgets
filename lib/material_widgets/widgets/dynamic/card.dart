@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
-class CustomCard extends StatelessWidget {
+List<String> types = [
+  'filled-rounded', 'filled-square', 'outlined-rounded', 'outlined-square',
+  'elevated-rounded', 'elevated-square'
+];
+
+class TCard extends StatelessWidget {
   final String type;
   final String size;
   final String? text;
 
-  const CustomCard({
+  const TCard({
     super.key,
-    this.type = 'filled-circle',
-    this.size = 'medium', 
+    this.type = 'filled-square',
+    this.size = 'medium',
     this.text,
   });
 
@@ -32,33 +37,56 @@ class CustomCard extends StatelessWidget {
     BoxDecoration? decoration;
 
     switch (type) {
-      case 'filled-circle':
-        decoration = BoxDecoration(
-          color: Theme.of(context).cardColor,
-          shape: BoxShape.circle,
-        );
-        break;
-      case 'outlined-circle':
-        decoration = BoxDecoration(
-          border: Border.all(color: Theme.of(context).colorScheme.primary, width: 2),
-          shape: BoxShape.circle,
-        );
-        break;
       case 'filled-square':
         decoration = BoxDecoration(
-          color: Theme.of(context).cardColor,
-          shape: BoxShape.rectangle,
+          color: Colors.grey.shade200,
+          shape: BoxShape.rectangle, 
         );
         break;
       case 'outlined-square':
         decoration = BoxDecoration(
-          border: Border.all(color: Theme.of(context).colorScheme.primary, width: 2),
-          shape: BoxShape.rectangle,
+          border: Border.all(color: Theme.of(context).primaryColor, width: 2),
+          shape: BoxShape.rectangle, 
         );
         break;
-      case 'underlined':
+      case 'filled-rounded':
         decoration = BoxDecoration(
-          border: Border(bottom: BorderSide(color: Theme.of(context).colorScheme.primary, width: 2)),
+          color: Colors.grey.shade200,
+          borderRadius: BorderRadius.circular(12), 
+        );
+        break;
+      case 'outlined-rounded':
+        decoration = BoxDecoration(
+          border: Border.all(color: Theme.of(context).colorScheme.primary, width: 2),
+          borderRadius: BorderRadius.circular(12),
+        );
+        break;
+      case 'elevated-rounded':
+        decoration = BoxDecoration(
+          color: Theme.of(context).cardColor,
+          borderRadius: BorderRadius.circular(12), 
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              spreadRadius: 3,
+              blurRadius: 8,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        );
+        break;
+      case 'elevated-square':
+        decoration = BoxDecoration(
+          color: Theme.of(context).cardColor,
+          shape: BoxShape.rectangle, 
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              spreadRadius: 3,
+              blurRadius: 8,
+              offset: const Offset(0, 4),
+            ),
+          ],
         );
         break;
       default:
@@ -72,7 +100,7 @@ class CustomCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
-      elevation: 5,
+      elevation: type.startsWith('elevated') ? 5 : 0,
       child: Container(
         width: containerSize.width,
         height: containerSize.height,
@@ -87,3 +115,4 @@ class CustomCard extends StatelessWidget {
     );
   }
 }
+

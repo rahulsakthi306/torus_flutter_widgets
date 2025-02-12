@@ -56,7 +56,7 @@ class _TDropdownState extends State<TDropdown> {
       case 'filled-circle':
         inputDecoration = InputDecoration(
           filled: true,
-          fillColor: Theme.of(context).primaryColor,
+          fillColor: Colors.grey.shade200,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: borderRadius,

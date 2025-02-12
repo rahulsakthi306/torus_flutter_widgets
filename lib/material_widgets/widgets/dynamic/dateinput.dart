@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:form_builder_validators/form_builder_validators.dart';
 
 List<String> type = [
   'filled-circle',
@@ -8,7 +9,7 @@ List<String> type = [
   'underlined',
 ];
 
-class Dateinput extends StatefulWidget {
+class TDateInput extends StatefulWidget {
     final String type;
   final String size;
   final String? hintText;
@@ -28,7 +29,7 @@ class Dateinput extends StatefulWidget {
   final void Function(String)? onFieldSubmitted;
   final String? Function(String?)? validator;
 
-  const Dateinput({
+  const TDateInput({
     super.key,
     this.type = 'outlined-square',
     this.size = 'large',
@@ -51,10 +52,10 @@ class Dateinput extends StatefulWidget {
   });
 
   @override
-  State<Dateinput> createState() => _DateinputState();
+  State<TDateInput> createState() => _TDateInputState();
 }
 
-class _DateinputState extends State<Dateinput> {
+class _TDateInputState extends State<TDateInput> {
  @override
   Widget build(BuildContext context) {
     Size size = _getSize(widget.size);
@@ -85,15 +86,15 @@ class _DateinputState extends State<Dateinput> {
         readOnly: widget.isReadOnly,
         onChanged: widget.onChanged,
         onFieldSubmitted: widget.onFieldSubmitted,
-        // validator: FormBuilderValidators.compose([
-        //   FormBuilderValidators
-        // ]),
+        validator: FormBuilderValidators.compose([
+          FormBuilderValidators.date()
+        ]),
+        autovalidateMode: AutovalidateMode.onUserInteraction,
       ),
     );
   }
 
   InputDecoration _buildInputDecoration(BorderRadius borderRadius) {
-    // Common decoration elements
     var decoration = InputDecoration(
       labelText: widget.label ?? 'Enter date',
       hintText: widget.hintText,
@@ -107,7 +108,7 @@ class _DateinputState extends State<Dateinput> {
       case 'filled-circle':
         return decoration.copyWith(
           filled: true,
-          fillColor: Theme.of(context).primaryColor,
+          fillColor: widget.type == 'filled-circle' ? Colors.grey.shade200 : Theme.of(context).primaryColor,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: borderRadius,

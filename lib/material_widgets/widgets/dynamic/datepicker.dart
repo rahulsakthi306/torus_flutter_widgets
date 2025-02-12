@@ -67,7 +67,7 @@ class _TDatePickerState extends State<TDatePicker> {
       case 'filled-circle':
         inputDecoration = InputDecoration(
           filled: true,
-          fillColor: Theme.of(context).primaryColor,
+          fillColor: Colors.grey.shade200,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
@@ -99,7 +99,7 @@ class _TDatePickerState extends State<TDatePicker> {
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.zero,
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
+          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: widget.label ?? 'Select a date',
           hintText: widget.hintText,
           helperText: widget.helperText,
@@ -162,8 +162,9 @@ class _TDatePickerState extends State<TDatePicker> {
       child: TextFormField(
         controller: _controller,
         decoration: inputDecoration,
+        enabled: !widget.isDisabled,
         readOnly: true,
-        onTap: _selectDate,
+        onTap: !widget.isDisabled ? _selectDate : (){},
       ),
     );
   }

@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
 
-class CustomIconButton extends StatelessWidget {
+class TIcon extends StatelessWidget {
   final IconData icon;
-  final String sizeCategory; 
+  final String size; 
   final Color? color;
   final Function()? onTap;
 
-  const CustomIconButton({
+  const TIcon({
     super.key,
     this.onTap,
     this.icon = Icons.question_mark,
-    this.sizeCategory = 'medium', 
+    this.size = 'medium', 
     this.color = Colors.blue,
   });
 
   @override
   Widget build(BuildContext context) {
-    double size;
+    double iconSize;
 
-    switch (sizeCategory) {
+    switch (size) {
       case 'small':
-        size = 16.0;
+        iconSize = 16.0;
         break;
       case 'large':
-        size = 32.0;
+        iconSize = 32.0;
         break;
       case 'medium':
       default:
-        size = 24.0;
+        iconSize = 24.0;
         break;
     }
 
@@ -35,7 +35,7 @@ class CustomIconButton extends StatelessWidget {
       onTap: onTap,
       child: Icon(
         icon,
-        size: size,
+        size: iconSize,
         color: color,
       ),
     );

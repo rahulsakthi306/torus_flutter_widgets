@@ -18,7 +18,7 @@ class CardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> cardList = sampleData.map((data) {
-      return CustomCard(
+      return TCard(
         type: type,
         size: size,
       );

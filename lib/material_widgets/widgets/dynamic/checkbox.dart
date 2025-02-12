@@ -1,69 +1,67 @@
 import 'package:flutter/material.dart';
 
-enum Position { left, right, top, bottom }
-enum CheckboxShape { rounded, squared }
+List<String> position = [ 'left', 'right', 'top', 'bottom' ];
+List<String> checkboxShape = [ 'rounded', 'squared' ];
 
 class TCheckbox extends StatelessWidget {
-  final bool value;
-  final ValueChanged<bool?> onChanged;
-  final String label;
+  final bool? value;
+  final ValueChanged<bool?>? onChanged;
+  final String? label;
   final bool isDisabled;
-  final Position contentPosition;
-  final CheckboxShape checkboxShape;
+  final String contentPosition;
+  final String checkboxShape;
 
   const TCheckbox({
     super.key,
-    required this.value,
-    required this.onChanged,
-    required this.label,
+    this.value,
+    this.onChanged,
+    this.label,
     this.isDisabled = false,
-    this.contentPosition = Position.right,
-    this.checkboxShape = CheckboxShape.squared, // Default to squared
+    this.contentPosition = 'right',
+    this.checkboxShape = 'squared',
   });
 
   @override
   Widget build(BuildContext context) {
-    // Create a checkbox widget with different shapes
     Widget checkboxWidget = Checkbox(
       value: value,
       onChanged: isDisabled ? null : onChanged,
-      shape: checkboxShape == CheckboxShape.rounded
+      shape: checkboxShape == 'rounded'
           ? RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
-          : null, // Default shape is square (no border radius)
+          : null,
     );
 
-    // Determine the layout based on contentPosition
     switch (contentPosition) {
-      case Position.left:
+      case 'left':
         return Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(label),
+            Text(label ?? ''),
             checkboxWidget,
           ],
         );
-      case Position.right:
+      case 'right':
         return Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             checkboxWidget,
-            Text(label),
+            Text(label ?? ''),
           ],
         );
-      case Position.top:
+      case 'top':
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(label),
+            Text(label ?? ''),
             checkboxWidget,
           ],
         );
-      case Position.bottom:
+      case 'bottom':
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             checkboxWidget,
-            Text(label),
+            Text(label ?? ''),
           ],
         );
       default:
@@ -71,7 +69,7 @@ class TCheckbox extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             checkboxWidget,
-            Text(label),
+            Text(label ?? ''),
           ],
         );
     }

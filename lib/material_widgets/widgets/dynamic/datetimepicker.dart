@@ -66,7 +66,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
       case 'filled-circle':
         inputDecoration = InputDecoration(
           filled: true,
-          fillColor: Theme.of(context).primaryColor,
+          fillColor: Colors.grey.shade200,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
@@ -150,7 +150,8 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
         controller: _controller,
         decoration: inputDecoration,
         readOnly: true,
-        onTap: _selectDateAndTime,
+        enabled: !widget.isDisabled,
+        onTap: !widget.isDisabled ? _selectDateAndTime : (){},
       ),
     );
   }

@@ -151,6 +151,7 @@ class _TTimePickerState extends State<TTimePicker> {
         controller: _controller,
         decoration: inputDecoration,
         readOnly: true,
+        enabled: !widget.isDisabled,
         onTap: !widget.isDisabled ? _selectTime : (){},
       ),
     );

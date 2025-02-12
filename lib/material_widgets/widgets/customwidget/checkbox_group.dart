@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/checkbox.dart';
 
-enum CheckboxAlignment { horizontal, vertical }
+List<String> checkboxAlignment = [ 'horizontal', 'vertical' ];
 
 class CustomCheckboxGroup extends StatefulWidget {
   final bool isDisable;
   final List<String> options;
-  final Position contentPosition;
-  final CheckboxAlignment checkboxAlignment;
-  final CheckboxShape checkboxShape; // Add this property
+  final String contentPosition;
+  final String checkboxAlignment;
+  final String checkboxShape; 
 
   const CustomCheckboxGroup({
     super.key,
     this.isDisable = false,
     required this.options,
-    this.contentPosition = Position.right,
-    this.checkboxAlignment = CheckboxAlignment.vertical,
-    this.checkboxShape = CheckboxShape.squared, 
+    this.contentPosition = 'right',
+    this.checkboxAlignment = 'vertical',
+    this.checkboxShape = 'squared', 
   });
 
   @override
@@ -42,7 +42,7 @@ class _CustomCheckboxGroupState extends State<CustomCheckboxGroup> {
   Widget build(BuildContext context) {
     Widget checkboxGroup;
     
-    if (widget.checkboxAlignment == CheckboxAlignment.horizontal) {
+    if (widget.checkboxAlignment == 'horizontal') {
       checkboxGroup = Row(
         children: widget.options.asMap().entries.map((entry) {
           int index = entry.key;
@@ -57,7 +57,7 @@ class _CustomCheckboxGroupState extends State<CustomCheckboxGroup> {
               label: option,
               isDisabled: widget.isDisable,
               contentPosition: widget.contentPosition,
-              checkboxShape: widget.checkboxShape, // Pass checkboxShape here
+              checkboxShape: widget.checkboxShape,
             ),
           );
         }).toList(),
@@ -77,7 +77,7 @@ class _CustomCheckboxGroupState extends State<CustomCheckboxGroup> {
               label: option,
               isDisabled: widget.isDisable,
               contentPosition: widget.contentPosition,
-              checkboxShape: widget.checkboxShape, // Pass checkboxShape here
+              checkboxShape: widget.checkboxShape,
             ),
           );
         }).toList(),
