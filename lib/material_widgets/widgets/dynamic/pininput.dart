@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-class PinInput extends StatefulWidget {
+class TPinInput extends StatefulWidget {
   final String type;
   final String size;
   final String? hintText;
@@ -21,16 +22,16 @@ class PinInput extends StatefulWidget {
   final String? Function(String?)? validator;
   final int pinLength;
 
-  const PinInput({
+  const TPinInput({
     super.key,
     this.type = 'outlined-square',
-    this.size = 'large',
+    this.size = 'medium',
     this.hintText,
     this.isDisabled = false,
     this.isReadOnly = false,
     this.keyboardType,
-    this.textAlign = TextAlign.start,
-    this.textAlignVertical = TextAlignVertical.top,
+    this.textAlign = TextAlign.center,
+    this.textAlignVertical = TextAlignVertical.center,
     this.showCursor = true,
     this.isPassword = false,
     this.helperText,
@@ -45,10 +46,10 @@ class PinInput extends StatefulWidget {
   });
 
   @override
-  State<PinInput> createState() => _PinInputState();
+  State<TPinInput> createState() => _TPinInputState();
 }
 
-class _PinInputState extends State<PinInput> {
+class _TPinInputState extends State<TPinInput> {
   late List<TextEditingController> _controllers;
 
   @override
@@ -88,13 +89,17 @@ class _PinInputState extends State<PinInput> {
         children: List.generate(widget.pinLength, (index) {
           return Container(
             margin: EdgeInsets.symmetric(horizontal: 4),
-            width: size.width / widget.pinLength - 8, // distribute space
+            width: size.width / widget.pinLength - 8, 
             child: TextFormField(
               controller: _controllers[index],
               decoration: inputDecoration.copyWith(
-                counterText: '', // Remove the character counter
+                counterText: '',
                 hintText: widget.hintText ?? '•',
               ),
+              inputFormatters: [               
+                  FilteringTextInputFormatter.digitsOnly,
+              ],
+              maxLength: 1,
               keyboardType: widget.keyboardType ?? TextInputType.number,
               textAlign: TextAlign.center,
               textAlignVertical: widget.textAlignVertical,
@@ -114,7 +119,7 @@ class _PinInputState extends State<PinInput> {
 
   InputDecoration _buildInputDecoration(BorderRadius borderRadius) {
     var decoration = InputDecoration(
-      labelText: widget.label ?? 'Enter PIN',
+      labelText: widget.label,
       helperText: widget.helperText,
       prefixIcon: widget.prefix,
       suffixIcon: widget.suffix,
@@ -125,7 +130,7 @@ class _PinInputState extends State<PinInput> {
       case 'filled-circle':
         return decoration.copyWith(
           filled: true,
-          fillColor: Theme.of(context).primaryColor,
+          fillColor: widget.type == 'filled-circle' ? Colors.grey.shade200 : Theme.of(context).primaryColor,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
@@ -177,13 +182,13 @@ class _PinInputState extends State<PinInput> {
   Size _getSize(String size) {
     switch (size) {
       case 'small':
-        return Size(120, 40);
+        return Size(200, 56);
       case 'medium':
-        return Size(200, 48);
+        return Size(250, 56);
       case 'large':
         return Size(300, 56);
       case 'block':
-        return Size(double.infinity, 56); // block size
+        return Size(350, 56);
       default:
         return Size(200, 48);
     }

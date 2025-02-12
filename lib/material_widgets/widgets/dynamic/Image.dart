@@ -1,43 +1,65 @@
 import 'package:flutter/material.dart';
 
-class CustomImage extends StatelessWidget {
-  final String imagePath;
-  final String sizeCategory; 
+class TImage extends StatefulWidget {
+  final String? imageUrl;
+  final String size;
   final Function()? onTap;
 
-  const CustomImage({
+  const TImage({
     super.key,
     this.onTap,
-    this.imagePath = 'assets/image/upload.png',
-    this.sizeCategory = 'medium', 
+    this.imageUrl,
+    this.size = 'medium',
   });
 
   @override
-  Widget build(BuildContext context) {
-    double size;
+  State<TImage> createState() => _TImageState();
+}
 
-  
-    switch (sizeCategory) {
+class _TImageState extends State<TImage> {
+  @override
+  Widget build(BuildContext context) {
+    double imageSize;
+    String? type;
+    if (widget.imageUrl!.contains('http') ||
+        widget.imageUrl!.contains('https')) {
+      setState(() {
+        type = 'network';
+      });
+    } else {
+      setState(() {
+        type = 'asset';
+      });
+    }
+    switch (widget.size) {
       case 'small':
-        size = 24.0;
+        imageSize = 24.0;
         break;
       case 'large':
-        size = 48.0;
+        imageSize = 48.0;
         break;
       case 'medium':
       default:
-        size = 36.0;
+        imageSize = 36.0;
         break;
     }
 
     return GestureDetector(
-      onTap: onTap,
-      child: Image.asset(
-        imagePath,
-        width: size,
-        height: size,
-        fit: BoxFit.contain,
-      ),
+      onTap: widget.onTap,
+      child: type == 'asset' && type != null
+          ? Image.asset(
+              widget.imageUrl ?? 'assets/image/upload.png',
+              width: imageSize,
+              height: imageSize,
+              fit: BoxFit.contain,
+            )
+          : type == 'network' && type != null
+              ? Image.network(
+                  widget.imageUrl ?? '',
+                  width: imageSize,
+                  height: imageSize,
+                )
+              : Container(),
     );
   }
 }

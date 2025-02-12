@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/bloc/connectivity_cubit.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/progress.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Image.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/indicator.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/pininput.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/progressbar.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/radio.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/rattingbar.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/switch.dart';
@@ -34,7 +37,7 @@ class ConnectivityStatus extends StatefulWidget {
 }
 
 class _ConnectivityStatusState extends State<ConnectivityStatus> {
-    bool switchVal = false; 
+  bool switchVal = false;
   @override
   Widget build(BuildContext context) {
     return BlocListener<ConnectivityCubit, ConnectivityResult>(
@@ -56,7 +59,10 @@ class _ConnectivityStatusState extends State<ConnectivityStatus> {
             padding: const EdgeInsets.all(12.0),
             child: Column(
               children: [
-                TProgressbar()
+              TImage(
+                size: 'small',
+                imageUrl: 'https://th.bing.com/th/id/OIP.940Ryc2jbFKRf0eU0J8Q2QHaHa?rs=1&pid=ImgDetMain',
+              )
               ],
             ),
           ),
