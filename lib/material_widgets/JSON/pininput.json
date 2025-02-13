@@ -1,8 +1,8 @@
 {
     "frameWork": "Flutter",
     "version": "3.24.3",
-    "component": "Dateinput",
-    "name": "Dateinput",
+    "component": "PinInput",
+    "name": "PinInput",
     "label": "",
     "type": "text",
     "layout": [
@@ -256,7 +256,17 @@
             },
             "value": "",
             "enabled": true
+        },
+        {
+            "label": "pinLength",
+            "name": "pinLength",
+            "type": "number",
+            "default": "",
+            "enum": "",
+            "value": "",
+            "enabled": true
         }
+
     ],
     "events": [
         {

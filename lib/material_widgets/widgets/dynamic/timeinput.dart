@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:form_builder_validators/form_builder_validators.dart';
+// import 'package:form_builder_validators/form_builder_validators.dart';
 
 List<String> type = [
   'filled-circle',
@@ -87,9 +87,9 @@ class _TimeinputState extends State<Timeinput> {
         readOnly: widget.isReadOnly,
         onChanged: widget.onChanged,
         onFieldSubmitted: widget.onFieldSubmitted,
-        validator: FormBuilderValidators.compose([
-          FormBuilderValidators.time()
-        ]),
+        // validator: FormBuilderValidators.compose([
+        //   FormBuilderValidators.time()
+        // ]),
         autovalidateMode: AutovalidateMode.onUserInteraction,
       ),
     );

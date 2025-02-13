@@ -1,10 +1,10 @@
 {
     "frameWork": "Flutter",
-    "version": "3.24.3",
-    "component": "RadioButton",
-    "name": "RadioButton",
+    "version": "3.27.1",
+    "component": "Switch",
+    "name": "Switch",
     "label": "",
-    "type": "text",
+    "type": "",
     "layout": [
         {
             "label": "length",
@@ -44,68 +44,82 @@
         {
             "name": "value",
             "label": "value",
-            "type": "double",
+            "type": "bool",
+            "default": "",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "false",
+                    "true"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "isDisabled",
+            "name": "isDisabled",
+            "type": "boolean",
+            "default": false,
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "false",
+                    "true"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "leftContent",
+            "label": "leftContent",
+            "type": "string",
             "default": "",
             "enum": "",
             "value": "",
             "enabled": true
         },
         {
-            "label": "size",
-            "name": "size",
+            "name": "rightContent",
+            "label": "rightContent",
             "type": "string",
-            "default": false,
+            "default": "",
+            "enum": "",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "switchShape",
+            "label": "switchShape",
+            "type": "string",
+            "default": "",
             "enum": {
                 "label": "enum",
                 "type": "dropdown",
                 "mode": "single",
                 "selectedValue": [],
                 "selectionList": [
-                    "small",
-                    "large",
-                    "medium"
-                ]
-            },
-            "value": "",
-            "enabled": true
-        },
-        {
-            "label": "color",
-            "name": "color",
-            "type": "string",
-            "default": false,
-            "enum": "",
-            "value": "",
-            "enabled": true
-        },
-        {
-            "label": "backgroundColor",
-            "name": "backgroundColor",
-            "type": "string",
-            "default": false,
-            "enum": "",
-            "value": "",
-            "enabled": true
-        },
-        {
-            "label": "type",
-            "name": "type",
-            "type": "string",
-            "default": false,
-            "enum": {
-                "label": "enum",
-                "type": "dropdown",
-                "mode": "single",
-                "selectedValue": [],
-                "selectionList": [
-                    "none",
-                    "linear",
-                    "circular"
+                    "rounded",
+                    "squared"
                 ]
             },
             "value": "",
             "enabled": true
         }
-       
+    ],
+    "events": [
+        {
+            "label": "onTap",
+            "name": "onTap",
+            "type": "Group",
+            "enabled": true
+        }
     ]
 }

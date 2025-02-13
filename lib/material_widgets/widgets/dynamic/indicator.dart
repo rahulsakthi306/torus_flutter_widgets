@@ -5,7 +5,7 @@ class ProgressIndicator extends StatelessWidget {
   final String sizeCategory;
   final Color color;
   final Color backgroundColor;
-  final String type; // 'linear' or 'circular'
+  final String type; 
 
   const ProgressIndicator({
     super.key,

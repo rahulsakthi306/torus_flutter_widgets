@@ -85,15 +85,6 @@
             "enabled": true
         },
         {
-            "label": "label",
-            "name": "label",
-            "type": "string",
-            "default": false,
-            "enum": "",
-            "value": "",
-            "enabled": true
-        },
-        {
             "label": "hintText",
             "name": "hintText",
             "type": "string",
@@ -139,11 +130,42 @@
             "enabled": true
         },
         {
-            "label": "dateFormat",
-            "name": "dateFormat",
+            "label": "datetimeFormat",
+            "name": "datetimeFormat",
             "type": "string",
             "default": "",
             "enum": "",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "textTheme",
+            "label": "textTheme",
+            "type": "string",
+            "default": "labelMedium",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "displayLarge",
+                    "displayMedium",
+                    "displaySmall",
+                    "headlineLarge",
+                    "headlineMedium",
+                    "headlineSmall",
+                    "titleLarge",
+                    "titleMedium",
+                    "titleSmall",
+                    "labelLarge",
+                    "labelMedium",
+                    "labelSmall",
+                    "bodyLarge",
+                    "bodyMedium",
+                    "bodySmall"
+                ]
+            },
             "value": "",
             "enabled": true
         }
