@@ -1,0 +1,124 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "TimePicker",
+    "label": "",
+    "layout": [
+        {
+          "name": "length",
+          "_type": "string",
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "alignment",
+          "_type": "select",
+            "selectionList": [
+              "topLeft",
+              "topCenter",
+              "topRight",
+              "centerLeft",
+              "center",
+              "centerRight",
+              "bottomLeft",
+              "bottomCenter",
+              "bottomRight"
+            ],
+          "enabled": true
+        }
+      ],
+      "props": [
+        {
+          "name": "type",
+          "_type": "select",
+          "selectionList": [
+            "none",
+            "filled-circle",
+            "outlined-circle",
+            "filled-square",
+            "outlined-square",
+            "underlined"
+          ],
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "size",
+          "_type": "select",
+          "selectionList": [
+            "none",
+            "small",
+            "medium",
+            "large",
+            "block"
+          ],
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "isDisabled",
+          "_type": "boolean",
+          "selectionList": [],
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "selectedTime",
+          "_type": "string",
+          "selectionList": [],
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "helperText",
+          "_type": "string",
+          "selectionList": [],
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "hintText",
+          "_type": "string",
+          "selectionList": [],
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "timeFormat",
+          "_type": "string",
+          "selectionList": [],
+          "value": "",
+          "enabled": true
+      },
+        {
+          "name": "textTheme",
+          "_type": "select",
+          "selectionList": [
+            "displayLarge",
+            "displayMedium",
+            "displaySmall",
+            "headlineLarge",
+            "headlineMedium",
+            "headlineSmall",
+            "titleLarge",
+            "titleMedium",
+            "titleSmall",
+            "labelLarge",
+            "labelMedium",
+            "labelSmall",
+            "bodyLarge",
+            "bodyMedium",
+            "bodySmall"
+          ],
+          "value": "",
+          "enabled": true
+        }
+      ],
+      "events": [
+        {
+          "name": "onChanged",
+          "type": "Group",
+          "enabled": true
+        }
+    ]
+}

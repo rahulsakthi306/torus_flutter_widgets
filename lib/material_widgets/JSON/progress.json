@@ -1,8 +1,8 @@
 {
     "frameWork": "Flutter",
     "version": "3.24.3",
-    "component": "RadioButton",
-    "name": "RadioButton",
+    "component": "Progress",
+    "name": "Progress",
     "label": "",
     "type": "text",
     "layout": [
