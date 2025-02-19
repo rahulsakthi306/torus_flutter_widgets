@@ -62,7 +62,7 @@
       },
       {
         "name": "type",
-        "_type": "string",
+        "_type": "select",
         "selectionList": [
           "none",
           "linear",

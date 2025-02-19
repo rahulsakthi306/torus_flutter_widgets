@@ -37,7 +37,7 @@
     },
     {
       "name": "sizeCategory",
-      "_type": "string",
+      "_type": "select",
       "selectionList": [
         "small",
         "large",
