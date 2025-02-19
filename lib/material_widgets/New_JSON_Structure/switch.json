@@ -1,0 +1,77 @@
+{
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Switch",
+  "label": "",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "string",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ],
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "value",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "isDisabled",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "leftContent",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "rightContent",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "switchShape",
+      "_type": "select",
+      "selectionList": [
+        "rounded",
+        "squared"
+      ],
+      "value": "",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onTap",
+      "_type": "Group",
+      "enabled": true
+    }
+  ]
+}

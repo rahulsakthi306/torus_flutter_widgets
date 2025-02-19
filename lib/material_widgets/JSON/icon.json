@@ -55,7 +55,17 @@
             "name": "size",
             "type": "string",
             "default": false,
-            "enum": "",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "small",
+                    "large",
+                    "medium"
+                ]
+            },
             "value": "",
             "enabled": true
         },

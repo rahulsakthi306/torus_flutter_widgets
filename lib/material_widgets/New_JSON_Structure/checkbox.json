@@ -1,0 +1,69 @@
+{
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Button",
+  "label": "",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "string",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ],
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "value",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "isDisabled",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "contentPosition",
+      "_type": "select",
+      "selectionList": [
+        "left",
+        "right",
+        "top",
+        "bottom"
+      ],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "checkboxShape",
+      "_type": "select",
+      "default": false,
+      "selectionList": [
+        "rounded",
+        "squared"
+      ],
+      "value": "",
+      "enabled": true
+    }
+  ]
+}

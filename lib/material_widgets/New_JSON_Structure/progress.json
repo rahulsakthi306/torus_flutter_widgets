@@ -1,0 +1,75 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Progress",
+    "label": "",
+    "layout": [
+        {
+          "name": "length",
+          "_type": "string",
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "alignment",
+          "_type": "select",
+            "selectionList": [
+              "topLeft",
+              "topCenter",
+              "topRight",
+              "centerLeft",
+              "center",
+              "centerRight",
+              "bottomLeft",
+              "bottomCenter",
+              "bottomRight"
+            ],
+          "enabled": true
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "double",
+          "selectionList": [],
+          "value": "",
+          "enabled": true
+      },
+      {
+        "name": "size",
+        "_type": "select",
+         "selectionList": [
+                "small",
+                "large",
+                "medium"
+            ],
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "color",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "backgroundColor",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "type",
+        "_type": "select",
+        "selectionList": [
+          "none",
+          "linear",
+          "circular"
+        ],
+        "value": "",
+        "enabled": true
+      }
+      ]
+}

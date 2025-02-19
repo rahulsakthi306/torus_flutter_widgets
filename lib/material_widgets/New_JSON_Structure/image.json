@@ -1,0 +1,58 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Image",
+    "label": "",
+    "layout": [
+        {
+          "name": "length",
+          "_type": "string",
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "alignment",
+          "_type": "select",
+            "selectionList": [
+              "topLeft",
+              "topCenter",
+              "topRight",
+              "centerLeft",
+              "center",
+              "centerRight",
+              "bottomLeft",
+              "bottomCenter",
+              "bottomRight"
+            ],
+          "enabled": true
+        }
+      ],
+      "props": [
+        {
+          "name": "size",
+          "_type": "select",
+           "selectionList": [
+                  "small",
+                  "large",
+                  "medium"
+              ],
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "imageUrl",
+          "_type": "string",
+          "default": false,
+          "selectionList": [],
+          "value": "",
+          "enabled": true
+      }
+      ],
+      "events": [
+        {
+          "name": "onTap",
+          "_type": "Group",
+          "enabled": true
+        }
+    ]
+}

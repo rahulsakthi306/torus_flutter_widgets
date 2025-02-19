@@ -42,6 +42,24 @@
     ],
     "props": [
         {
+            "name": "value",
+            "label": "value",
+            "type": "bool",
+            "default": "",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "false",
+                    "true"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
             "label": "isDisabled",
             "name": "isDisabled",
             "type": "boolean",
@@ -60,8 +78,8 @@
             "enabled": true
         },
         {
-            "label": "selectedOptions",
-            "name": "selectedOptions",
+            "label": "contentPosition",
+            "name": "contentPosition",
             "type": "boolean",
             "default": false,
             "enum": {
@@ -70,8 +88,28 @@
                 "mode": "single",
                 "selectedValue": [],
                 "selectionList": [
-                    "false",
-                    "true"
+                    "left",
+                    "right",
+                    "top",
+                    "bottom"
+                ]
+            },
+            "value": "",
+            "enabled": true
+        },
+        {
+            "label": "checkboxShape",
+            "name": "checkboxShape",
+            "type": "boolean",
+            "default": false,
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "rounded",
+                    "squared"
                 ]
             },
             "value": "",

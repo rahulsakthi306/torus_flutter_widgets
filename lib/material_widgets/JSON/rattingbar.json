@@ -44,7 +44,7 @@
         {
             "name": "rating",
             "label": "rating",
-            "type": "decimal",
+            "type": "double",
             "default": "",
             "enum": "",
             "value": "",
@@ -53,7 +53,7 @@
         {
             "name": "size",
             "label": "size",
-            "type": "decimal",
+            "type": "double",
             "default": "",
             "enum": "",
             "value": "",

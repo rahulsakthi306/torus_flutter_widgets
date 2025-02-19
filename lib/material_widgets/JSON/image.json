@@ -46,13 +46,23 @@
             "name": "size",
             "type": "string",
             "default": false,
-            "enum": "",
+            "enum": {
+                "label": "enum",
+                "type": "dropdown",
+                "mode": "single",
+                "selectedValue": [],
+                "selectionList": [
+                    "small",
+                    "large",
+                    "medium"
+                ]
+            },
             "value": "",
             "enabled": true
         },
         {
-            "label": "imagePath",
-            "name": "imagePath",
+            "label": "imageUrl",
+            "name": "imageUrl",
             "type": "string",
             "default": false,
             "enum": "",
