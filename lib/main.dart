@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:responsive_grid/responsive_grid.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/bloc/connectivity_cubit.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Icon.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Image.dart';
@@ -17,6 +18,7 @@ import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/radio.dar
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/rattingbar.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/switch.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/textarea.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/textfield.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/timepicker.dart';
 
 void main() {
@@ -46,8 +48,12 @@ class ConnectivityStatus extends StatefulWidget {
 
 class _ConnectivityStatusState extends State<ConnectivityStatus> {
   bool switchVal = false;
+   double columnStart = 1; 
+    double columnEnd = 13;
+
   @override
   Widget build(BuildContext context) {
+      double gridWidth = columnEnd - columnStart;
     return BlocListener<ConnectivityCubit, ConnectivityResult>(
       listener: (context, connectivityResult) {
         if (connectivityResult == ConnectivityResult.none) {
@@ -65,11 +71,43 @@ class _ConnectivityStatusState extends State<ConnectivityStatus> {
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(12.0),
-            child: Column(
-              children: [
-          TTimePicker(isDisabled: true,)
-              ],
+            child: ResponsiveGridRow(
+      children: [
+        ResponsiveGridCol(
+          md: (gridWidth / 12 * 6).round(), // Medium screens, 50% width (6/12)
+          lg: (gridWidth / 12 * 3).round(), // Large screens, 25% width (3/12)
+          sm: (gridWidth / 12 * 12).round(), // Small screens, full width (12/12)
+          xs: (gridWidth / 12 * 12).round(), // Extra small screens, full width (12/12)
+          child: TextField(
+            decoration: InputDecoration(
+              labelText: 'Enter something', // From your JSON label
             ),
+          ),
+        ),
+        ResponsiveGridCol(
+          md: (gridWidth / 12 * 6).round(), // Medium screens, 50% width (6/12)
+          lg: (gridWidth / 12 * 3).round(), // Large screens, 25% width (3/12)
+          sm: (gridWidth / 12 * 12).round(), // Small screens, full width (12/12)
+          xs: (gridWidth / 12 * 12).round(), // Extra small screens, full width (12/12)
+          child: TextField(
+            decoration: InputDecoration(
+              labelText: 'Enter something', // From your JSON label
+            ),
+          ),
+        ),
+        ResponsiveGridCol(
+          md: (gridWidth / 12 * 6).round(), // Medium screens, 50% width (6/12)
+          lg: (gridWidth / 12 * 3).round(), // Large screens, 25% width (3/12)
+          sm: (gridWidth / 12 * 12).round(), // Small screens, full width (12/12)
+          xs: (gridWidth / 12 * 12).round(), // Extra small screens, full width (12/12)
+          child: TextField(
+            decoration: InputDecoration(
+              labelText: 'Enter something', // From your JSON label
+            ),
+          ),
+        ),
+      ],
+    ),
           ),
         ),
       ),
