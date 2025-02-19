@@ -7,23 +7,30 @@
     {
       "name": "length",
       "_type": "string",
+      "value": "12",
+      "enabled": true
+    },
+    {
+      "name": "mobile_row_order",
+      "_type": "number",
       "value": "",
       "enabled": true
     },
     {
       "name": "alignment",
       "_type": "select",
-      "selectionList": [
-        "topLeft",
-        "topCenter",
-        "topRight",
-        "centerLeft",
-        "center",
-        "centerRight",
-        "bottomLeft",
-        "bottomCenter",
-        "bottomRight"
-      ],
+        "selectionList": [
+          "topLeft",
+          "topCenter",
+          "topRight",
+          "centerLeft",
+          "center",
+          "centerRight",
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight"
+        ],
+      "value": "center",
       "enabled": true
     }
   ],

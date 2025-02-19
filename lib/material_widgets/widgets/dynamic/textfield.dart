@@ -13,19 +13,16 @@ class TTextField extends StatefulWidget {
   final String size;
   final String? hintText;
   final bool isDisabled;
-  final bool isReadOnly;
   final TextInputType? keyboardType;
   final TextAlign textAlign;
   final TextAlignVertical textAlignVertical;
   final bool showCursor;
-  final bool isPassword;
   final String? helperText;
   final Widget? prefix;
   final Widget? suffix;
   final String? label;
   final TextEditingController? controller;
   final void Function(String)? onChanged;
-  final void Function(String)? onFieldSubmitted;
   final String? Function(String?)? validator;
 
   const TTextField({
@@ -34,20 +31,17 @@ class TTextField extends StatefulWidget {
     this.size = 'block',
     this.hintText,
     this.isDisabled = false,
-    this.isReadOnly = false,
-    this.keyboardType,
     this.textAlign = TextAlign.start,
-    this.textAlignVertical = TextAlignVertical.top,
+    this.textAlignVertical = TextAlignVertical.center,
     this.showCursor = true,
-    this.isPassword = false,
     this.helperText,
     this.prefix,
     this.suffix,
     this.controller,
     this.onChanged,
-    this.onFieldSubmitted,
     this.validator,
     this.label,
+    this.keyboardType,
   });
 
   @override
@@ -172,11 +166,9 @@ class _TTextFieldState extends State<TTextField> {
         textAlign: widget.textAlign,
         textAlignVertical: widget.textAlignVertical,
         showCursor: widget.showCursor,
-        obscureText: widget.isPassword,
+        obscureText: false,
         enabled: !widget.isDisabled,
-        readOnly: widget.isReadOnly,
         onChanged: widget.onChanged,
-        onFieldSubmitted: widget.onFieldSubmitted,
         validator: widget.validator,
       ),
     );
