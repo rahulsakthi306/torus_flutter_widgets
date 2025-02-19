@@ -24,13 +24,14 @@ class TTimePicker extends StatefulWidget {
     super.key,
     this.type = 'outlined-square',
     this.size = 'medium',
-    this.label,
-    this.hintText,
     this.isDisabled = false,
     this.selectedTime,
-    this.onChanged,
     this.helperText,
-    this.timeFormat, 
+    this.hintText,
+    this.timeFormat,
+    this.label,
+    this.onChanged,
+ 
   });
 
   @override
@@ -187,7 +188,7 @@ class _TTimePickerState extends State<TTimePicker> {
         return Size(200, 48);
       case 'large':
         return Size(300, 56);
-      case 'block':
+      case 'max':
         return Size(double.infinity, 56); // block size
       default:
         return Size(200, 48);
