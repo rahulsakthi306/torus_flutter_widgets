@@ -1,0 +1,34 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Appbar",
+    "name": "Appbar",
+    "label": "",
+    "type": "",
+    "props": [
+        {
+            "name": "needTorusAppSettings",
+            "_type": "string",
+            "selectionList": [],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "type",
+            "_type": "select",
+            "selectionList": [
+                "filled",
+                "transparent"
+            ],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "centerTitle",
+            "type": "string",
+            "selectionList": [],
+            "value": "",
+            "enabled": true
+        }
+    ]
+}
