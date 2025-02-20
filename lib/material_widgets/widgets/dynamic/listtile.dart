@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomListTile extends StatelessWidget {
+class TListTile extends StatelessWidget {
   final String title;
   final String subtitle;
   final Color color;
@@ -12,8 +12,6 @@ class CustomListTile extends StatelessWidget {
   final Color? activeThumbColor;
   final void Function(bool)? onToggle;
   final bool? isChecked;  
-
-  // Additional properties for Checkbox
   final bool tristate;
   final void Function(bool?)? checkboxOnChanged;
   final MouseCursor? mouseCursor;
@@ -33,7 +31,7 @@ class CustomListTile extends StatelessWidget {
   final bool isError;
   final String? semanticLabel;
 
-  const CustomListTile({
+  const TListTile({
     super.key,
     this.title = 'Title',
     this.subtitle = 'Subtitle',

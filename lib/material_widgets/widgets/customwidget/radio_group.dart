@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/radio.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/radio.dart';
 
 
 

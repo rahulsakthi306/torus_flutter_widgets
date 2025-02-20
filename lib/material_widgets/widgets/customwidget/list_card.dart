@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/card.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/DataDisplay/card.dart';
 
 class CardList extends StatelessWidget {
   final List<String> sampleData;

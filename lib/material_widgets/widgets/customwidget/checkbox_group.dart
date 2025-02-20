@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/checkbox.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/checkbox.dart';
 
 List<String> checkboxAlignment = [ 'horizontal', 'vertical' ];
 
