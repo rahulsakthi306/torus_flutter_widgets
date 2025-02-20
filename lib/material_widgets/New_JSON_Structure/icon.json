@@ -1,65 +1,70 @@
 {
-    "frameWork": "Flutter",
-    "version": "3.27.1",
-    "component": "Icon",
-    "label": "",
-    "layout": [
-      {
-        "name": "length",
-        "_type": "number",
-        "value": "12",
-        "enabled": true
-      },
-      {
-        "name": "alignment",
-        "_type": "select",
-        "selectionList": [
-          "topLeft",
-          "topCenter",
-          "topRight",
-          "centerLeft",
-          "center",
-          "centerRight",
-          "bottomLeft",
-          "bottomCenter",
-          "bottomRight"
-        ],
-        "value": "center",
-        "enabled": true
-      }
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Icon",
+  "label": "",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "number",
+      "value": "12",
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
       ],
-      "props": [
-        {
-          "name": "icon",
-          "_type": "string",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-      },
-      {
-        "name": "size",
-        "_type": "select",
-        "selectionList": [
-          "none",
-          "small",
-          "medium",
-          "large"
-        ],
-        "value": "medium",
-        "enabled": true
-      },
-      {
-        "name": "color",
-        "_type": "string",
-        "selectionList": [],
-        "value": "",
-        "enabled": true
+      "value": "center",
+      "enabled": true
     }
+  ],
+  "props": [
+    {
+      "name": "icon",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "size",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "small",
+        "medium",
+        "large"
       ],
-      "events": [
-        {
-          "name": "onTap",
-          "enabled": true
-        }
-    ]
+      "value": "medium",
+      "enabled": true
+    },
+    {
+      "name": "color",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "transparent"
+      ],
+      "value": "primary",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onTap",
+      "enabled": true
+    }
+  ]
 }

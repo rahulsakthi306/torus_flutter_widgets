@@ -39,7 +39,7 @@
           "name": "size",
           "_type": "select",
           "selectionList": ["none","small","medium","large"],
-          "value": "",
+          "value": "medium",
           "enabled": true
       },
       {

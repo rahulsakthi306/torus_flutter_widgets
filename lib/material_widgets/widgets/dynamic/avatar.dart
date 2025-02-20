@@ -9,8 +9,8 @@ class TAvatar extends StatefulWidget {
   const TAvatar({
     super.key,
     this.text,
-    this.imageUrl,
     this.size = 'small',
+    this.imageUrl,
     this.icon,
   });
 
