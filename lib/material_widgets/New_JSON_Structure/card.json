@@ -11,12 +11,6 @@
         "enabled": true
       },
       {
-        "name": "mobile_row_order",
-        "_type": "number",
-        "value": "",
-        "enabled": true
-      },
-      {
         "name": "alignment",
         "_type": "select",
         "selectionList": [
