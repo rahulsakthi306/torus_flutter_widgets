@@ -46,7 +46,7 @@
             "outlined-square",
             "underlined"
           ],
-          "value": "",
+          "value": "outlined-square",
           "enabled": true
         },
         {
@@ -57,9 +57,9 @@
             "small",
             "medium",
             "large",
-            "block"
+            "max"
           ],
-          "value": "",
+          "value": "medium",
           "enabled": true
         },
         {
@@ -77,13 +77,6 @@
           "enabled": true
         },
         {
-          "name": "isReadOnly",
-          "_type": "string",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-        },
-        {
           "name": "textAlign",
           "_type": "select",
           "selectionList": [
@@ -95,7 +88,7 @@
             "left",
             "right"
           ],
-          "value": "",
+          "value": "start",
           "enabled": true
         },
         {
@@ -107,7 +100,7 @@
             "center",
             "bottom"
           ],
-          "value": "",
+          "value": "center",
           "enabled": true
         },
         {
@@ -165,7 +158,7 @@
             "bodyMedium",
             "bodySmall"
           ],
-          "value": "",
+          "value": "labelMedium",
           "enabled": true
         },
         {
@@ -179,12 +172,6 @@
       "events": [
         {
           "name": "onChanged",
-          "type": "Group",
-          "enabled": true
-      },
-      {
-          "name": "onFieldSubmitted",
-          "type": "Group",
           "enabled": true
       }
     ],
@@ -192,7 +179,6 @@
     {
       "name": "isRequired",
       "_type": "boolean",
-      "default": false,
       "selectionList": [],
       "value": "",
       "enabled": true
@@ -211,12 +197,11 @@
         "phone",
         "url"
       ],
-      "value": "",
+      "value": "number",
       "enabled": true
     },
     {
       "name": "format",
-      "groupLabel": "validation",
       "_type": "select",
       "selectionList": [
         "none",
@@ -249,20 +234,16 @@
       "enabled": "true"
     },
     {
-      "name": "range",
-      "groupLabel": "validation for number",
-      "_type": "Group",
-      "minValue": "",
-      "maxValue": "",
-      "enabled": "true"
+      "range": {
+        "minValue": "",
+        "maxValue": ""
+      }
     },
     {
-      "name": "length",
-      "groupLabel": "validation for string",
-      "_type": "Group",
-      "minLength": "",
-      "maxLength": "",
-      "enabled": "true"
+      "length": {
+        "minLength": "",
+        "maxLength": ""
+      }
     }
   ]
 }

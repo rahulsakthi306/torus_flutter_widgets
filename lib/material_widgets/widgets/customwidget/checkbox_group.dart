@@ -8,7 +8,7 @@ class CustomCheckboxGroup extends StatefulWidget {
   final List<String> options;
   final String contentPosition;
   final String checkboxAlignment;
-  final String checkboxShape; 
+
 
   const CustomCheckboxGroup({
     super.key,
@@ -16,7 +16,7 @@ class CustomCheckboxGroup extends StatefulWidget {
     required this.options,
     this.contentPosition = 'right',
     this.checkboxAlignment = 'vertical',
-    this.checkboxShape = 'squared', 
+ 
   });
 
   @override
@@ -57,7 +57,7 @@ class _CustomCheckboxGroupState extends State<CustomCheckboxGroup> {
               label: option,
               isDisabled: widget.isDisable,
               contentPosition: widget.contentPosition,
-              checkboxShape: widget.checkboxShape,
+
             ),
           );
         }).toList(),
@@ -77,7 +77,7 @@ class _CustomCheckboxGroupState extends State<CustomCheckboxGroup> {
               label: option,
               isDisabled: widget.isDisable,
               contentPosition: widget.contentPosition,
-              checkboxShape: widget.checkboxShape,
+
             ),
           );
         }).toList(),

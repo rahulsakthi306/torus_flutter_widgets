@@ -48,9 +48,10 @@
          "selectionList": [
                 "small",
                 "large",
-                "medium"
+                "medium",
+                "block"
             ],
-        "value": "",
+        "value": "medium",
         "enabled": true
       },
       {
@@ -75,7 +76,7 @@
           "linear",
           "circular"
         ],
-        "value": "",
+        "value": "linear",
         "enabled": true
       }
       ]

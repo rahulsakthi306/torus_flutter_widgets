@@ -1,65 +1,63 @@
 {
-    "frameWork": "Flutter",
-    "version": "3.27.1",
-    "component": "Image",
-    "label": "",
-    "layout": [
-      {
-        "name": "length",
-        "_type": "number",
-        "value": "12",
-        "enabled": true
-      },
-      {
-        "name": "mobile_row_order",
-        "_type": "number",
-        "value": "",
-        "enabled": true
-      },
-      {
-        "name": "alignment",
-        "_type": "select",
-        "selectionList": [
-          "topLeft",
-          "topCenter",
-          "topRight",
-          "centerLeft",
-          "center",
-          "centerRight",
-          "bottomLeft",
-          "bottomCenter",
-          "bottomRight"
-        ],
-        "value": "center",
-        "enabled": true
-      }
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Image",
+  "label": "",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "number",
+      "value": "12",
+      "enabled": true
+    },
+    {
+      "name": "mobile_row_order",
+      "_type": "number",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
       ],
-      "props": [
-        {
-          "name": "size",
-          "_type": "select",
-           "selectionList": [
-                  "small",
-                  "large",
-                  "medium"
-              ],
-          "value": "",
-          "enabled": true
-        },
-        {
-          "name": "imageUrl",
-          "_type": "string",
-          "default": false,
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-      }
+      "value": "center",
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "size",
+      "_type": "select",
+      "selectionList": [
+        "small",
+        "large",
+        "medium"
       ],
-      "events": [
-        {
-          "name": "onTap",
-          "_type": "Group",
-          "enabled": true
-        }
-    ]
+      "value": "medium",
+      "enabled": true
+    },
+    {
+      "name": "imageUrl",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onTap",
+      "enabled": true
+    }
+  ]
 }

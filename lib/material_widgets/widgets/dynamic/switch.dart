@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-List<String> switchShape = [ 'rounded', 'squared' ];
-
 class TSwitch extends StatelessWidget {
   final bool? value;
   final ValueChanged<bool>? onChanged;
@@ -9,7 +7,6 @@ class TSwitch extends StatelessWidget {
   final bool isDisabled;
   final String leftContent;
   final String rightContent;
-  final String switchShape;
 
   const TSwitch({
     super.key,
@@ -19,7 +16,6 @@ class TSwitch extends StatelessWidget {
     this.isDisabled = false,
     this.leftContent = '',
     this.rightContent = '',
-    this.switchShape = 'squared',
   });
 
   @override

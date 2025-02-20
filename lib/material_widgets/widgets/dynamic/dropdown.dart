@@ -8,7 +8,7 @@ List<String> type = [
   'underlined',
 ];
 
-List<String> size = ['small', 'medium', 'large', 'block'];
+List<String> size = ['small', 'medium', 'large', 'max'];
 
 class TDropdown extends StatefulWidget {
   final String type;
@@ -39,6 +39,7 @@ class TDropdown extends StatefulWidget {
 class _TDropdownState extends State<TDropdown> {
   @override
   Widget build(BuildContext context) {
+    String labelText = widget.label ?? 'Select an option';
     Size size = _getSize(widget.size);
 
     BorderRadius borderRadius;
@@ -62,7 +63,7 @@ class _TDropdownState extends State<TDropdown> {
             borderRadius: borderRadius,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select an option',
+          labelText: labelText,
           hintText: widget.hintText,
         );
         break;
@@ -74,7 +75,7 @@ class _TDropdownState extends State<TDropdown> {
             borderRadius: borderRadius,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select an option',
+          labelText: labelText,
           hintText: widget.hintText,
         );
         break;
@@ -88,7 +89,7 @@ class _TDropdownState extends State<TDropdown> {
             borderRadius: BorderRadius.zero,
           ),
           contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
-          labelText: widget.label ?? 'Select an option',
+          labelText: labelText,
           hintText: widget.hintText,
         );
         break;
@@ -100,7 +101,7 @@ class _TDropdownState extends State<TDropdown> {
             borderRadius: BorderRadius.zero,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select an option',
+          labelText: labelText,
           hintText: widget.hintText,
         );
         break;
@@ -111,7 +112,7 @@ class _TDropdownState extends State<TDropdown> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select an option',
+          labelText: labelText,
           hintText: widget.hintText,
         );
         break;
@@ -123,7 +124,7 @@ class _TDropdownState extends State<TDropdown> {
             borderRadius: borderRadius,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? '-- Select --',
+          labelText: labelText,
           hintText: widget.hintText,
         );
     }
@@ -153,7 +154,7 @@ class _TDropdownState extends State<TDropdown> {
         return Size(200, 48);
       case 'large':
         return Size(300, 56);
-      case 'block':
+      case 'max':
         return Size(double.infinity, 56); 
       default:
         return Size(200, 48);

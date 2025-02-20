@@ -1,7 +1,7 @@
 {
   "frameWork": "Flutter",
   "version": "3.27.1",
-  "component": "Button",
+  "component": "Checkbox",
   "label": "",
   "layout": [
     {
@@ -58,7 +58,7 @@
         "top",
         "bottom"
       ],
-      "value": "",
+      "value": "right",
       "enabled": true
     },
     {
@@ -69,7 +69,7 @@
         "rounded",
         "squared"
       ],
-      "value": "",
+      "value": "squared",
       "enabled": true
     }
   ]

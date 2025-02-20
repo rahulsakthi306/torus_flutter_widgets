@@ -6,7 +6,6 @@ class TPinInput extends StatefulWidget {
   final String size;
   final String? hintText;
   final bool isDisabled;
-  final bool isReadOnly;
   final TextInputType? keyboardType;
   final TextAlign textAlign;
   final TextAlignVertical textAlignVertical;
@@ -18,7 +17,6 @@ class TPinInput extends StatefulWidget {
   final String? label;
   final TextEditingController? controller;
   final void Function(String)? onChanged;
-  final void Function(String)? onFieldSubmitted;
   final String? Function(String?)? validator;
   final int pinLength;
 
@@ -28,9 +26,8 @@ class TPinInput extends StatefulWidget {
     this.size = 'medium',
     this.hintText,
     this.isDisabled = false,
-    this.isReadOnly = false,
     this.keyboardType,
-    this.textAlign = TextAlign.center,
+    this.textAlign = TextAlign.start,
     this.textAlignVertical = TextAlignVertical.center,
     this.showCursor = true,
     this.isPassword = false,
@@ -39,7 +36,6 @@ class TPinInput extends StatefulWidget {
     this.suffix,
     this.controller,
     this.onChanged,
-    this.onFieldSubmitted,
     this.validator,
     this.label,
     this.pinLength = 4,
@@ -106,9 +102,7 @@ class _TPinInputState extends State<TPinInput> {
               showCursor: widget.showCursor,
               obscureText: widget.isPassword,
               enabled: !widget.isDisabled,
-              readOnly: widget.isReadOnly,
               onChanged: widget.onChanged,
-              onFieldSubmitted: widget.onFieldSubmitted,
               validator: widget.validator,
             ),
           );
@@ -187,7 +181,7 @@ class _TPinInputState extends State<TPinInput> {
         return Size(250, 56);
       case 'large':
         return Size(300, 56);
-      case 'block':
+      case 'max':
         return Size(350, 56);
       default:
         return Size(200, 48);

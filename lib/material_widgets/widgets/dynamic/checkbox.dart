@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-List<String> position = [ 'left', 'right', 'top', 'bottom' ];
+List<String> contentPosition = [ 'left', 'right', 'top', 'bottom' ];
 List<String> checkboxShape = [ 'rounded', 'squared' ];
 
 class TCheckbox extends StatelessWidget {

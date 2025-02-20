@@ -62,22 +62,11 @@
       "selectionList": [],
       "value": "",
       "enabled": true
-    },
-    {
-      "name": "switchShape",
-      "_type": "select",
-      "selectionList": [
-        "rounded",
-        "squared"
-      ],
-      "value": "",
-      "enabled": true
     }
   ],
   "events": [
     {
-      "name": "onTap",
-      "_type": "Group",
+      "name": "onChanged",
       "enabled": true
     }
   ]

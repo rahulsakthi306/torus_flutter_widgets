@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 List<String> progressBarSize = [ 'small', 'medium', 'large', 'block' ];
 
 class TProgressbar extends StatefulWidget {
-  final double? value;  // Progress value (0.0 to 1.0)
-  final String type;  // Type of progress bar: 'linear' or 'circular'
+  final double? value;  
+  final String type;  
   final Color color;
   final Color backgroundColor;
   final String size;
@@ -12,10 +12,11 @@ class TProgressbar extends StatefulWidget {
   const TProgressbar({
     super.key,
     this.value,
-    this.type = 'linear',
+    this.size = 'block',
+    this.type = 'circular ',
     this.color = Colors.blue,
     this.backgroundColor = Colors.grey,
-    this.size = 'medium',
+   
   });
 
   @override

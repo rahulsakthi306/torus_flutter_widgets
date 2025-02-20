@@ -17,7 +17,7 @@ class TDateTimePicker extends StatefulWidget {
   final bool isDisabled;
   final DateTime? selectedDateTime;
   final void Function(DateTime?)? onChanged;
-  final String? helperText;
+   final String? helperText;
   final String? datetimeFormat;
 
   const TDateTimePicker({
@@ -50,6 +50,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
 
   @override
   Widget build(BuildContext context) {
+     String labelText = widget.label ?? 'Select a date and time';
     Size size = _getSize(widget.size);
 
     BorderRadius borderRadius;
@@ -72,7 +73,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
             borderRadius: borderRadius,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date and time',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -85,7 +86,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
             borderRadius: borderRadius,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date and time',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -99,7 +100,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
             borderRadius: BorderRadius.zero,
           ),
           contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
-          labelText: widget.label ?? 'Select a date and time',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -112,7 +113,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
             borderRadius: BorderRadius.zero,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date and time',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -124,7 +125,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date and time',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -137,7 +138,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
             borderRadius: borderRadius,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date and time',
+          labelText:labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -206,7 +207,7 @@ class _TDateTimePickerState extends State<TDateTimePicker> {
         return Size(200, 48);
       case 'large':
         return Size(300, 56);
-      case 'block':
+      case 'max':
         return Size(double.infinity, 56); 
       default:
         return Size(200, 48);

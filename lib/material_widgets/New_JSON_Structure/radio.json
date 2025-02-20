@@ -34,8 +34,7 @@
       "enabled": true
     }
   ],
-  "props": [],
-  "events": [
+  "props": [
     {
       "name": "value",
       "_type": "boolean",
@@ -59,17 +58,13 @@
         "top",
         "bottom"
       ],
-      "value": "",
+      "value": "right",
       "enabled": true
-    },
+    }
+  ],
+  "events": [
     {
-      "name": "radioShape",
-      "_type": "select",
-      "selectionList": [
-        "rounded",
-        "squared"
-      ],
-      "value": "",
+      "name": "onChanged",
       "enabled": true
     }
   ]

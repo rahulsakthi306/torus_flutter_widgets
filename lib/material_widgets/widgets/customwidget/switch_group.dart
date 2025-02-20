@@ -9,7 +9,6 @@ class CustomSwitchGroup extends StatefulWidget {
   final List<String> leftContents;
   final List<String> rightContents;
   final String switchAlignment;
-  final String switchShape;
 
   const CustomSwitchGroup({
     super.key,
@@ -18,7 +17,6 @@ class CustomSwitchGroup extends StatefulWidget {
     required this.leftContents,
     required this.rightContents,
     this.switchAlignment = 'vertical',
-    this.switchShape = 'squared',
   });
 
   @override
@@ -60,7 +58,6 @@ class _CustomSwitchGroupState extends State<CustomSwitchGroup> {
               isDisabled: widget.isDisable,
               leftContent: widget.leftContents[index],
               rightContent: widget.rightContents[index],
-              switchShape: widget.switchShape,
             ),
           );
         }).toList(),
@@ -81,7 +78,6 @@ class _CustomSwitchGroupState extends State<CustomSwitchGroup> {
               isDisabled: widget.isDisable,
               leftContent: widget.leftContents[index],
               rightContent: widget.rightContents[index],
-              switchShape: widget.switchShape,
             ),
           );
         }).toList(),

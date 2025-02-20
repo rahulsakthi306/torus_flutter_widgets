@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 List<String> position = [ 'left', "right", "top", "bottom" ];
-List<String> radioShape = [ 'rounded', 'squared' ];
 
 class TRadio extends StatelessWidget {
   final bool? value;
@@ -9,7 +8,6 @@ class TRadio extends StatelessWidget {
   final String? label;
   final bool isDisabled;
   final String contentPosition;
-  final String radioShape;
 
   const TRadio({
     super.key,
@@ -18,7 +16,6 @@ class TRadio extends StatelessWidget {
     this.label,
     this.isDisabled = false,
     this.contentPosition = 'right',
-    this.radioShape = 'rounded',
   });
 
   @override

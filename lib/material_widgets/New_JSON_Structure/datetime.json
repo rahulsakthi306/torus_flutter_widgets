@@ -46,7 +46,7 @@
             "outlined-square",
             "underlined"
           ],
-          "value": "",
+          "value": "outlined-square",
           "enabled": true
         },
         {
@@ -57,9 +57,9 @@
             "small",
             "medium",
             "large",
-            "block"
+            "max"
           ],
-          "value": "",
+          "value": "medium",
           "enabled": true
         },
         {
@@ -124,7 +124,6 @@
       "events": [
         {
           "name": "onChanged",
-          "_type": "Group",
           "enabled": true
         }
     ]

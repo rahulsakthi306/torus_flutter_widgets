@@ -49,14 +49,13 @@
           "none",
           "small",
           "medium",
-          "large",
-          "block"
+          "large"
         ],
-        "value": "",
+        "value": "medium",
         "enabled": true
       },
       {
-        "name": "icon",
+        "name": "color",
         "_type": "string",
         "selectionList": [],
         "value": "",
@@ -66,7 +65,6 @@
       "events": [
         {
           "name": "onTap",
-          "_type": "Group",
           "enabled": true
         }
     ]

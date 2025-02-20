@@ -8,7 +8,6 @@ class CustomRadioButtonGroup extends StatefulWidget {
   final List<String> options;
   final String contentPosition;
   final String radioAlignment;
-  final String radioShape;
 
   const CustomRadioButtonGroup({
     super.key,
@@ -16,7 +15,6 @@ class CustomRadioButtonGroup extends StatefulWidget {
     required this.options,
     this.contentPosition = 'right',
     this.radioAlignment = 'vertical',
-    this.radioShape = 'squared',
   });
 
   @override
@@ -57,7 +55,6 @@ class _CustomRadioButtonGroupState extends State<CustomRadioButtonGroup> {
               label: option,
               isDisabled: widget.isDisable,
               contentPosition: widget.contentPosition,
-              radioShape: widget.radioShape,
             ),
           );
         }).toList(),
@@ -77,7 +74,6 @@ class _CustomRadioButtonGroupState extends State<CustomRadioButtonGroup> {
               label: option,
               isDisabled: widget.isDisable,
               contentPosition: widget.contentPosition,
-              radioShape: widget.radioShape,
             ),
           );
         }).toList(),
