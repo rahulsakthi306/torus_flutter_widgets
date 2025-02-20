@@ -14,43 +14,37 @@ class TTextArea extends StatefulWidget {
   final String size;
   final String? hintText;
   final bool isDisabled;
-  final bool isReadOnly;
-  final TextInputType? keyboardType;
   final TextAlign textAlign;
   final TextAlignVertical textAlignVertical;
   final bool showCursor;
-  final bool isPassword;
   final String? helperText;
   final Widget? prefix;
   final Widget? suffix;
   final String? label;
   final TextEditingController? controller;
   final void Function(String)? onChanged;
-  final void Function(String)? onFieldSubmitted;
   final String? Function(String?)? validator;
   final int maxlines;
+  final TextInputType? keyboardType;
 
   const TTextArea({
     super.key,
     this.type = 'outlined-squaree',
-    this.size = 'medium',
+    this.size = 'max',
     this.hintText,
     this.isDisabled = false,
-    this.isReadOnly = false,
-    this.keyboardType = TextInputType.multiline,
     this.textAlign = TextAlign.start,
     this.textAlignVertical = TextAlignVertical.top,
     this.showCursor = true,
-    this.isPassword = false,
     this.helperText,
     this.prefix,
     this.suffix,
     this.controller,
     this.onChanged,
-    this.onFieldSubmitted,
     this.validator,
     this.label,
-    this.maxlines = 1, 
+    this.maxlines = 5, 
+    this.keyboardType = TextInputType.multiline,
   });
 
   @override
@@ -175,11 +169,8 @@ class _TTextAreaState extends State<TTextArea> {
         textAlign: widget.textAlign,
         textAlignVertical: widget.textAlignVertical,
         showCursor: widget.showCursor,
-        obscureText: widget.isPassword,
         enabled: !widget.isDisabled,
-        readOnly: widget.isReadOnly,
         onChanged: widget.onChanged,
-        onFieldSubmitted: widget.onFieldSubmitted,
         validator: widget.validator,
         maxLines: widget.maxlines,
       ),
@@ -199,7 +190,7 @@ class _TTextAreaState extends State<TTextArea> {
     case 'large':
       height = 126;
       return Size(300, height);
-    case 'block':
+    case 'max':
       height = 100;
       return Size(double.infinity, height);
     default:

@@ -4,28 +4,35 @@
     "component": "TimePicker",
     "label": "",
     "layout": [
-        {
-          "name": "length",
-          "_type": "string",
-          "value": "",
-          "enabled": true
-        },
-        {
-          "name": "alignment",
-          "_type": "select",
-            "selectionList": [
-              "topLeft",
-              "topCenter",
-              "topRight",
-              "centerLeft",
-              "center",
-              "centerRight",
-              "bottomLeft",
-              "bottomCenter",
-              "bottomRight"
-            ],
-          "enabled": true
-        }
+      {
+        "name": "length",
+        "_type": "number",
+        "value": "12",
+        "enabled": true
+      },
+      {
+        "name": "mobile_row_order",
+        "_type": "number",
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "alignment",
+        "_type": "select",
+        "selectionList": [
+          "topLeft",
+          "topCenter",
+          "topRight",
+          "centerLeft",
+          "center",
+          "centerRight",
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight"
+        ],
+        "value": "center",
+        "enabled": true
+      }
       ],
       "props": [
         {
@@ -39,7 +46,7 @@
             "outlined-square",
             "underlined"
           ],
-          "value": "",
+          "value": "outlined-square",
           "enabled": true
         },
         {
@@ -50,9 +57,9 @@
             "small",
             "medium",
             "large",
-            "block"
+            "max"
           ],
-          "value": "",
+          "value": "medium",
           "enabled": true
         },
         {
@@ -110,14 +117,13 @@
             "bodyMedium",
             "bodySmall"
           ],
-          "value": "",
+          "value": "labelMedium",
           "enabled": true
         }
       ],
       "events": [
         {
           "name": "onChanged",
-          "type": "Group",
           "enabled": true
         }
     ]

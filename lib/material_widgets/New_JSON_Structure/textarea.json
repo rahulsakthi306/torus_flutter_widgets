@@ -4,28 +4,35 @@
     "component": "TextArea",
     "label": "",
     "layout": [
-        {
-          "name": "length",
-          "_type": "string",
-          "value": "",
-          "enabled": true
-        },
-        {
-          "name": "alignment",
-          "_type": "select",
-            "selectionList": [
-              "topLeft",
-              "topCenter",
-              "topRight",
-              "centerLeft",
-              "center",
-              "centerRight",
-              "bottomLeft",
-              "bottomCenter",
-              "bottomRight"
-            ],
-          "enabled": true
-        }
+      {
+        "name": "length",
+        "_type": "number",
+        "value": "12",
+        "enabled": true
+      },
+      {
+        "name": "mobile_row_order",
+        "_type": "number",
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "alignment",
+        "_type": "select",
+        "selectionList": [
+          "topLeft",
+          "topCenter",
+          "topRight",
+          "centerLeft",
+          "center",
+          "centerRight",
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight"
+        ],
+        "value": "center",
+        "enabled": true
+      }
       ],
       "props": [
         {
@@ -39,7 +46,7 @@
             "outlined-square",
             "underlined"
           ],
-          "value": "",
+          "value": "outlined-square",
           "enabled": true
         },
         {
@@ -50,9 +57,9 @@
             "small",
             "medium",
             "large",
-            "block"
+            "max"
           ],
-          "value": "",
+          "value": "medium",
           "enabled": true
         },
         {
@@ -70,13 +77,6 @@
           "enabled": true
         },
         {
-          "name": "isReadOnly",
-          "_type": "string",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-        },
-        {
           "name": "textAlign",
           "_type": "select",
           "selectionList": [
@@ -88,7 +88,7 @@
             "left",
             "right"
           ],
-          "value": "",
+          "value": "start",
           "enabled": true
         },
         {
@@ -100,18 +100,11 @@
             "center",
             "bottom"
           ],
-          "value": "",
+          "value": "center",
           "enabled": true
         },
         {
           "name": "showCursor",
-          "_type": "boolean",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-        },
-        {
-          "name": "isPassword",
           "_type": "boolean",
           "selectionList": [],
           "value": "",
@@ -165,20 +158,14 @@
             "bodyMedium",
             "bodySmall"
           ],
-          "value": "",
+          "value": "labelMedium",
           "enabled": true
         }
 
       ],
       "events": [
         {
-          "name": "onChanged",
-          "_type": "Group",      
-          "enabled": true
-        },
-        {
-          "name": "onFieldSubmitted",
-          "_type": "Group",      
+          "name": "onChanged",     
           "enabled": true
         }
     ],
@@ -186,9 +173,8 @@
       {
         "name": "isRequired",
         "_type": "boolean",
-        "default": false,
         "selectionList": [],
-        "value": "",
+        "value": false,
         "enabled": true
       },
       {
@@ -205,12 +191,11 @@
           "phone",
           "url"
         ],
-        "value": "",
+        "value": "multiline",
         "enabled": true
       },
       {
         "name": "format",
-        "groupLabel": "validation",
         "_type": "select",
         "selectionList": [
           "none",
@@ -243,20 +228,16 @@
         "enabled": "true"
       },
       {
-        "name": "range",
-        "groupLabel": "validation for number",
-        "_type": "Group",
-        "minValue": "",
-        "maxValue": "",
-        "enabled": "true"
+        "range": {
+          "minValue": "",
+          "maxValue": ""
+        }
       },
       {
-        "name": "length",
-        "groupLabel": "validation for string",
-        "_type": "Group",
-        "minLength": "",
-        "maxLength": "",
-        "enabled": "true"
+        "length": {
+          "minLength": "",
+          "maxLength": ""
+        }
       }
     ]
 }
