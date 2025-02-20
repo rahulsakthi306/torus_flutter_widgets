@@ -9,7 +9,6 @@ List<String> type = [
   'underlined',
 ];
 
-
 class TDatePicker extends StatefulWidget {
   final String type;
   final String size;
@@ -25,13 +24,13 @@ class TDatePicker extends StatefulWidget {
     super.key,
     this.type = 'outlined-square',
     this.size = 'medium',
-    this.label,
-    this.hintText,
     this.isDisabled = false,
-    this.selectedDate,
-    this.onChanged,
     this.helperText,
+    this.hintText,
+    this.selectedDate,
     this.dateFormat,
+    this.label,
+    this.onChanged,
   });
 
   @override
@@ -51,6 +50,7 @@ class _TDatePickerState extends State<TDatePicker> {
 
   @override
   Widget build(BuildContext context) {
+    String labelText = widget.label ?? 'Select a date';
     Size size = _getSize(widget.size);
 
     BorderRadius borderRadius;
@@ -73,7 +73,7 @@ class _TDatePickerState extends State<TDatePicker> {
             borderRadius: borderRadius,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -86,7 +86,7 @@ class _TDatePickerState extends State<TDatePicker> {
             borderRadius: borderRadius,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -100,7 +100,7 @@ class _TDatePickerState extends State<TDatePicker> {
             borderRadius: BorderRadius.zero,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -113,7 +113,7 @@ class _TDatePickerState extends State<TDatePicker> {
             borderRadius: BorderRadius.zero,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -125,7 +125,7 @@ class _TDatePickerState extends State<TDatePicker> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -137,7 +137,7 @@ class _TDatePickerState extends State<TDatePicker> {
             borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );
@@ -150,7 +150,7 @@ class _TDatePickerState extends State<TDatePicker> {
             borderRadius: borderRadius,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Select a date',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
         );

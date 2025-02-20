@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/bloc/connectivity_cubit.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/checkbox.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/button.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/textfield.dart';
 
 void main() {
   runApp(MyApp());

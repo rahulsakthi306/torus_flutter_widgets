@@ -6,7 +6,7 @@
   "layout": [
     {
       "name": "length",
-      "_type": "string",
+      "_type": "number",
       "value": "12",
       "enabled": true
     },
@@ -19,17 +19,17 @@
     {
       "name": "alignment",
       "_type": "select",
-        "selectionList": [
-          "topLeft",
-          "topCenter",
-          "topRight",
-          "centerLeft",
-          "center",
-          "centerRight",
-          "bottomLeft",
-          "bottomCenter",
-          "bottomRight"
-        ],
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ],
       "value": "center",
       "enabled": true
     }
@@ -46,7 +46,7 @@
         "outlined-square",
         "underlined"
       ],
-      "value": "",
+      "value": "outlined-square",
       "enabled": true
     },
     {
@@ -57,23 +57,16 @@
         "small",
         "medium",
         "large",
-        "block"
+        "max"
       ],
-      "value": "",
+      "value": "medium",
       "enabled": true
     },
     {
       "name": "isDisabled",
       "_type": "boolean",
       "selectionList": [],
-      "value": "",
-      "enabled": true
-    },
-    {
-      "name": "selectedDate",
-      "_type": "string",
-      "selectionList": [],
-      "value": "",
+      "value": false,
       "enabled": true
     },
     {
@@ -91,12 +84,19 @@
       "enabled": true
     },
     {
+      "name": "selectedDate",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
       "name": "dateFormat",
       "_type": "string",
       "selectionList": [],
       "value": "",
       "enabled": true
-  },
+    },
     {
       "name": "textTheme",
       "_type": "select",
@@ -117,14 +117,13 @@
         "bodyMedium",
         "bodySmall"
       ],
-      "value": "",
+      "value": "labelMedium",
       "enabled": true
     }
   ],
   "events": [
     {
       "name": "onChanged",
-      "_type": "Group",
       "enabled": true
     }
   ]

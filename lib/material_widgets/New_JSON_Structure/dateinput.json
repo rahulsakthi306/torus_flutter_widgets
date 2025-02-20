@@ -46,7 +46,7 @@
         "outlined-square",
         "underlined"
       ],
-      "value": "",
+      "value": "outlined-square",
       "enabled": true
     },
     {
@@ -57,9 +57,9 @@
         "small",
         "medium",
         "large",
-        "block"
+        "max"
       ],
-      "value": "",
+      "value": "medium",
       "enabled": true
     },
     {
@@ -73,14 +73,7 @@
       "name": "isDisabled",
       "_type": "boolean",
       "selectionList": [],
-      "value": "",
-      "enabled": true
-    },
-    {
-      "name": "isReadOnly",
-      "_type": "string",
-      "selectionList": [],
-      "value": "",
+      "value": false,
       "enabled": true
     },
     {
@@ -95,7 +88,7 @@
         "left",
         "right"
       ],
-      "value": "",
+      "value": "start",
       "enabled": true
     },
     {
@@ -107,21 +100,14 @@
         "center",
         "bottom"
       ],
-      "value": "",
+      "value": "center",
       "enabled": true
     },
     {
       "name": "showCursor",
       "_type": "boolean",
       "selectionList": [],
-      "value": "",
-      "enabled": true
-    },
-    {
-      "name": "isPassword",
-      "_type": "boolean",
-      "selectionList": [],
-      "value": "",
+      "value": false,
       "enabled": true
     },
     {
@@ -165,97 +151,14 @@
         "bodyMedium",
         "bodySmall"
       ],
-      "value": "",
+      "value": "labelMedium",
       "enabled": true
     }
   ],
   "events": [
     {
       "name": "onChanged",
-      "_type": "Group",      
       "enabled": true
-    },
-    {
-      "name": "onFieldSubmitted",
-      "_type": "Group",      
-      "enabled": true
-    }
-  ],
-  "validations": [
-    {
-      "name": "isRequired",
-      "_type": "boolean",
-      "default": false,
-      "selectionList": [],
-      "value": "",
-      "enabled": true
-    },
-    {
-      "name": "keyboardType",
-      "_type": "select",
-      "selectionList": [
-        "none",
-        "name",
-        "emailAddress",
-        "datetime",
-        "number",
-        "text",
-        "multiline",
-        "phone",
-        "url"
-      ],
-      "value": "",
-      "enabled": true
-    },
-    {
-      "name": "format",
-      "groupLabel": "validation",
-      "_type": "select",
-      "selectionList": [
-        "none",
-        "numeric",
-        "email",
-        "uppercase",
-        "lowercase",
-        "password",
-        "ip",
-        "iban",
-        "creditCard",
-        "ssn",
-        "St_Code",
-        "Alphabets With Space",
-        "Alphanumeric With Space",
-        "Numeric With Special Charecters",
-        "Alphanumeric With Underscore Alone",
-        "Alphanumeric With Specific Special Charecters",
-        "Only Numbers With 1 Decimal Values",
-        "Only Numbers With 2 Decimal Values",
-        "Only Numbers With 3 Decimal Values",
-        "Restrict Special Characters",
-        "Email Domain Name With Atleast 2 Characters",
-        "Restrict White Spaces",
-        "Alphabets With Special Characters",
-        "Alphabets With Underscore Alone",
-        "Alphabets With Space And Dot",
-        "First Letter Only Uppercase 0thers Lowercase"
-      ],
-      "enabled": "true"
-    },
-    {
-      "name": "range",
-      "groupLabel": "validation for number",
-      "_type": "Group",
-      "minValue": "",
-      "maxValue": "",
-      "enabled": "true"
-    },
-    {
-      "name": "length",
-      "groupLabel": "validation for string",
-      "_type": "Group",
-      "minLength": "",
-      "maxLength": "",
-      "enabled": "true"
     }
   ]
 }

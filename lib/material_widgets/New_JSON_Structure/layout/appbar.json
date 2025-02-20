@@ -7,27 +7,29 @@
     "type": "",
     "props": [
         {
-            "name": "needTorusAppSettings",
-            "_type": "string",
+            "name": "Need Torus App Settings",
+            "_type": "boolean",
             "selectionList": [],
-            "value": "",
+            "value": true,
             "enabled": true
         },
         {
             "name": "type",
             "_type": "select",
             "selectionList": [
-                "filled",
+                "primary",
+                "secondary",
+                "tertiary",
                 "transparent"
             ],
-            "value": "",
+            "value": "primary",
             "enabled": true
         },
         {
             "name": "centerTitle",
-            "type": "string",
+            "_type": "boolean",
             "selectionList": [],
-            "value": "",
+            "value": false,
             "enabled": true
         }
     ]

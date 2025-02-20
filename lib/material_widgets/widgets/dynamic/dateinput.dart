@@ -10,23 +10,19 @@ List<String> type = [
 ];
 
 class TDateInput extends StatefulWidget {
-    final String type;
+  final String type;
   final String size;
   final String? hintText;
   final bool isDisabled;
-  final bool isReadOnly;
-  final TextInputType? keyboardType;
   final TextAlign textAlign;
   final TextAlignVertical textAlignVertical;
   final bool showCursor;
-  final bool isPassword;
   final String? helperText;
   final Widget? prefix;
   final Widget? suffix;
   final String? label;
   final TextEditingController? controller;
   final void Function(String)? onChanged;
-  final void Function(String)? onFieldSubmitted;
   final String? Function(String?)? validator;
 
   const TDateInput({
@@ -35,18 +31,14 @@ class TDateInput extends StatefulWidget {
     this.size = 'large',
     this.hintText,
     this.isDisabled = false,
-    this.isReadOnly = false,
-    this.keyboardType ,
     this.textAlign = TextAlign.start,
     this.textAlignVertical = TextAlignVertical.top,
     this.showCursor = true,
-    this.isPassword = false,
     this.helperText,
     this.prefix,
     this.suffix,
     this.controller,
     this.onChanged,
-    this.onFieldSubmitted,
     this.validator ,
     this.label,
   });
@@ -77,15 +69,11 @@ class _TDateInputState extends State<TDateInput> {
       child: TextFormField(
         controller: widget.controller,
         decoration: inputDecoration,
-        keyboardType: widget.keyboardType,
         textAlign: widget.textAlign,
         textAlignVertical: widget.textAlignVertical,
         showCursor: widget.showCursor,
-        obscureText: widget.isPassword,
         enabled: !widget.isDisabled,
-        readOnly: widget.isReadOnly,
         onChanged: widget.onChanged,
-        onFieldSubmitted: widget.onFieldSubmitted,
         // validator: FormBuilderValidators.compose([
         //   FormBuilderValidators.date()
         // ]),

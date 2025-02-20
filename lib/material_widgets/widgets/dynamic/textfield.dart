@@ -49,10 +49,13 @@ class TTextField extends StatefulWidget {
 }
 
 class _TTextFieldState extends State<TTextField> {
+  final bool _isPassword = true;
+  bool _isObscured = true;
+
   @override
   Widget build(BuildContext context) {
+    String labelText = widget.label ?? 'Enter text here';
     Size size = _getSize(widget.size);
-
     BorderRadius borderRadius;
 
     if (widget.type.contains('circle')) {
@@ -149,12 +152,31 @@ class _TTextFieldState extends State<TTextField> {
             borderRadius: borderRadius,
           ),
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
-          labelText: widget.label ?? 'Enter text here',
+          labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
         );
+    }
+
+    if (_isPassword) {
+      inputDecoration = inputDecoration.copyWith(
+        suffixIcon: IconButton(
+          icon: Icon(
+            _isObscured ? Icons.visibility_off : Icons.visibility,
+          ),
+          onPressed: () {
+            setState(() {
+              _isObscured = !_isObscured;
+            });
+          },
+        ),
+      );
+    } else {
+      setState(() {
+        _isObscured = false;
+      });
     }
 
     return SizedBox(
@@ -166,7 +188,7 @@ class _TTextFieldState extends State<TTextField> {
         textAlign: widget.textAlign,
         textAlignVertical: widget.textAlignVertical,
         showCursor: widget.showCursor,
-        obscureText: false,
+        obscureText: _isObscured,
         enabled: !widget.isDisabled,
         onChanged: widget.onChanged,
         validator: widget.validator,
