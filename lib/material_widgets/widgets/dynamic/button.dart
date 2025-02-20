@@ -33,14 +33,17 @@ class TBUtton extends StatefulWidget {
   const TBUtton({
     super.key,
     this.type = 'elevated-circle',
+    this.variant,
+    this.size = 'medium',
+    this.isDisabled = false,
+    this.icon,
+    this.enableSpinner = false,
+    this.spinnerPosition = 'left',
     this.label,
     this.onPressed,
-    this.size = 'medium',
-    this.icon,
-    this.variant,
-    this.isDisabled = false,
-    this.enableSpinner = false,
-    this.spinnerPosition = 'left', this.formData, this.callback, this.formKey,
+    this.formData, 
+    this.callback, 
+    this.formKey,
   });
 
   @override
@@ -80,6 +83,7 @@ class _TBUttonState extends State<TBUtton> {
 
   @override
   Widget build(BuildContext context) {
+    String labelText = widget.label ?? 'Click here';
     final size = _getsize(widget.size);
     final buttonColor = _getButtonColor(widget.variant ?? '');
     final isDisabled = widget.isDisabled;
@@ -118,7 +122,7 @@ class _TBUttonState extends State<TBUtton> {
             children: [
               spinner,
               SizedBox(width: 12),
-              Text(widget.label ?? 'Click here', style: textStyle),
+              Text(labelText, style: textStyle),
             ],
           );
           break;
@@ -127,7 +131,7 @@ class _TBUttonState extends State<TBUtton> {
             mainAxisSize: MainAxisSize.min, // Prevents the Row from expanding
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(widget.label ?? 'Click here', style: textStyle),
+              Text(labelText, style: textStyle),
               SizedBox(width: 12),
               spinner,
             ],
@@ -141,21 +145,21 @@ class _TBUttonState extends State<TBUtton> {
             children: [
               spinner,
               SizedBox(width: 12),
-              Text(widget.label ?? 'Click here', style: textStyle),
+              Text(labelText, style: textStyle),
             ],
           );
           break;
       }
     } else {
       buttonContent = widget.icon == null
-          ? Text(widget.label ?? 'Click here', style: textStyle)
+          ? Text(labelText, style: textStyle)
           : Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 widget.icon!,
                 SizedBox(width: 12),
                 Text(
-                  widget.label ?? 'Click here',
+                  labelText,
                   style: textStyle,
                 ),
               ],

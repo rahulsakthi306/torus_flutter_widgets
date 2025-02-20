@@ -6,7 +6,7 @@
   "layout": [
     {
       "name": "length",
-      "_type": "string",
+      "_type": "number",
       "value": "12",
       "enabled": true
     },
@@ -50,7 +50,7 @@
         "icon-square",
         "tonal"
       ],
-      "value": "",
+      "value": "elevated-circle",
       "enabled": true
     },
     {
@@ -75,16 +75,16 @@
         "small",
         "medium",
         "large",
-        "block"
+        "max"
       ],
-      "value": "",
+      "value": "medium",
       "enabled": true
     },
     {
       "name": "isDisabled",
       "_type": "boolean",
       "selectionList": [],
-      "value": "",
+      "value": false,
       "enabled": true
     },
     {
@@ -97,7 +97,7 @@
       "name": "enableSpinner",
       "_type": "boolean",
       "selectionList": [],
-      "value": "",
+      "value": false,
       "enabled": true
     },
     {
@@ -108,7 +108,7 @@
         "left",
         "right"
       ],
-      "value": "",
+      "value": "left",
       "enabled": true
     },
     {
@@ -131,7 +131,7 @@
         "bodyMedium",
         "bodySmall"
       ],
-      "value": "",
+      "value": "labelMedium",
       "enabled": true
     }
   ],
