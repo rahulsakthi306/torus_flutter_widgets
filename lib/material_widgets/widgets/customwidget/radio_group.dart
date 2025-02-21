@@ -1,85 +1,116 @@
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/radio.dart';
 
+List<String> position = ['left', "right", "top", "bottom"];
 
-
-class CustomRadioButtonGroup extends StatefulWidget {
-  final bool isDisable;
+class TRadioGroup extends StatefulWidget {
   final List<String> options;
+  final String? groupValue;
+  final ValueChanged<String?>? onChanged;
   final String contentPosition;
-  final String radioAlignment;
+  final bool isDisabled;
 
-  const CustomRadioButtonGroup({
+  const TRadioGroup({
     super.key,
-    this.isDisable = false,
-    required this.options,
+    this.options = const [],
+    this.groupValue,
+    this.onChanged,
     this.contentPosition = 'right',
-    this.radioAlignment = 'vertical',
+    this.isDisabled = false,
   });
 
   @override
-  State<CustomRadioButtonGroup> createState() => _CustomRadioButtonGroupState();
+  State<TRadioGroup> createState() => _TRadioGroupState();
 }
 
-class _CustomRadioButtonGroupState extends State<CustomRadioButtonGroup> {
-  int? selectedValue;
-
+class _TRadioGroupState extends State<TRadioGroup> {
   @override
-  void initState() {
-    super.initState();
-    selectedValue = null; 
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: widget.options.map((option) {
+        return TRadio(
+          label: option,
+          value: widget.groupValue == option,
+          onChanged: widget.isDisabled
+              ? null
+              : (value) {
+                  setState(() {
+                    widget.onChanged?.call(option);
+                  });
+                },
+          contentPosition: widget.contentPosition,
+          isDisabled: widget.isDisabled,
+        );
+      }).toList(),
+    );
   }
+}
 
-  void handleRadioChange(int? value) {
-    setState(() {
-      selectedValue = value;
-    });
-  }
+class TRadio extends StatelessWidget {
+  final bool value;
+  final ValueChanged<bool?>? onChanged;
+  final String? label;
+  final bool isDisabled;
+  final String contentPosition;
+
+  const TRadio({
+    super.key,
+    required this.value,
+    this.onChanged,
+    this.label,
+    this.isDisabled = false,
+    this.contentPosition = 'right',
+  });
 
   @override
   Widget build(BuildContext context) {
-    Widget radioGroup;
+    Widget radioButtonWidget = Radio<bool>(
+      value: true,
+      groupValue: value ? true : null,
+      onChanged: isDisabled ? null : onChanged,
+    );
 
-    if (widget.radioAlignment == 'horizontal') {
-      radioGroup = Row(
-        children: widget.options.asMap().entries.map((entry) {
-          int index = entry.key;
-          String option = entry.value;
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: TRadio(
-              value: selectedValue == index,
-              onChanged: widget.isDisable
-                  ? (bool? val){}
-                  : (bool? value) => handleRadioChange(index),
-              label: option,
-              isDisabled: widget.isDisable,
-              contentPosition: widget.contentPosition,
-            ),
-          );
-        }).toList(),
-      );
-    } else {
-      radioGroup = Column(
-        children: widget.options.asMap().entries.map((entry) {
-          int index = entry.key;
-          String option = entry.value;
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: TRadio(
-              value: selectedValue == index,
-              onChanged: widget.isDisable
-                  ? (bool? val){}
-                  : (bool? value) => handleRadioChange(index),
-              label: option,
-              isDisabled: widget.isDisable,
-              contentPosition: widget.contentPosition,
-            ),
-          );
-        }).toList(),
-      );
+    switch (contentPosition) {
+      case 'left':
+        return Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(label ?? 'Option'),
+            radioButtonWidget,
+          ],
+        );
+      case 'right':
+        return Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            radioButtonWidget,
+            Text(label ?? 'Option'),
+          ],
+        );
+      case 'top':
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(label ?? 'Option'),
+            radioButtonWidget,
+          ],
+        );
+      case 'bottom':
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            radioButtonWidget,
+            Text(label ?? 'Option'),
+          ],
+        );
+      default:
+        return Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            radioButtonWidget,
+            Text(label ?? 'Option'),
+          ],
+        );
     }
-
-    return radioGroup;
   }
 }

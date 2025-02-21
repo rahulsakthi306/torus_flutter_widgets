@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/bloc/connectivity_cubit.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/checkbox.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/radio_group.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Connectivity Monitor',
       home: BlocProvider(
         create: (context) =>
@@ -33,8 +34,7 @@ class ConnectivityStatus extends StatefulWidget {
 
 class _ConnectivityStatusState extends State<ConnectivityStatus> {
   bool switchVal = false;
-   double columnStart = 1; 
-    double columnEnd = 13;
+  String? selectedOption;
 
   @override
   Widget build(BuildContext context) {
@@ -54,21 +54,21 @@ class _ConnectivityStatusState extends State<ConnectivityStatus> {
       child: Scaffold(
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-              children: [
-                TCheckbox(
-                  value: switchVal,
-                  onChanged: (bool? val){
-                    setState(() {
-                      switchVal = val!;
-                    });
-                  },
-                ),
-              ],
-            )
+              padding: const EdgeInsets.all(12.0),
+              child: Column(
+                children: [
+                  TRadioGroup(
+                    options: ['Option 1', 'Option 2', 'Option 3'],
+                    groupValue: selectedOption,
+                    onChanged: (value) {
+                      setState(() {
+                        selectedOption = value;
+                      });
+                    },
+                  ),
+                ],
+              )),
         ),
-      ),
       ),
     );
   }

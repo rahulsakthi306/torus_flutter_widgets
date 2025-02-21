@@ -1,0 +1,72 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "RadioGroup",
+    "label": "",
+    "layout": [
+      {
+        "name": "length",
+        "_type": "number",
+        "value": 12,
+        "enabled": true
+      },
+      {
+        "name": "alignment",
+        "_type": "select",
+        "selectionList": [
+          "topLeft",
+          "topCenter",
+          "topRight",
+          "centerLeft",
+          "center",
+          "centerRight",
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight"
+        ],
+        "value": "center",
+        "enabled": true
+      }
+    ],
+    "props": [
+      {
+        "name": "options",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "groupValue",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "isDisabled",
+        "_type": "boolean",
+        "selectionList": [],
+        "value": false,
+        "enabled": true
+      },
+      {
+        "name": "contentPosition",
+        "_type": "select",
+        "selectionList": [
+          "left",
+          "right",
+          "top",
+          "bottom"
+        ],
+        "value": "right",
+        "enabled": true
+      }
+    ],
+    "events": [
+      {
+        "name": "onChanged",
+        "enabled": true
+      }
+    ]
+  }
