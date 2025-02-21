@@ -7,7 +7,7 @@
     {
       "name": "length",
       "_type": "number",
-      "value": "12",
+      "value": 12,
       "enabled": true
     },
     {
@@ -101,7 +101,7 @@
       "name": "showCursor",
       "_type": "boolean",
       "selectionList": [],
-      "value": false,
+      "value": true,
       "enabled": true
     },
     {

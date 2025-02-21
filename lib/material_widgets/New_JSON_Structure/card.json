@@ -1,66 +1,71 @@
 {
-    "frameWork": "Flutter",
-    "version": "3.27.1",
-    "component": "Card",
-    "label": "",
-    "layout": [
-      {
-        "name": "length",
-        "_type": "number",
-        "value": "12",
-        "enabled": true
-      },
-      {
-        "name": "alignment",
-        "_type": "select",
-        "selectionList": [
-          "topLeft",
-          "topCenter",
-          "topRight",
-          "centerLeft",
-          "center",
-          "centerRight",
-          "bottomLeft",
-          "bottomCenter",
-          "bottomRight"
-        ],
-        "value": "center",
-        "enabled": true
-      }
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Card",
+  "label": "",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "number",
+      "value": 12,
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
       ],
-      "props": [
-          {
-            "name": "type",
-            "_type": "string",
-            "value": "",
-            "enabled": true
-          },
-          {
-            "name": "size",
-            "_type": "select",
-            "default": "",
-            "selectionList": [
-                    "filled-rounded", 
-                    "filled-square",
-                    "outlined-rounded",
-                    "outlined-square",
-                    "elevated-rounded",
-                    "elevated-square"
-                ],
-            "value": "",
-            "enabled": true
-          },
-          {
-            "name": "text",
-            "label": "text",
-            "_type": "string",
-            "value": "",
-            "enabled": true
-          }
-        
+      "value": "center",
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "text",
+      "_type": "string",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "type",
+      "_type": "select",
+      "selectionList": [
+        "filled-rounded",
+        "filled-square",
+        "outlined-rounded",
+        "outlined-square",
+        "elevated-rounded",
+        "elevated-square"
       ],
-      "events": [
-        {
-        }
-    ]
+      "value": "elevated-rounded",
+      "enabled": true
+    },
+    {
+      "name": "size",
+      "_type": "select",
+      "selectionList": [
+       "small",
+       "medium",
+       "large",
+       "max"
+      ],
+      "value": "",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onTap",
+      "enabled": true
+    }
+  ]
 }

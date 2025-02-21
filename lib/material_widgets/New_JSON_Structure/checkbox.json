@@ -7,7 +7,7 @@
     {
       "name": "length",
       "_type": "number",
-      "value": "12",
+      "value": 12,
       "enabled": true
     },
     {
@@ -30,17 +30,17 @@
   ],
   "props": [
     {
-      "name": "value",
+      "name": "defaultValue",
       "_type": "boolean",
       "selectionList": [],
-      "value": "",
+      "value": false,
       "enabled": true
     },
     {
       "name": "isDisabled",
       "_type": "boolean",
       "selectionList": [],
-      "value": "",
+      "value": false,
       "enabled": true
     },
     {
@@ -56,7 +56,7 @@
       "enabled": true
     },
     {
-      "name": "checkboxShape",
+      "name": "shape",
       "_type": "select",
       "default": false,
       "selectionList": [
@@ -64,6 +64,12 @@
         "squared"
       ],
       "value": "squared",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onChange",
       "enabled": true
     }
   ]
