@@ -43,7 +43,7 @@
             "enabled": true
         },
         {
-            "name": "maxValue",
+            "name": "max",
             "_type": "numeric",
             "selectionList": [],
             "value": 100,
