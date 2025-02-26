@@ -7,7 +7,7 @@
       {
         "name": "length",
         "_type": "number",
-        "value": "12",
+        "value": 12,
         "enabled": true
       },
       {
@@ -29,6 +29,36 @@
       }
       ],
       "props": [
+        {
+          "name": "static",
+          "_type": "boolean",
+          "selectionList": [],
+          "value": false,
+          "staticProps": [
+             {
+              "name": "value",
+              "_type": "array",
+              "selectionList": [],
+              "items": [],
+              "enabled": true
+            }   
+          ]
+        },
+        {
+          "name": "dynamic",
+          "_type": "boolean",
+          "selectionList": [],
+          "value": false,
+          "dynamicProps": [
+            {
+              "name": "category",
+              "_type": "string",
+              "selectionList": [],
+              "value": "",
+              "enabled": true
+            }
+          ]
+        },
         {
           "name": "type",
           "_type": "select",
@@ -67,16 +97,9 @@
           "name": "isDisabled",
           "_type": "boolean",
           "selectionList": [],
-          "value": "",
+          "value": false,
           "enabled": true
         },
-        {
-          "name": "category",
-          "_type": "string",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-      },
       {
           "name": "selectedItem",
           "_type": "string",

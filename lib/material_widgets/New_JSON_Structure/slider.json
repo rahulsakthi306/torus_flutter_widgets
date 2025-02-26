@@ -1,0 +1,84 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Slider",
+    "label": "",
+    "layout": [
+        {
+            "name": "length",
+            "_type": "number",
+            "value": 12,
+            "enabled": true
+        },
+        {
+            "name": "alignment",
+            "_type": "select",
+            "selectionList": [
+                "topLeft",
+                "topCenter",
+                "topRight",
+                "centerLeft",
+                "center",
+                "centerRight",
+                "bottomLeft",
+                "bottomCenter",
+                "bottomRight"
+            ],
+            "value": "center",
+            "enabled": true
+        }
+    ],
+    "props": [
+        {
+            "name": "value",
+            "_type": "numeric",
+            "selectionList": [],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "size",
+            "_type": "select",
+            "selectionList": [
+                "small",
+                "medium",
+                "large",
+                "max"
+            ],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "labelPositon",
+            "_type": "select",
+            "selectionList": [
+                "left",
+                "right",
+                "top",
+                "bottom"
+            ],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "max",
+            "_type": "numeric",
+            "selectionList": [ ],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "divisions",
+            "_type": "numeric",
+            "selectionList": [],
+            "value": 0,
+            "enabled": true
+        }
+    ],
+    "events": [
+        {
+            "name": "onChanged",
+            "enabled": true
+        }
+    ]
+}

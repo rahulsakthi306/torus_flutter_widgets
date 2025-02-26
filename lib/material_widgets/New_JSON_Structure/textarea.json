@@ -7,7 +7,7 @@
       {
         "name": "length",
         "_type": "number",
-        "value": "12",
+        "value": 12,
         "enabled": true
       },
       {
@@ -67,7 +67,7 @@
           "name": "isDisabled",
           "_type": "boolean",
           "selectionList": [],
-          "value": "",
+          "value": false,
           "enabled": true
         },
         {
@@ -101,7 +101,7 @@
           "name": "showCursor",
           "_type": "boolean",
           "selectionList": [],
-          "value": "",
+          "value": false,
           "enabled": true
         },
         {
@@ -128,10 +128,9 @@
         {
           "name": "maxlines",
           "_type": "number",
-          "selectionList": [],
-          "value": "",
+          "value": 1,
           "enabled": true
-      },
+        },
         {
           "name": "textTheme",
           "_type": "select",

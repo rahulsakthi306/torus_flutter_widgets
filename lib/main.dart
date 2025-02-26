@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/bloc/connectivity_cubit.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/radio_group.dart';
+import 'package:torus_flutter_widgets/pinin.dart';
 
 void main() {
   runApp(MyApp());
@@ -51,23 +52,27 @@ class _ConnectivityStatusState extends State<ConnectivityStatus> {
           ScaffoldMessenger.of(context).clearSnackBars();
         }
       },
-      child: Scaffold(
-        body: Center(
-          child: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Column(
-                children: [
-                  TRadioGroup(
-                    options: ['Option 1', 'Option 2', 'Option 3'],
-                    groupValue: selectedOption,
-                    onChanged: (value) {
-                      setState(() {
-                        selectedOption = value;
-                      });
-                    },
-                  ),
-                ],
-              )),
+      child: SafeArea(
+        child: Scaffold(
+          body: Center(
+            child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TestScreen2Tfpinnumber6a5f(),
+                    // TRadioGroup(
+                    //   options: ['Option 1', 'Option 2', 'Option 3'],
+                    //   groupValue: selectedOption,
+                    //   onChanged: (value) {
+                    //     setState(() {
+                    //       selectedOption = value;
+                    //     });
+                    //   },
+                    // ),
+                  ],
+                )),
+          ),
         ),
       ),
     );

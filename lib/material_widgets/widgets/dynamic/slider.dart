@@ -15,13 +15,13 @@ class TSlider extends StatefulWidget {
   const TSlider({
     super.key,
     this.value = 0,
+    this.size = 'medium',
+    this.labelPosition = 'left',
+    this.min = 0,
+    this.max = 100,
     this.divisions = 10,
     this.label,
     this.onChanged,
-    this.min = 0,
-    this.max = 100,
-    this.size = 'medium',
-    this.labelPosition = 'left',
   });
 
   @override

@@ -22,6 +22,8 @@ dependencies:
   flutter_bloc: any
   form_builder_validators: any
   responsive_grid: ^2.4.4
+  pinput: any
+  sms_autofill: ^2.4.1
 
 dev_dependencies:
   flutter_test:

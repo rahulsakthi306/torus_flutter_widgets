@@ -1,77 +1,87 @@
 {
-    "frameWork": "Flutter",
-    "version": "3.27.1",
-    "component": "Progress",
-    "label": "",
-    "layout": [
-      {
-        "name": "length",
-        "_type": "number",
-        "value": "12",
-        "enabled": true
-      },
-      {
-        "name": "alignment",
-        "_type": "select",
-        "selectionList": [
-          "topLeft",
-          "topCenter",
-          "topRight",
-          "centerLeft",
-          "center",
-          "centerRight",
-          "bottomLeft",
-          "bottomCenter",
-          "bottomRight"
-        ],
-        "value": "center",
-        "enabled": true
-      }
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Progress",
+  "label": "",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "number",
+      "value": 12,
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
       ],
-      "props": [
-        {
-          "name": "value",
-          "type": "double",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-      },
-      {
-        "name": "size",
-        "_type": "select",
-         "selectionList": [
-                "small",
-                "large",
-                "medium",
-                "block"
-            ],
-        "value": "medium",
-        "enabled": true
-      },
-      {
-        "name": "color",
-        "_type": "string",
-        "selectionList": [],
-        "value": "",
-        "enabled": true
-      },
-      {
-        "name": "backgroundColor",
-        "_type": "string",
-        "selectionList": [],
-        "value": "",
-        "enabled": true
-      },
-      {
-        "name": "type",
-        "_type": "select",
-        "selectionList": [
-          "none",
-          "linear",
-          "circular"
-        ],
-        "value": "linear",
-        "enabled": true
-      }
-      ]
+      "value": "center",
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "value",
+      "_type": "numeric",
+      "selectionList": [],
+      "value": 0,
+      "enabled": true
+    },
+    {
+      "name": "size",
+      "_type": "select",
+      "selectionList": [
+        "small",
+        "large",
+        "medium",
+        "max"
+      ],
+      "value": "medium",
+      "enabled": true
+    },
+    {
+      "name": "color",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "transparent"
+      ],
+      "value": "primary",
+      "enabled": true
+    },
+    {
+      "name": "backgroundColor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "transparent"
+      ],
+      "value": "transparent",
+      "enabled": true
+    },
+    {
+      "name": "type",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "linear",
+        "circular"
+      ],
+      "value": "linear",
+      "enabled": true
+    }
+  ]
 }
