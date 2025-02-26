@@ -101,7 +101,7 @@
           "name": "showCursor",
           "_type": "boolean",
           "selectionList": [],
-          "value": false,
+          "value": true,
           "enabled": true
         },
         {
@@ -128,6 +128,7 @@
         {
           "name": "maxlines",
           "_type": "number",
+          "selectionList": [],
           "value": 1,
           "enabled": true
         },
@@ -218,7 +219,7 @@
           "Alphabets With Space And Dot",
           "First Letter Only Uppercase 0thers Lowercase"
         ],
-        "enabled": "true"
+        "enabled": true
       },
       {
         "range": {

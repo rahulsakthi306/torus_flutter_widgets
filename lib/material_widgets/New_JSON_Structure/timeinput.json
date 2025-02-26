@@ -7,7 +7,7 @@
       {
         "name": "length",
         "_type": "number",
-        "value": "12",
+        "value": 12,
         "enabled": true
       },
       {
@@ -67,7 +67,7 @@
           "name": "isDisabled",
           "_type": "boolean",
           "selectionList": [],
-          "value": "",
+          "value": false,
           "enabled": true
         },
         {
@@ -101,7 +101,7 @@
           "name": "showCursor",
           "_type": "boolean",
           "selectionList": [],
-          "value": "",
+          "value": true,
           "enabled": true
         },
         {
@@ -212,7 +212,7 @@
           "Alphabets With Space And Dot",
           "First Letter Only Uppercase 0thers Lowercase"
         ],
-        "enabled": "true"
+        "enabled": true
       },
       {
         "range": {

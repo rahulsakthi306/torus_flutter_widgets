@@ -31,9 +31,9 @@
   "props": [
     {
       "name": "value",
-      "_type": "numeric",
+      "type": "double",
       "selectionList": [],
-      "value": 0,
+      "value": "",
       "enabled": true
     },
     {
@@ -46,6 +46,17 @@
         "max"
       ],
       "value": "medium",
+      "enabled": true
+    },
+    {
+      "name": "type",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "linear",
+        "circular"
+      ],
+      "value": "linear",
       "enabled": true
     },
     {
@@ -70,17 +81,6 @@
         "transparent"
       ],
       "value": "transparent",
-      "enabled": true
-    },
-    {
-      "name": "type",
-      "_type": "select",
-      "selectionList": [
-        "none",
-        "linear",
-        "circular"
-      ],
-      "value": "linear",
       "enabled": true
     }
   ]

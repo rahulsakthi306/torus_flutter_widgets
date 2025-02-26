@@ -7,7 +7,7 @@
     {
       "name": "length",
       "_type": "number",
-      "value": "12",
+      "value": 12,
       "enabled": true
     },
     {
@@ -30,17 +30,17 @@
   ],
   "props": [
     {
-      "name": "value",
+      "name": "defaultValue",
       "_type": "boolean",
       "selectionList": [],
-      "value": "",
+      "value": false,
       "enabled": true
     },
     {
       "name": "isDisabled",
       "_type": "boolean",
       "selectionList": [],
-      "value": "",
+      "value": false,
       "enabled": true
     },
     {

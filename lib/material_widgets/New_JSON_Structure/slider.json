@@ -30,48 +30,66 @@
     ],
     "props": [
         {
-            "name": "value",
-            "_type": "numeric",
-            "selectionList": [],
-            "value": "",
-            "enabled": true
-        },
-        {
             "name": "size",
             "_type": "select",
             "selectionList": [
+                "none",
                 "small",
                 "medium",
                 "large",
                 "max"
             ],
-            "value": "",
+            "value": "medium",
             "enabled": true
         },
         {
-            "name": "labelPositon",
-            "_type": "select",
-            "selectionList": [
-                "left",
-                "right",
-                "top",
-                "bottom"
-            ],
-            "value": "",
-            "enabled": true
-        },
-        {
-            "name": "max",
+            "name": "maxValue",
             "_type": "numeric",
-            "selectionList": [ ],
-            "value": "",
+            "selectionList": [],
+            "value": 100,
             "enabled": true
         },
         {
             "name": "divisions",
             "_type": "numeric",
             "selectionList": [],
-            "value": 0,
+            "value": 10,
+            "enabled": true
+        },
+        {
+            "name": "labelPosition",
+            "_type": "select",
+            "selectionList": [
+                "none",
+                "top",
+                "bottom",
+                "left",
+                "right"
+            ],
+            "value": "start",
+            "enabled": true
+        },
+        {
+            "name": "textTheme",
+            "_type": "select",
+            "selectionList": [
+                "displayLarge",
+                "displayMedium",
+                "displaySmall",
+                "headlineLarge",
+                "headlineMedium",
+                "headlineSmall",
+                "titleLarge",
+                "titleMedium",
+                "titleSmall",
+                "labelLarge",
+                "labelMedium",
+                "labelSmall",
+                "bodyLarge",
+                "bodyMedium",
+                "bodySmall"
+            ],
+            "value": "labelMedium",
             "enabled": true
         }
     ],

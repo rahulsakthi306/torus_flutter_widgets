@@ -1,243 +1,173 @@
 {
-    "frameWork": "Flutter",
-    "version": "3.27.1",
-    "component": "PinInput",
-    "label": "",
-    "layout": [
-      {
-        "name": "length",
-        "_type": "number",
-        "value": "12",
-        "enabled": true
-      },
-      {
-        "name": "alignment",
-        "_type": "select",
-        "selectionList": [
-          "topLeft",
-          "topCenter",
-          "topRight",
-          "centerLeft",
-          "center",
-          "centerRight",
-          "bottomLeft",
-          "bottomCenter",
-          "bottomRight"
-        ],
-        "value": "center",
-        "enabled": true
-      }
-      ],
-      "props": [
-        {
-          "name": "type",
-          "_type": "select",
-          "selectionList": [
-            "none",
-            "filled-circle",
-            "outlined-circle",
-            "filled-square",
-            "outlined-square",
-            "underlined"
-          ],
-          "value": "outlined-square",
-          "enabled": true
-        },
-        {
-          "name": "size",
-          "_type": "select",
-          "selectionList": [
-            "none",
-            "small",
-            "medium",
-            "large",
-            "max"
-          ],
-          "value": "medium",
-          "enabled": true
-        },
-        {
-          "name": "hintText",
-          "_type": "string",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-        },
-        {
-          "name": "isDisabled",
-          "_type": "boolean",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-        },
-        {
-          "name": "textAlign",
-          "_type": "select",
-          "selectionList": [
-            "none",
-            "start",
-            "end",
-            "center",
-            "justify",
-            "left",
-            "right"
-          ],
-          "value": "start",
-          "enabled": true
-        },
-        {
-          "name": "textAlignVertical",
-          "_type": "select",
-          "selectionList": [
-            "none",
-            "top",
-            "center",
-            "bottom"
-          ],
-          "value": "center",
-          "enabled": true
-        },
-        {
-          "name": "showCursor",
-          "_type": "boolean",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-        },
-        {
-          "name": "isPassword",
-          "_type": "boolean",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-        },
-        {
-          "name": "helperText",
-          "_type": "string",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-        },
-        {
-          "name": "prefix",
-          "_type": "string",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-        },
-        {
-          "name": "suffix",
-          "_type": "string",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-        },
-        {
-          "name": "textTheme",
-          "_type": "select",
-          "selectionList": [
-            "displayLarge",
-            "displayMedium",
-            "displaySmall",
-            "headlineLarge",
-            "headlineMedium",
-            "headlineSmall",
-            "titleLarge",
-            "titleMedium",
-            "titleSmall",
-            "labelLarge",
-            "labelMedium",
-            "labelSmall",
-            "bodyLarge",
-            "bodyMedium",
-            "bodySmall"
-          ],
-          "value": "labelMedium",
-          "enabled": true
-        },
-        {
-          "name": "pinLength",
-          "_type": "number",
-          "selectionList": [],
-          "value": "",
-          "enabled": true
-      }
-      ],
-      "events": [
-        {
-          "name": "onChanged",
-          "enabled": true
-      }
-    ],
-    "validations": [
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "PinInput",
+  "label": "",
+  "layout": [
     {
-      "name": "isRequired",
-      "_type": "boolean",
+      "name": "length",
+      "_type": "number",
+      "value": 12,
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ],
+      "value": "center",
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "filled-circle",
+        "outlined-circle",
+        "filled-square",
+        "outlined-square",
+        "underlined"
+      ],
+      "value": "outlined-square",
+      "enabled": true
+    },
+    {
+      "name": "size",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "value": "medium",
+      "enabled": true
+    },
+    {
+      "name": "hintText",
+      "_type": "string",
       "selectionList": [],
       "value": "",
       "enabled": true
     },
     {
-      "name": "keyboardType",
-      "_type": "select",
-      "selectionList": [
-        "none",
-        "name",
-        "emailAddress",
-        "datetime",
-        "number",
-        "text",
-        "multiline",
-        "phone",
-        "url"
-      ],
-      "value": "number",
+      "name": "isDisabled",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
       "enabled": true
     },
     {
-      "name": "format",
+      "name": "textAlign",
       "_type": "select",
       "selectionList": [
         "none",
-        "numeric",
-        "email",
-        "uppercase",
-        "lowercase",
-        "password",
-        "ip",
-        "iban",
-        "creditCard",
-        "ssn",
-        "St_Code",
-        "Alphabets With Space",
-        "Alphanumeric With Space",
-        "Numeric With Special Charecters",
-        "Alphanumeric With Underscore Alone",
-        "Alphanumeric With Specific Special Charecters",
-        "Only Numbers With 1 Decimal Values",
-        "Only Numbers With 2 Decimal Values",
-        "Only Numbers With 3 Decimal Values",
-        "Restrict Special Characters",
-        "Email Domain Name With Atleast 2 Characters",
-        "Restrict White Spaces",
-        "Alphabets With Special Characters",
-        "Alphabets With Underscore Alone",
-        "Alphabets With Space And Dot",
-        "First Letter Only Uppercase 0thers Lowercase"
+        "start",
+        "end",
+        "center",
+        "justify",
+        "left",
+        "right"
       ],
-      "enabled": "true"
+      "value": "start",
+      "enabled": true
     },
     {
-      "range": {
-        "minValue": "",
-        "maxValue": ""
-      }
+      "name": "textAlignVertical",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "top",
+        "center",
+        "bottom"
+      ],
+      "value": "center",
+      "enabled": true
     },
     {
-      "length": {
-        "minLength": "",
-        "maxLength": ""
-      }
+      "name": "showCursor",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": true,
+      "enabled": true
+    },
+    {
+      "name": "isPassword",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "helperText",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "prefix",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "suffix",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "pinLength",
+      "_type": "number",
+      "selectionList": [],
+      "value": 4,
+      "enabled": true
+    },
+    {
+      "name": "textTheme",
+      "_type": "select",
+      "selectionList": [
+        "displayLarge",
+        "displayMedium",
+        "displaySmall",
+        "headlineLarge",
+        "headlineMedium",
+        "headlineSmall",
+        "titleLarge",
+        "titleMedium",
+        "titleSmall",
+        "labelLarge",
+        "labelMedium",
+        "labelSmall",
+        "bodyLarge",
+        "bodyMedium",
+        "bodySmall"
+      ],
+      "value": "labelMedium",
+      "enabled": true
     }
-  ]
+  ],
+  "events": [
+    {
+      "name": "onChanged",
+      "enabled": true
+    }
+  ],
+  "validations": []
 }

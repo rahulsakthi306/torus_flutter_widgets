@@ -25,7 +25,7 @@ class TCard extends StatelessWidget {
         return const Size(200, 48);
       case 'large':
         return const Size(300, 56);
-      case 'block':
+      case 'max':
         return const Size(double.infinity, 56);
       default:
         return const Size(200, 48);

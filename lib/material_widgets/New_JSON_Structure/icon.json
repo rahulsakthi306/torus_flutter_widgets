@@ -7,7 +7,7 @@
     {
       "name": "length",
       "_type": "number",
-      "value": "12",
+      "value": 12,
       "enabled": true
     },
     {
@@ -49,7 +49,7 @@
       "enabled": true
     },
     {
-      "name": "color",
+      "name": "type",
       "_type": "select",
       "selectionList": [
         "primary",
