@@ -133,6 +133,10 @@
       ],
       "events": [
         {
+          "name": "onTap",
+          "enabled": true
+        },
+        {
           "name": "onChanged",
           "enabled": true
         }

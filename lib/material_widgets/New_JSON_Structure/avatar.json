@@ -82,6 +82,14 @@
         {
           "name": "onTap",
           "enabled": true
+        },
+        {
+          "name": "onLongPress",
+          "enabled": true
+        },
+        {
+          "name": "onDoubleTap",
+          "enabled": true
         }
     ]
 }

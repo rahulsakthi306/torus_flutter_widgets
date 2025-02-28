@@ -69,7 +69,7 @@
   ],
   "events": [
     {
-      "name": "onChange",
+      "name": "onChanged",
       "enabled": true
     }
   ]
