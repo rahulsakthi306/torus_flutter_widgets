@@ -133,6 +133,13 @@
           "enabled": true
         },
         {
+          "name": "needClear",
+          "_type": "boolean",
+          "selectionList": [],
+          "value": false,
+          "enabled": true
+        },
+        {
           "name": "textTheme",
           "_type": "select",
           "selectionList": [
