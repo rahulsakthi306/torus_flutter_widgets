@@ -38,14 +38,10 @@ class TDatePicker extends StatefulWidget {
 }
 
 class _TDatePickerState extends State<TDatePicker> {
-  final TextEditingController _controller = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    if (widget.selectedDate != null) {
-      _controller.text = _formatDate(widget.selectedDate!);
-    }
   }
 
   @override
@@ -160,7 +156,9 @@ class _TDatePickerState extends State<TDatePicker> {
       width: size.width,
       // height: size.height,
       child: TextFormField(
-        controller: _controller,
+        controller: TextEditingController(
+          text: widget.selectedDate != null ? _formatDate(widget.selectedDate!) : '',
+        ),
         decoration: inputDecoration,
         enabled: !widget.isDisabled,
         readOnly: true,
@@ -179,9 +177,6 @@ class _TDatePickerState extends State<TDatePicker> {
     );
 
     if (selectedDate != null) {
-      setState(() {
-        _controller.text = _formatDate(selectedDate);
-      });
       widget.onChanged?.call(selectedDate);
     }
   }
@@ -199,7 +194,7 @@ class _TDatePickerState extends State<TDatePicker> {
         return Size(200, 48);
       case 'large':
         return Size(300, 56);
-      case 'block':
+      case 'max':
         return Size(double.infinity, 56);
       default:
         return Size(200, 48);

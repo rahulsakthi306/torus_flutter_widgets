@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/static/gloabl.dart';
 
 List<String> type = [
   'elevated-circle',
@@ -168,7 +170,11 @@ class _TBUttonState extends State<TBUtton> {
 
     Widget buildButton(Widget buttonChild, ButtonStyle buttonStyle) {
       return ElevatedButton(
-        onPressed: isDisabled ? null : widget.onPressed,
+        onPressed: isDisabled ? null : (){
+           setState(() {
+            FormControl.test_switch = false;
+                      });
+        },
         style: buttonStyle,
         child: buttonChild,
       );

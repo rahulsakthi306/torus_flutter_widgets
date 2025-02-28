@@ -49,8 +49,8 @@ class TTextField extends StatefulWidget {
 }
 
 class _TTextFieldState extends State<TTextField> {
-  final bool _isPassword = true;
-  bool _isObscured = true;
+  final bool _isPassword = false;
+  bool _isObscured = false;
 
   @override
   Widget build(BuildContext context) {
@@ -179,6 +179,10 @@ class _TTextFieldState extends State<TTextField> {
       });
     }
 
+    void _onTap(){
+
+    }
+
     return SizedBox(
       width: size.width,
       child: TextFormField(
@@ -192,6 +196,7 @@ class _TTextFieldState extends State<TTextField> {
         enabled: !widget.isDisabled,
         onChanged: widget.onChanged,
         validator: widget.validator,
+        onTap: _onTap
       ),
     );
   }
