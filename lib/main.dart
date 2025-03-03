@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/bloc/connectivity_cubit.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/radio_group.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/DataDisplay/avatar.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/button.dart';
 import 'package:torus_flutter_widgets/pinin.dart';
 
@@ -63,8 +64,11 @@ class _ConnectivityStatusState extends State<ConnectivityStatus> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                   TTextField(
-                    keyboardType: TextInputType.text,
+                   Tooltip(
+                    message: 'This is avatar',
+                     child: TAvatar(
+                      icon: Icons.abc,
+                     )
                    ),
                    TTextField(
                     keyboardType: TextInputType.text,

@@ -72,20 +72,20 @@ class _TAvatarState extends State<TAvatar> {
       });
     }
     
-    return GestureDetector(
-      onTap: () {},
-      child: CircleAvatar(
-        radius: _getRadius(context),
-        backgroundImage: imageProvider,
-        child: widget.icon != null
-            ? Icon(widget.icon)
-            : initials.isNotEmpty
-                ? Text(
-                    initials,
-                    style: _getTextStyle(context),
-                  )
-                : null,
-      ),
+    return  GestureDetector(
+        onTap: () {},
+        child: CircleAvatar(
+          radius: _getRadius(context),
+          backgroundImage: imageProvider,
+          child: widget.icon != null
+              ? Icon(widget.icon)
+              : initials.isNotEmpty
+                  ? Text(
+                      initials,
+                      style: _getTextStyle(context),
+                    )
+                  : null,
+        ),
     );
   }
 }

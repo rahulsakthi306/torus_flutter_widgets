@@ -55,6 +55,12 @@
         "enabled": true
       },
       {
+        "name": "tooltip",
+        "_type": "string",
+        "value": "",
+        "enabled": true
+      },
+      {
         "name": "textTheme",
         "_type": "select",
           "selectionList": [
