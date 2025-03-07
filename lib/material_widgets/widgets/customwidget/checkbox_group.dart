@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/checkbox.dart';
 
-List<String> checkboxAlignment = [ 'horizontal', 'vertical' ];
 
 class CustomCheckboxGroup extends StatefulWidget {
   final bool isDisable;
@@ -13,7 +12,7 @@ class CustomCheckboxGroup extends StatefulWidget {
   const CustomCheckboxGroup({
     super.key,
     this.isDisable = false,
-    required this.options,
+    this.options = const ['HI','HELLO','HEY'],
     this.contentPosition = 'right',
     this.checkboxAlignment = 'vertical',
  

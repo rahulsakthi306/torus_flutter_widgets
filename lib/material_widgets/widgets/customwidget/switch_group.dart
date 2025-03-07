@@ -5,17 +5,17 @@ List<String> switchAlignment = [ 'horizontal', 'vertical' ];
 
 class CustomSwitchGroup extends StatefulWidget {
   final bool isDisable;
-  final List<String> options;
-  final List<String> leftContents;
-  final List<String> rightContents;
+  final List<String>? options;
+  final List<String>? leftContents;
+  final List<String>? rightContents;
   final String switchAlignment;
 
   const CustomSwitchGroup({
     super.key,
     this.isDisable = false,
-    required this.options,
-    required this.leftContents,
-    required this.rightContents,
+    this.options = const ['f'] ,
+    this.leftContents =const ['on' ],
+    this.rightContents = const ['off'],
     this.switchAlignment = 'vertical',
   });
 
@@ -29,7 +29,7 @@ class _CustomSwitchGroupState extends State<CustomSwitchGroup> {
   @override
   void initState() {
     super.initState();
-    switchValues = List<bool>.filled(widget.options.length, false);
+    switchValues = List<bool>.filled(widget.options!.length, false);
   }
 
   void handleSwitchChange(int index, bool value) {
@@ -44,7 +44,7 @@ class _CustomSwitchGroupState extends State<CustomSwitchGroup> {
 
     if (widget.switchAlignment == 'horizontal') {
       switchGroup = Row(
-        children: widget.options.asMap().entries.map((entry) {
+        children: widget.options!.asMap().entries.map((entry) {
           int index = entry.key;
           String option = entry.value;
           return Padding(
@@ -56,15 +56,15 @@ class _CustomSwitchGroupState extends State<CustomSwitchGroup> {
                   : (bool value) => handleSwitchChange(index, value),
               label: option,
               isDisabled: widget.isDisable,
-              leftContent: widget.leftContents[index],
-              rightContent: widget.rightContents[index],
+              leftContent: widget.leftContents![index],
+              rightContent: widget.rightContents![index],
             ),
           );
         }).toList(),
       );
     } else {
       switchGroup = Column(
-        children: widget.options.asMap().entries.map((entry) {
+        children: widget.options!.asMap().entries.map((entry) {
           int index = entry.key;
           String option = entry.value;
           return Padding(
@@ -76,8 +76,8 @@ class _CustomSwitchGroupState extends State<CustomSwitchGroup> {
                   : (bool value) => handleSwitchChange(index, value),
               label: option,
               isDisabled: widget.isDisable,
-              leftContent: widget.leftContents[index],
-              rightContent: widget.rightContents[index],
+              leftContent: widget.leftContents![index],
+              rightContent: widget.rightContents![index],
             ),
           );
         }).toList(),

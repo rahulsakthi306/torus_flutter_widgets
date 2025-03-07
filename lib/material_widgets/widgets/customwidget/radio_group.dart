@@ -11,7 +11,7 @@ class TRadioGroup extends StatefulWidget {
 
   const TRadioGroup({
     super.key,
-    this.options = const [],
+    this.options = const ['1','2'],
     this.groupValue,
     this.onChanged,
     this.contentPosition = 'right',

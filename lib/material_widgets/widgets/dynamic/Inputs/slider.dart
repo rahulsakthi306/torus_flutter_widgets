@@ -14,18 +14,20 @@ class TSlider extends StatefulWidget {
 
   const TSlider({
     super.key,
-    this.value = 0,
-    this.size = 'medium',
+    required this.value,
+    required this.onChanged,
+    this.size = 'max',
     this.max = 100,
     this.divisions = 10,
     this.min = 0,
     this.labelPosition = 'left',
     this.label,
-    this.onChanged,
-  });
+  }); 
 
   @override
-  State<TSlider> createState() => _TSliderState();
+  State<TSlider> createState() {
+    return _TSliderState();
+  }
 }
 
 class _TSliderState extends State<TSlider> {
@@ -48,15 +50,16 @@ class _TSliderState extends State<TSlider> {
   Widget build(BuildContext context) {
     Size size = _getSize(widget.size);
 
-    Widget sliderWidget = SizedBox(
+    Widget continuousSliderWidget = SizedBox(
       width: size.width,
       child: Slider(
-        value: widget.value,
+        value: widget.value ?? 0,
         min: widget.min,
         max: widget.max,
         divisions: widget.divisions,
-        label: widget.value.toString(),
+        label: widget.value?.round().toString(),
         onChanged: widget.onChanged,
+         
       ),
     );
 
@@ -66,14 +69,14 @@ class _TSliderState extends State<TSlider> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Text(widget.label ?? ''),
-            widget.size == 'max' ? Flexible(child: sliderWidget) : sliderWidget,
+            widget.size == 'max' ? Flexible(child: continuousSliderWidget) : continuousSliderWidget,
           ],
         );
       case 'right':
         return Row(
           mainAxisSize: MainAxisSize.max,
           children: [
-            widget.size == 'max' ? Flexible(child: sliderWidget) : sliderWidget,
+            widget.size == 'max' ? Flexible(child: continuousSliderWidget) : continuousSliderWidget,
             Text(widget.label ?? ''),
           ],
         );
@@ -82,14 +85,14 @@ class _TSliderState extends State<TSlider> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(widget.label ?? ''),
-            sliderWidget,
+            continuousSliderWidget,
           ],
         );
       case 'bottom':
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            sliderWidget,
+            continuousSliderWidget,
             Text(widget.label ?? ''),
           ],
         );
@@ -97,7 +100,7 @@ class _TSliderState extends State<TSlider> {
         return Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            sliderWidget,
+            continuousSliderWidget,
             Text(widget.label ?? ''),
           ],
         );
