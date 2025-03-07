@@ -1,82 +1,80 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/bloc/connectivity_cubit.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/radio_group.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/DataDisplay/avatar.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/button.dart';
-import 'package:torus_flutter_widgets/pinin.dart';
-
-import 'material_widgets/widgets/dynamic/Inputs/textfield.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Connectivity Monitor',
-      home: BlocProvider(
-        create: (context) =>
-            ConnectivityCubit(Connectivity())..monitorConnectivity(),
-        child: ConnectivityStatus(),
+      home: Scaffold(
+        appBar: AppBar(title: Text('onEditingComplete with Form Example')),
+        body: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: MyForm(),
+        ),
       ),
     );
   }
 }
 
-class ConnectivityStatus extends StatefulWidget {
-  const ConnectivityStatus({super.key});
-
+class MyForm extends StatefulWidget {
   @override
-  State<ConnectivityStatus> createState() => _ConnectivityStatusState();
+  _MyFormState createState() => _MyFormState();
 }
 
-class _ConnectivityStatusState extends State<ConnectivityStatus> {
-  bool switchVal = false;
-  String? selectedOption;
+class _MyFormState extends State<MyForm> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller2 = TextEditingController();
+
+  // This function will be triggered when the user finishes editing
+  void _onEditingComplete() {
+    // This gets called when the user finishes editing in the TextFormField
+    if (_formKey.currentState?.validate() ?? false) {
+      // You can add any action you want here, like submitting the form
+      print('Form is valid, value entered: ${_controller.text}');
+      // Clear the input field after submission
+      _controller.clear();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<ConnectivityCubit, ConnectivityResult>(
-      listener: (context, connectivityResult) {
-        if (connectivityResult == ConnectivityResult.none) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('No internet connection'),
-              backgroundColor: Colors.red,
-            ),
-          );
-        } else {
-          ScaffoldMessenger.of(context).clearSnackBars();
-        }
-      },
-      child: SafeArea(
-        child: Scaffold(
-          body: Center(
-            child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                   Tooltip(
-                    message: 'This is avatar',
-                     child: TAvatar(
-                      icon: Icons.abc,
-                     )
-                   ),
-                   TTextField(
-                    keyboardType: TextInputType.text,
-                   ),
-                  ],
-                )),
+    return Form(
+      key: _formKey,
+      child: Column(
+        children: [
+          TextFormField(
+            controller: _controller,
+            decoration: InputDecoration(labelText: 'Enter some text'),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter some text';
+              }
+              return null; 
+            },
+            onEditingComplete: _onEditingComplete,
           ),
-        ),
+          SizedBox(height: 20),
+          TextFormField(
+            controller: _controller2,
+            decoration: InputDecoration(labelText: 'Enter some text'),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter some text';
+              }
+              return null; 
+            },
+            onEditingComplete: _onEditingComplete,
+          ),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('Submit'),
+          ),
+        ],
       ),
     );
   }

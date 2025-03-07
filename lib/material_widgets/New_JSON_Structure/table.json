@@ -1,0 +1,154 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Table",
+    "groupLabel": "Table",
+    "label": "",
+    "type": "dynamic",
+    "tableName": "",
+    "primaryKey": "",
+    "layout": [
+      {
+        "name": "length",
+        "type": "string",
+        "default": "12",
+        "enum": "",
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "orientation",
+        "type": "string",
+        "default": "",
+        "enum": "",
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "alignment",
+        "type": "string",
+        "default": "center",
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "topLeft",
+            "topCenter",
+            "topRight",
+            "centerLeft",
+            "center",
+            "centerRight",
+            "bottomLeft",
+            "bottomCenter",
+            "bottomRight"
+          ]
+        },
+        "enabled": true
+      }
+    ],
+    "props": [
+      {
+        "name": "needPagination",
+        "label": "needPagination",
+        "type": "boolean",
+        "default": false,
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "true",
+            "false"
+          ]
+        },
+        "value": "",
+        "apiName": "",
+        "enabled": true
+      },
+      {
+        "name": "needSearchBar",
+        "label": "needSearchBar",
+        "type": "boolean",
+        "default": false,
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "true",
+            "false"
+          ]
+        },
+        "value": "true",
+        "searchColumn": "",
+        "enabled": true
+      },
+      {
+        "name": "needPerPageSelector",
+        "label": "needPerPageSelector",
+        "type": "boolean",
+        "default": false,
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "true",
+            "false"
+          ]
+        },
+        "value": "true",
+        "searchColumn": "",
+        "enabled": true
+      },
+      {
+        "name": "actions",
+        "label": "actions",
+        "type": "string",
+        "default": "edit",
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "*",
+            "edit",
+            "delete"
+          ]
+        },
+        "value": "true",
+        "enabled": true
+      },
+      {
+        "name": "isPivotTable",
+        "label": "isPivotTable",
+        "type": "string",
+        "default": "false",
+        "enum": {
+          "label": "enum",
+          "type": "dropdown",
+          "mode": "single",
+          "selectedValue": [],
+          "selectionList": [
+            "true",
+            "false"
+          ]
+        },
+        "value": "true",
+        "enabled": true
+      }
+    ],
+    "events": [
+      {
+        "name": "bindTran",
+        "type": "Group",
+        "enabled": true
+      }
+    ]
+  }
