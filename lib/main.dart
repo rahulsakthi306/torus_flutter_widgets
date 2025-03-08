@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/fab.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('onEditingComplete with Form Example')),
+        appBar: AppBar(title: Text('Example')),
         body: Padding(
           padding: EdgeInsets.all(16.0),
-          child: MyForm(),
+          child: Floatab(),
+          
+          // child: MyForm(),
         ),
+        // floatingActionButton: Floatab(),
       ),
     );
   }
