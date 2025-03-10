@@ -1,0 +1,27 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "ListTile",
+    "label": "",
+    "props": [
+      {
+        "name": "text",
+        "_type": "string",
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "type",
+        "_type": "select",
+        "selectionList": ["card"],
+        "value": "card",
+        "enabled": true
+      }
+    ],
+    "events": [
+      {
+        "name": "onTap",
+        "enabled": true
+      }
+    ]
+  }

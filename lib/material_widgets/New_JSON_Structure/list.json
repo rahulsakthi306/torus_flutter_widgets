@@ -1,155 +1,81 @@
 {
-    "frameWork": "Flutter",
-    "version": "3.27.1",
-    "component": "List",
-    "name": "List",
-    "label": "",
-    "type": "",
-    "layout": [
-      {
-        "name": "length",
-        "type": "string",
-        "default": "12",
-        "enum": "",
-        "value": "",
-        "enabled": true
-      },
-      {
-        "name": "orientation",
-        "type": "string",
-        "default": "",
-        "enum": "",
-        "value": "",
-        "enabled": true
-      },
-      {
-        "name": "alignment",
-        "type": "string",
-        "default": "center",
-        "enum": {
-          "label": "enum",
-          "type": "dropdown",
-          "mode": "single",
-          "selectedValue": [],
-          "selectionList": [
-            "topLeft",
-            "topCenter",
-            "topRight",
-            "centerLeft",
-            "center",
-            "centerRight",
-            "bottomLeft",
-            "bottomCenter",
-            "bottomRight"
-          ]
-        },
-        "enabled": true
-      }
-    ],
-    "props": [
-      {
-        "name": "showSearchBar",
-        "label": "showSearchBar",
-        "type": "boolean",
-        "default": false,
-        "enum": {
-          "label": "enum",
-          "type": "dropdown",
-          "mode": "single",
-          "selectedValue": [],
-          "selectionList": ["true", "false"]
-        },
-        "value": "",
-        "apiName": "",
-        "enabled": true
-      },
-      {
-        "name": "showSearchHistory",
-        "label": "showSearchHistory",
-        "type": "boolean",
-        "default": false,
-        "enum": {
-          "label": "enum",
-          "type": "dropdown",
-          "mode": "single",
-          "selectedValue": [],
-          "selectionList": ["true", "false"]
-        },
-        "value": "true",
-        "searchColumn": "",
-        "enabled": true
-      },
-      {
-        "name": "showPagination",
-        "label": "showPagination",
-        "type": "boolean",
-        "default": false,
-        "enum": {
-          "label": "enum",
-          "type": "dropdown",
-          "mode": "single",
-          "selectedValue": [],
-          "selectionList": ["true", "false"]
-        },
-        "value": "true",
-        "searchColumn": "",
-        "enabled": true
-      },
-      {
-        "name": "showItemperPageSelector",
-        "label": "showItemperPageSelector",
-        "type": "boolean",
-        "default": false,
-        "enum": {
-          "label": "enum",
-          "type": "dropdown",
-          "mode": "single",
-          "selectedValue": [],
-          "selectionList": ["true", "false"]
-        },
-        "value": "true",
-        "searchColumn": "",
-        "enabled": true
-      },
-      {
-        "name": "searchBorderStyle",
-        "label": "searchBorderStyle",
-        "type": "boolean",
-        "default": "underlined",
-        "enum": {
-          "label": "enum",
-          "type": "dropdown",
-          "mode": "single",
-          "selectedValue": [],
-          "selectionList": ["rounded", "underlined", "outlined"]
-        },
-        "value": "true",
-        "searchColumn": "",
-        "enabled": true
-      },
-      {
-        "name": "loaderType",
-        "label": "loaderType",
-        "type": "boolean",
-        "default": "circular",
-        "enum": {
-          "label": "enum",
-          "type": "dropdown",
-          "mode": "single",
-          "selectedValue": [],
-          "selectionList": ["circular","skeleton"]
-        },
-        "value": "true",
-        "searchColumn": "",
-        "enabled": true
-      }
-    ],
-    "events": [
-      {
-        "name": "onTap",
-        "type": "Group",
-        "enabled": true
-      }
-    ]
-  }
-  
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "List",
+  "label": "",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "number",
+      "value": 12,
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ],
+      "value": "center",
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "showSearchBar",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "showSearchHistory",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "showPagination",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "showItemperPageSelector",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "searchBorderStyle",
+      "_type": "select",
+      "selectionList": ["rounded", "underlined", "outlined"],
+      "value": "outlined",
+      "enabled": true
+    },
+    {
+      "name": "loaderType",
+      "_type": "select",
+      "selectionList": ["circular","skeleton"],
+      "value": "circular",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onTap",
+      "enabled": true
+    }
+  ]
+}

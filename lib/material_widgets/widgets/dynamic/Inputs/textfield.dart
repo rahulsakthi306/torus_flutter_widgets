@@ -21,6 +21,10 @@ class TTextField extends StatefulWidget {
   final Widget? prefix;
   final Widget? suffix;
   final String? label;
+  final bool isFloatLabel;
+  final IconData? labelPrefix;
+  final IconData? labelSuffix;
+  final MainAxisAlignment ? outerLabelPosition;
   final TextEditingController? controller;
   final void Function(String)? onChanged;
   final String? Function(String?)? validator;
@@ -42,6 +46,10 @@ class TTextField extends StatefulWidget {
     this.validator,
     this.label,
     this.keyboardType,
+    this.isFloatLabel = false,
+    this.labelPrefix,
+    this.labelSuffix = Icons.abc,
+    this.outerLabelPosition = MainAxisAlignment.end,
   });
 
   @override
@@ -76,27 +84,34 @@ class _TTextFieldState extends State<TTextField> {
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
+          contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 12),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
         break;
       case 'outlined-circle':
         inputDecoration = InputDecoration(
           filled: false,
           border: OutlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
+            borderSide:
+                BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
+          contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 12),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
         break;
       case 'filled-square':
@@ -113,50 +128,65 @@ class _TTextFieldState extends State<TTextField> {
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
         break;
       case 'outlined-square':
         inputDecoration = InputDecoration(
           filled: false,
           border: OutlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
+            borderSide:
+                BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: BorderRadius.zero,
           ),
-          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
+          contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 12),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
         break;
       case 'underlined':
         inputDecoration = InputDecoration(
           filled: false,
           border: UnderlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
+            borderSide:
+                BorderSide(color: Theme.of(context).primaryColor, width: 2),
           ),
-          contentPadding: EdgeInsets.symmetric(vertical: 8,horizontal: 12),
+          contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
         break;
       default:
         inputDecoration = InputDecoration(
           filled: false,
           border: OutlineInputBorder(
-            borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
+            borderSide:
+                BorderSide(color: Theme.of(context).primaryColor, width: 2),
             borderRadius: borderRadius,
           ),
-          contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
+          contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 12),
           labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
     }
 
@@ -179,25 +209,38 @@ class _TTextFieldState extends State<TTextField> {
       });
     }
 
-    void _onTap(){
+    void _onTap() {}
 
-    }
-
-    return SizedBox(
-      width: size.width,
-      child: TextFormField(
-        controller: widget.controller,
-        decoration: inputDecoration,
-        keyboardType: widget.keyboardType,
-        textAlign: widget.textAlign,
-        textAlignVertical: widget.textAlignVertical,
-        showCursor: widget.showCursor,
-        obscureText: _isObscured,
-        enabled: !widget.isDisabled,
-        onChanged: widget.onChanged,
-        validator: widget.validator,
-        onTap: _onTap
-      ),
+    return Column(
+      children: [
+        if (!widget.isFloatLabel)
+          Row(
+            mainAxisAlignment: widget.outerLabelPosition ?? MainAxisAlignment.start,
+            children: [
+              if (widget.labelPrefix != null) Icon(widget.labelPrefix),
+              SizedBox(width: 8),
+              Text(widget.label ?? ''),
+              SizedBox(width: 8),
+              if (widget.labelSuffix != null) Icon(widget.labelSuffix),
+            ],
+          ),
+        SizedBox(height: 8),
+        SizedBox(
+          width: size.width,
+          child: TextFormField(
+              controller: widget.controller,
+              decoration: inputDecoration,
+              keyboardType: widget.keyboardType,
+              textAlign: widget.textAlign,
+              textAlignVertical: widget.textAlignVertical,
+              showCursor: widget.showCursor,
+              obscureText: _isObscured,
+              enabled: !widget.isDisabled,
+              onChanged: widget.onChanged,
+              validator: widget.validator,
+              onTap: _onTap),
+        ),
+      ],
     );
   }
 
@@ -208,7 +251,7 @@ class _TTextFieldState extends State<TTextField> {
       case 'medium':
         return Size(200, 48);
       case 'large':
-        return Size(300, 56); 
+        return Size(300, 56);
       case 'block':
         return Size(double.infinity, 56);
       default:
