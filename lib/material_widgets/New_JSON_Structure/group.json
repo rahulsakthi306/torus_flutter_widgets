@@ -1,0 +1,28 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Group",
+    "label": "",
+    "props": [
+      {
+        "name": "type",
+        "_type": "string",
+        "selectionList": [ "none", "card" ],
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "curved",
+        "_type": "multiSelect",
+        "selectionList": [
+          "filled-circle",
+          "outlined-circle",
+          "filled-square",
+          "outlined-square",
+          "underlined"
+        ],
+        "value": "outlined-square",
+        "enabled": true
+      }
+    ]
+  }
