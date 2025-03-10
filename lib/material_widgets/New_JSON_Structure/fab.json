@@ -1,0 +1,106 @@
+{
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Fab",
+  "label": "",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "number",
+      "value": 12,
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ],
+      "value": "bottomRight",
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "elevated-circle",
+        "filled-circle",
+        "outlined-circle",
+        "elevated-square",
+        "filled-square",
+        "outlined-square"
+      ],
+      "value": "elevated-circle",
+      "enabled": true
+    },
+    {
+      "name": "icon",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "tooltip",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "foregroundColor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "transparent"
+      ],
+      "value": "primary",
+      "enabled": true
+    },
+    {
+      "name": "backgroundColor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "transparent"
+      ],
+      "value": "transparent",
+      "enabled": true
+    },
+    {
+      "name": "isExtended",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "elevation",
+      "_type": "number",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onPressed",
+      "enabled": true
+    }
+  ]
+}

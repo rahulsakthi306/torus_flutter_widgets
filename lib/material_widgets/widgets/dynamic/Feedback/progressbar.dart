@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-List<String> progressBarSize = [ 'small', 'medium', 'large', 'block' ];
+List<String> progressBarSize = [ 'small', 'medium', 'large', 'max' ];
 
 class TProgressbar extends StatefulWidget {
   final double? value;  
@@ -76,7 +76,7 @@ class _TProgressbarState extends State<TProgressbar> {
         return 70.0;
       case 'large':
         return 100.0;
-      case 'block':
+      case 'max':
         return double.infinity;
       default:
         return 50.0;

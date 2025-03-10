@@ -1,0 +1,2 @@
+D:/torus_flutter_widgets/android/app/.cxx/Debug/45n1q6y4/x86/CMakeFiles/edit_cache.dir
+D:/torus_flutter_widgets/android/app/.cxx/Debug/45n1q6y4/x86/CMakeFiles/rebuild_cache.dir

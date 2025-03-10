@@ -1,0 +1,76 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Badge",
+    "label": "",
+    "layout": [
+        {
+            "name": "length",
+            "_type": "number",
+            "value": 12,
+            "enabled": true
+        },
+        {
+            "name": "alignment",
+            "_type": "select",
+            "selectionList": [
+                "topLeft",
+                "topCenter",
+                "topRight",
+                "centerLeft",
+                "center",
+                "centerRight",
+                "bottomLeft",
+                "bottomCenter",
+                "bottomRight"
+            ],
+            "value": "center",
+            "enabled": true
+        }
+    ],
+    "props": [
+        {
+            "name": "backgroundColor",
+            "_type": "select",
+            "selectionList": [
+                "primary",
+                "secondary",
+                "tertiary",
+                "transparent"
+            ],
+            "value": "primary",
+            "enabled": true
+        },
+        {
+            "name": "textColor",
+            "_type": "select",
+            "selectionList": [
+                "primary",
+                "secondary",
+                "tertiary",
+                "transparent"
+            ],
+            "value": "primary",
+            "enabled": true
+        },
+        {
+            "name": "smallSize",
+            "type": "double",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "largeSize",
+            "type": "double",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "isLabelVisible",
+            "_type": "boolean",
+            "selectionList": [],
+            "value": false,
+            "enabled": true
+          }
+    ]
+}
