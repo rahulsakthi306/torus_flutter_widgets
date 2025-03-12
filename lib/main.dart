@@ -1,44 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/fab.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Example')),
-        body: Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Floatab(),
-          
-          // child: MyForm(),
+      debugShowCheckedModeBanner: false,
+      home: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Floatab(
+          alignment: Alignment.bottomRight,
+          isExpandableTab: true,
+          type: 'filled-circle',
+          options: [
+             {'icon': Icons.abc, 'label': 'Option 1'},
+              {'icon': Icons.abc_sharp, 'label': 'Option 2'}
+          ],
+          backgroundColor: Colors.white
         ),
-        // floatingActionButton: Floatab(),
-      ),
-    );
-  }
-}
-
-class MyForm extends StatefulWidget {
-  @override
-  _MyFormState createState() => _MyFormState();
-}
-
-class _MyFormState extends State<MyForm> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          TTextField(
-            label: 'Employee ID',
-          )
-        ],
       ),
     );
   }

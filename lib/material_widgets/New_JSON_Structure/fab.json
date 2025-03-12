@@ -45,14 +45,21 @@
       "enabled": true
     },
     {
-      "name": "icon",
+      "name": "elevation",
+      "_type": "number",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "tooltip",
       "_type": "string",
       "selectionList": [],
       "value": "",
       "enabled": true
     },
     {
-      "name": "tooltip",
+      "name": "icon",
       "_type": "string",
       "selectionList": [],
       "value": "",
@@ -65,7 +72,9 @@
         "primary",
         "secondary",
         "tertiary",
-        "transparent"
+        "transparent",
+        "light",
+        "dark"
       ],
       "value": "primary",
       "enabled": true
@@ -77,7 +86,9 @@
         "primary",
         "secondary",
         "tertiary",
-        "transparent"
+        "transparent",
+         "light",
+        "dark"
       ],
       "value": "transparent",
       "enabled": true
@@ -90,12 +101,26 @@
       "enabled": true
     },
     {
-      "name": "elevation",
-      "_type": "number",
+      "name": "isExpandableFAB",
+      "_type": "boolean",
       "selectionList": [],
       "value": false,
       "enabled": true
-    }
+    },
+    {
+      "name": "actionIcons",
+      "_type": "array",
+      "selectionList": [],
+      "items": [],
+      "enabled": true
+    },   
+    {
+      "name": "actionLabels",
+      "_type": "array",
+      "selectionList": [],
+      "items": [],
+      "enabled": true
+    }   
   ],
   "events": [
     {

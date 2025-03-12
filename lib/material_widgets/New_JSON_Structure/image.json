@@ -34,8 +34,10 @@
       "_type": "select",
       "selectionList": [
         "small",
+        "medium",
         "large",
-        "medium"
+        "max",
+        "default"
       ],
       "value": "medium",
       "enabled": true
