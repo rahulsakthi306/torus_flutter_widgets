@@ -40,27 +40,28 @@
         "outlined-square",
         "underlined"
       ],
-      "value": "outlined-square",
+      "value": "filled-square",
       "enabled": true
     },
     {
-      "name": "size",
-      "_type": "select",
-      "selectionList": [
-        "none",
-        "small",
-        "medium",
-        "large",
-        "max"
-      ],
-      "value": "medium",
-      "enabled": true
-    },
-    {
-      "name": "hintText",
-      "_type": "string",
+      "name": "pinLength",
+      "_type": "number",
       "selectionList": [],
-      "value": "",
+      "value": 4,
+      "enabled": true
+    },
+    {
+      "name": "showCursor",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "obscureText",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
       "enabled": true
     },
     {
@@ -71,72 +72,10 @@
       "enabled": true
     },
     {
-      "name": "textAlign",
-      "_type": "select",
-      "selectionList": [
-        "none",
-        "start",
-        "end",
-        "center",
-        "justify",
-        "left",
-        "right"
-      ],
-      "value": "start",
-      "enabled": true
-    },
-    {
-      "name": "textAlignVertical",
-      "_type": "select",
-      "selectionList": [
-        "none",
-        "top",
-        "center",
-        "bottom"
-      ],
-      "value": "center",
-      "enabled": true
-    },
-    {
-      "name": "showCursor",
-      "_type": "boolean",
-      "selectionList": [],
-      "value": true,
-      "enabled": true
-    },
-    {
-      "name": "isPassword",
+      "name": "smsAutoFill",
       "_type": "boolean",
       "selectionList": [],
       "value": false,
-      "enabled": true
-    },
-    {
-      "name": "helperText",
-      "_type": "string",
-      "selectionList": [],
-      "value": "",
-      "enabled": true
-    },
-    {
-      "name": "prefix",
-      "_type": "string",
-      "selectionList": [],
-      "value": "",
-      "enabled": true
-    },
-    {
-      "name": "suffix",
-      "_type": "string",
-      "selectionList": [],
-      "value": "",
-      "enabled": true
-    },
-    {
-      "name": "pinLength",
-      "_type": "number",
-      "selectionList": [],
-      "value": 4,
       "enabled": true
     },
     {
@@ -165,7 +104,7 @@
   ],
   "events": [
     {
-      "name": "onChanged",
+      "name": "onCompleted",
       "enabled": true
     }
   ],

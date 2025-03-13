@@ -1,12 +1,11 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
 class TestScreen2Tfpinnumber6a5f extends StatefulWidget {
+  final int pinLength;
   final String type;
-  final String size;
   final String? hintText;
   final bool isDisabled;
   final TextInputType? keyboardType;
@@ -21,12 +20,10 @@ class TestScreen2Tfpinnumber6a5f extends StatefulWidget {
   final TextEditingController? controller;
   final void Function(String)? onChanged;
   final String? Function(String?)? validator;
-  final int pinLength;
 
   const TestScreen2Tfpinnumber6a5f({
     super.key,
-    this.type = 'underlined',
-    this.size = 'max',
+    this.type = 'filled-square',
     this.hintText,
     this.isDisabled = false,
     this.textAlign = TextAlign.start,
@@ -83,7 +80,6 @@ class _TestScreen2Tfpinnumber6a5fState extends State<TestScreen2Tfpinnumber6a5f>
     super.dispose();
   }
 
-  // Method to start a timer for OTP expiry
   void _startTimer() {
     _start = 30;
     _timer?.cancel();
@@ -98,9 +94,8 @@ class _TestScreen2Tfpinnumber6a5fState extends State<TestScreen2Tfpinnumber6a5f>
     });
   }
 
-  // Listening for incoming OTP
   void _listenForCode() async {
-    await _smsAutoFill.listenForCode;
+    _smsAutoFill.listenForCode;
   }
 
   // Code update callback
@@ -129,67 +124,67 @@ class _TestScreen2Tfpinnumber6a5fState extends State<TestScreen2Tfpinnumber6a5f>
   // Builds the input fields for the pin code
   @override
   Widget build(BuildContext context) {
-    Size size = _getSize(widget.size);
-
     BorderRadius borderRadius = BorderRadius.circular(8);
 
     InputDecoration inputDecoration = _buildInputDecoration(borderRadius);
 
-    return SizedBox(
-      width: size.width,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate(widget.pinLength, (index) {
-          return Container(
-            margin: const EdgeInsets.symmetric(horizontal: 4),
-            width: size.width / widget.pinLength - 8,
-            child: TextFormField(
-              controller: _controllers[index],
-              focusNode: _focusNodes[index],
-              decoration: inputDecoration.copyWith(
-                counterText: '',
-                hintText: widget.hintText ?? '•',
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: List.generate(widget.pinLength, (index) {
+            return Container(
+              margin: const EdgeInsets.symmetric(horizontal: 4),
+              child: Flexible(
+                flex: 1,
+                child: TextFormField(
+                  controller: _controllers[index],
+                  focusNode: _focusNodes[index],
+                  decoration: inputDecoration.copyWith(
+                    counterText: '',
+                    hintText: widget.hintText ?? '•',
+                  ),
+                  inputFormatters: [
+                    FilteringTextInputFormatter.digitsOnly,
+                  ],
+                  maxLength: 1,
+                  keyboardType: widget.keyboardType ?? TextInputType.number,
+                  textAlign: TextAlign.center,
+                  textAlignVertical: widget.textAlignVertical,
+                  showCursor: widget.showCursor,
+                  obscureText: widget.isPassword,
+                  enabled: !widget.isDisabled,
+                  onChanged: (value) {
+                    _onPinChanged(value, index);
+                  },
+                  validator: widget.validator,
+                  autofillHints: [AutofillHints.oneTimeCode],
+                ),
               ),
-              inputFormatters: [
-                FilteringTextInputFormatter.digitsOnly,
-              ],
-              maxLength: 1,
-              keyboardType: widget.keyboardType ?? TextInputType.number,
-              textAlign: TextAlign.center,
-              textAlignVertical: widget.textAlignVertical,
-              showCursor: widget.showCursor,
-              obscureText: widget.isPassword,
-              enabled: !widget.isDisabled,
-              onChanged: (value) {
-                _onPinChanged(value, index);
-              },
-              validator: widget.validator,
-              autofillHints: [AutofillHints.oneTimeCode],
-            ),
-          );
-        }),
-      ),
+            );
+          }),
+        ),
+        SizedBox(height: 8.0),
+        Text(widget.helperText ?? '')
+      ],
     );
   }
 
-  // Builds the input decoration based on type
   InputDecoration _buildInputDecoration(BorderRadius borderRadius) {
     var decoration = InputDecoration(
-      labelText: widget.label,
-      helperText: widget.helperText,
-      prefixIcon: widget.prefix,
-      suffixIcon: widget.suffix,
       contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
     );
 
     switch (widget.type) {
-      case 'filled-circle':
+     case 'filled-circle':
         return decoration.copyWith(
           filled: true,
-          fillColor: widget.type == 'filled-circle' ? Colors.grey.shade200 : Theme.of(context).primaryColor,
+          fillColor: widget.type == 'filled-circle'
+              ? Colors.grey.shade200
+              : Theme.of(context).primaryColor,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
-            borderRadius: borderRadius,
+            borderRadius: BorderRadius.circular(100),
           ),
         );
       case 'outlined-circle':
@@ -232,22 +227,6 @@ class _TestScreen2Tfpinnumber6a5fState extends State<TestScreen2Tfpinnumber6a5f>
             borderRadius: borderRadius,
           ),
         );
-    }
-  }
-
-  // Gets the size for the pin input field
-  Size _getSize(String size) {
-    switch (size) {
-      case 'small':
-        return const Size(200, 56);
-      case 'medium':
-        return const Size(250, 56);
-      case 'large':
-        return const Size(300, 56);
-      case 'max':
-        return const Size(350, 56);
-      default:
-        return const Size(200, 48);
     }
   }
 }

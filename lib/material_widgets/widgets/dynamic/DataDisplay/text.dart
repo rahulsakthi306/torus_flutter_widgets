@@ -15,7 +15,7 @@ class CommonTextWidget extends StatelessWidget {
     this.textTheme = 'labelMedium',
     this.textOverflow = TextOverflow.fade,
     this.textAlign = TextAlign.center,
-    this.fontWeight = FontWeight.normal
+    this.fontWeight = FontWeight.w100
   });
 
   @override
