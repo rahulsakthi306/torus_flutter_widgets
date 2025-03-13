@@ -35,7 +35,52 @@
             "selectionList": [],
             "value": "",
             "enabled": true
-          },
+        },
+        {
+            "name": "textOverflow",
+            "_type": "select",
+            "selectionList": [
+                "clip",
+                "fade",
+                "ellipsis",
+                "visible"
+            ],
+            "value": "fade",
+            "enabled": true
+        },
+        {
+            "name": "textAlign",
+            "_type": "select",
+            "selectionList": [
+                "left",
+                "right",
+                "center",
+                "justify",
+                "start",
+                "end"
+            ],
+            "value": "center",
+            "enabled": true
+        },
+        {
+            "name": "fontWeight",
+            "_type": "select",
+            "selectionList": [
+                "normal",
+                "bold",
+                "w100",
+                "w200",
+                "w300",
+                "w400",
+                "w500",
+                "w600",
+                "w700",
+                "w800",
+                "w900"
+            ],
+            "value": "normal",
+            "enabled": true
+        },
         {
             "name": "textTheme",
             "_type": "select",
