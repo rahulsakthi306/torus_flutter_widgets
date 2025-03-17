@@ -1,0 +1,15 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Tabbar",
+    "name": "Tabbar",
+    "label": "",
+    "type": "",
+    "props": [],
+    "events": [
+        {
+            "name": "onChanged",
+            "enabled": true
+        }
+    ]
+}
