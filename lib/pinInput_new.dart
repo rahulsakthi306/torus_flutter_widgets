@@ -24,7 +24,7 @@ class PinInputCustom extends StatefulWidget {
 
   const PinInputCustom({
     super.key,
-    this.type = 'outlinedSquare',
+    this.type = 'underlined',
     this.pinLength = 4,
     this.showCursor = false,
     this.obscureText = false,

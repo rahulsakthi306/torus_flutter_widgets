@@ -1,5 +1,6 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Navigation/tab_bar.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/chart.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,6 +22,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
   late TabController _tabController;
+   List<Map<String, String>> rawData = [
+      {"name": "Amrish", "value": "6600"},
+      {"name": "Dominic", "value": "4600"},
+      {"name": "Parama", "value": "3600"},
+      {"name": "Mari", "value": "3600"},
+    ];
 
   @override
   void initState() {
@@ -38,9 +45,16 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TabBar'),
+        title: Text('Chart'),
       ),
-      body: CommonTabBar(tabs: []),
+      body: Column(
+        children: [
+           TChart(
+                rawData: rawData,
+                chartType: 'pie',
+              ),
+        ],
+      ),
     );
   }
 }
