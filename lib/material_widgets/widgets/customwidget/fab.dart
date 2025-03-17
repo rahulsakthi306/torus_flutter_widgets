@@ -184,12 +184,21 @@ class _ExpandableFabState extends State<ExpandableFab> {
               child: AnimatedOpacity(
                 opacity: _isOpen ? 1.0 : 0.0,
                 duration: Duration(milliseconds: 300),
-                child: FloatingActionButton(
-                  onPressed: () {
-                  },
-                  backgroundColor: widget.backgroundColor,
-                  shape: _getShape(widget.type),
-                  child: Icon(widget.options[index]['icon']),
+                child: Row(
+                  children: [
+                    Card(child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Text(widget.options[index]['label']),
+                    ),),
+                    SizedBox(width: 12,),
+                    FloatingActionButton(
+                      onPressed: () {
+                      },
+                      backgroundColor: widget.backgroundColor,
+                      shape: _getShape(widget.type),
+                      child: Icon(widget.options[index]['icon']),
+                    ),
+                  ],
                 ),
               ),
             );

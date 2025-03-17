@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/chart/pi_chart.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/fab.dart';
 import 'package:torus_flutter_widgets/pinInput_new.dart';
-import 'package:torus_flutter_widgets/pinin.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,23 +18,11 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(
-                children: [
-                  Flexible(
-                    flex: 12,
-                    child: Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: PinInputCustom()
-                      ),
-                    ),
-                  )
-                ],
-              )
+           PiChart(),
             ],
           ),
         ),
+       
       ),
     );
   }

@@ -24,14 +24,14 @@ class PinInputCustom extends StatefulWidget {
 
   const PinInputCustom({
     super.key,
-    this.type = 'outlinedSquare',
+    this.type = 'underlined',
     this.pinLength = 4,
     this.showCursor = false,
     this.obscureText = false,
     this.onCompleted,
     this.controller,
-    this.smsAutoFill = false,
-    this.isDisabled = false, 
+    this.smsAutoFill = true,
+    this.isDisabled = false,
     this.onTap,
     this.onChanged,
   });
@@ -112,26 +112,24 @@ class _PinInputCustomState extends State<PinInputCustom> with CodeAutoFill {
         pinDecoration = BoxDecoration();
     }
 
-    return Visibility(
-      child: Pinput(
-        controller: widget.controller,
-        length: widget.pinLength,
-        validator: (s) {
-          return null;
-        },
-        pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
-        showCursor: widget.showCursor,
-        obscureText: widget.obscureText,
-        enabled: !widget.isDisabled,
-        defaultPinTheme: PinTheme(
-          width: 56,
-          height: 56,
-          decoration: pinDecoration,
-        ),
-        onCompleted: widget.onCompleted,
-        onTap: widget.onTap,
-        onChanged: widget.onChanged,
+    return Pinput(
+      controller: widget.controller,
+      length: widget.pinLength,
+      validator: (s) {
+        return null;
+      },
+      pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
+      showCursor: widget.showCursor,
+      obscureText: widget.obscureText,
+      enabled: !widget.isDisabled,
+      defaultPinTheme: PinTheme(
+        width: 56,
+        height: 56,
+        decoration: pinDecoration,
       ),
+      onCompleted: widget.onCompleted,
+      onTap: widget.onTap,
+      onChanged: widget.onChanged,
     );
   }
 }
