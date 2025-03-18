@@ -1,0 +1,44 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Chart",
+    "label": "",
+    "layout": [
+      {
+        "name": "length",
+        "_type": "number",
+        "value": 12,
+        "enabled": true
+      },
+      {
+        "name": "alignment",
+        "_type": "select",
+        "selectionList": [
+          "topLeft",
+          "topCenter",
+          "topRight",
+          "centerLeft",
+          "center",
+          "centerRight",
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight"
+        ],
+        "value": "center",
+        "enabled": true
+      }
+      ],
+      "props": [
+        {
+            "name": "chartType",
+            "_type": "select",
+            "selectionList": [
+                "line",
+                "bar",
+                "pie"
+            ],
+            "value": "pie",
+            "enabled": true
+          }
+      ] 
+}      
