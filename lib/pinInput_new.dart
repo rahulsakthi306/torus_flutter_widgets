@@ -12,6 +12,7 @@ List<String> type = [
 
 class PinInputCustom extends StatefulWidget {
   final String type;
+  final String? label;
   final int pinLength;
   final bool showCursor;
   final bool obscureText;
@@ -21,6 +22,9 @@ class PinInputCustom extends StatefulWidget {
   final Function(String)? onCompleted;
   final VoidCallback? onTap;
   final ValueChanged<String>? onChanged;
+   final String? labelPosition;
+   final Widget? labelPrefix;
+  final Widget? labelSuffix; 
 
   const PinInputCustom({
     super.key,
@@ -34,6 +38,10 @@ class PinInputCustom extends StatefulWidget {
     this.isDisabled = false,
     this.onTap,
     this.onChanged,
+    this.label = 'OTP',
+    this.labelPosition = "top",
+    this.labelPrefix = const Icon(Icons.currency_bitcoin),
+    this.labelSuffix,
   });
 
   @override
@@ -112,24 +120,95 @@ class _PinInputCustomState extends State<PinInputCustom> with CodeAutoFill {
         pinDecoration = BoxDecoration();
     }
 
-    return Pinput(
-      controller: widget.controller,
-      length: widget.pinLength,
-      validator: (s) {
-        return null;
-      },
-      pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
-      showCursor: widget.showCursor,
-      obscureText: widget.obscureText,
-      enabled: !widget.isDisabled,
-      defaultPinTheme: PinTheme(
-        width: 56,
-        height: 56,
-        decoration: pinDecoration,
-      ),
-      onCompleted: widget.onCompleted,
-      onTap: widget.onTap,
-      onChanged: widget.onChanged,
+    // Build the label widget
+    Widget labelWidget = widget.label != null
+        ? Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (widget.labelPrefix != null) widget.labelPrefix!,
+              Padding(
+                padding: const EdgeInsets.only(left: 4.0, right: 4.0),
+                child: Text(
+                  widget.label!,
+                ),
+              ),
+              if (widget.labelSuffix != null) widget.labelSuffix!,
+            ],
+          )
+        : Container();
+
+    // Deciding label position
+    Widget contentWidget = Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (widget.labelPosition == "top") labelWidget,
+        if (widget.labelPosition == "topCenter") 
+          Align(
+            alignment: Alignment.topCenter,
+            child: labelWidget,
+          ),
+        Pinput(
+          controller: widget.controller,
+          length: widget.pinLength,
+          validator: (s) {
+            return null;
+          },
+          pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
+          showCursor: widget.showCursor,
+          obscureText: widget.obscureText,
+          enabled: !widget.isDisabled,
+          defaultPinTheme: PinTheme(
+            width: 56,
+            height: 56,
+            decoration: pinDecoration,
+          ),
+          onCompleted: widget.onCompleted,
+          onTap: widget.onTap,
+          onChanged: widget.onChanged,
+        ),
+        if (widget.labelPosition == "bottom") labelWidget,
+        if (widget.labelPosition == "bottomCenter") 
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: labelWidget,
+          ),
+      ],
     );
+
+    if (widget.labelPosition == "left" || widget.labelPosition == "right") {
+      contentWidget = Row(
+        mainAxisAlignment: widget.labelPosition == "left"
+            ? MainAxisAlignment.start
+            : MainAxisAlignment.end,
+        children: [
+          if (widget.labelPosition == "left") labelWidget,
+          Expanded(
+            child: Pinput(
+              controller: widget.controller,
+              length: widget.pinLength,
+              validator: (s) {
+                return null;
+              },
+              pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
+              showCursor: widget.showCursor,
+              obscureText: widget.obscureText,
+              enabled: !widget.isDisabled,
+              defaultPinTheme: PinTheme(
+                width: 56,
+                height: 56,
+                decoration: pinDecoration,
+              ),
+              onCompleted: widget.onCompleted,
+              onTap: widget.onTap,
+              onChanged: widget.onChanged,
+            ),
+          ),
+          if (widget.labelPosition == "right") labelWidget,
+        ],
+      );
+    }
+
+    return contentWidget;
   }
 }

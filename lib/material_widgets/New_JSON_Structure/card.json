@@ -66,6 +66,21 @@
       "_type": "string",
       "value": "",
       "enabled": true
+    },
+    {
+      "name": "fillColor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
+      ],
+      "value": "greyShade",
+      "enabled": true
     }
   ],
   "events": [

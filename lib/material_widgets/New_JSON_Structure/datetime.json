@@ -92,6 +92,20 @@
           "enabled": true
       },
       {
+        "name": "prefix",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "suffix",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+      },
+      {
         "name": "needClear",
         "_type": "boolean",
         "selectionList": [],

@@ -4,6 +4,7 @@ import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/char
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/dateinput.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/textarea.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/textfield.dart';
+import 'package:torus_flutter_widgets/pinInput_new.dart';
 
 void main() {
   runApp(MyApp());
@@ -54,8 +55,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-         TDateInput(
-         )
+            PinInputCustom()
           ],
         ),
       ),

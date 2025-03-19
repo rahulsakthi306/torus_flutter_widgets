@@ -79,6 +79,35 @@
       "enabled": true
     },
     {
+      "name": "labelPrefix",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "labelSuffix",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },  
+    {
+      "name": "labelPosition",
+      "_type": "select",
+      "selectionList": [
+       "left",
+       "right",
+       "center",
+       "top",
+       "topCenter",
+       "bottom",
+       "bottomCenter"
+      ],
+      "value": "start",
+      "enabled": true
+    },
+    {
       "name": "textTheme",
       "_type": "select",
       "selectionList": [
