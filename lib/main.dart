@@ -1,6 +1,9 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/chart.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/dateinput.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/textarea.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/textfield.dart';
 
 void main() {
   runApp(MyApp());
@@ -47,13 +50,14 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       appBar: AppBar(
         title: Text('Chart'),
       ),
-      body: Column(
-        children: [
-           TChart(
-                rawData: rawData,
-                chartType: 'pie',
-              ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          children: [
+         TDateInput(
+         )
+          ],
+        ),
       ),
     );
   }

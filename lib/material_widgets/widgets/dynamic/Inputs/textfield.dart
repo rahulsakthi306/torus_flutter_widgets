@@ -24,10 +24,11 @@ class TTextField extends StatefulWidget {
   final bool isFloatLabel;
   final IconData? labelPrefix;
   final IconData? labelSuffix;
-  final MainAxisAlignment ? outerLabelPosition;
+  final MainAxisAlignment? outerLabelPosition;
   final TextEditingController? controller;
   final void Function(String)? onChanged;
   final String? Function(String?)? validator;
+  final String? fillColor;
 
   const TTextField({
     super.key,
@@ -46,10 +47,11 @@ class TTextField extends StatefulWidget {
     this.validator,
     this.label,
     this.keyboardType,
-    this.isFloatLabel = false,
+    this.isFloatLabel = true,
     this.labelPrefix,
     this.labelSuffix = Icons.abc,
     this.outerLabelPosition = MainAxisAlignment.end,
+    this.fillColor,  // Receiving fillColor to decide color
   });
 
   @override
@@ -62,7 +64,7 @@ class _TTextFieldState extends State<TTextField> {
 
   @override
   Widget build(BuildContext context) {
-    String labelText = widget.label ?? 'Enter text here';
+    String? labelText = widget.isFloatLabel ? widget.label ?? 'Enter text here' : null;
     Size size = _getSize(widget.size);
     BorderRadius borderRadius;
 
@@ -74,12 +76,41 @@ class _TTextFieldState extends State<TTextField> {
       borderRadius = BorderRadius.circular(8);
     }
 
+    // Determine the fill color based on fillColor
+    Color containerColor;
+    switch (widget.fillColor) {
+      case "primary":
+        containerColor = Theme.of(context).colorScheme.primary;
+        break;
+      case "secondary":
+        containerColor = Theme.of(context).colorScheme.secondary;
+        break;
+      case "tertiary":
+        containerColor = Theme.of(context).colorScheme.tertiary;
+        break;
+      case "transparent":
+        containerColor = Colors.transparent;
+        break;
+      case "light":
+        containerColor = Colors.white;
+        break;
+      case "dark":
+        containerColor = Colors.black;
+        break;
+      case "greyShade":
+        containerColor = Colors.grey.shade200;
+        break;
+      default:
+        containerColor = Colors.transparent;
+        break;
+    }
+
     InputDecoration inputDecoration;
     switch (widget.type) {
       case 'filled-circle':
         inputDecoration = InputDecoration(
           filled: true,
-          fillColor: Colors.grey.shade200,
+          fillColor: containerColor, 
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
@@ -117,7 +148,7 @@ class _TTextFieldState extends State<TTextField> {
       case 'filled-square':
         inputDecoration = InputDecoration(
           filled: true,
-          fillColor: Colors.grey.shade200,
+          fillColor: containerColor,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.zero,
@@ -213,7 +244,7 @@ class _TTextFieldState extends State<TTextField> {
 
     return Column(
       children: [
-        if (!widget.isFloatLabel)
+        if (widget.isFloatLabel)
           Row(
             mainAxisAlignment: widget.outerLabelPosition ?? MainAxisAlignment.start,
             children: [

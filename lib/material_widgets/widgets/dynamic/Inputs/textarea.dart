@@ -26,6 +26,11 @@ class TTextArea extends StatefulWidget {
   final String? Function(String?)? validator;
   final int maxlines;
   final TextInputType? keyboardType;
+  final String? fillColor;
+  final bool isFloatLabel;
+  final IconData? labelPrefix;
+  final IconData? labelSuffix;
+  final MainAxisAlignment? outerLabelPosition;
 
   const TTextArea({
     super.key,
@@ -45,6 +50,11 @@ class TTextArea extends StatefulWidget {
     this.label,
     this.maxlines = 5, 
     this.keyboardType = TextInputType.multiline,
+    this.fillColor, 
+    this.isFloatLabel = false,
+    this.labelPrefix,
+    this.labelSuffix,
+    this.outerLabelPosition = MainAxisAlignment.start,
   });
 
   @override
@@ -66,12 +76,40 @@ class _TTextAreaState extends State<TTextArea> {
       borderRadius = BorderRadius.circular(8);
     }
 
+    Color containerColor;
+    switch (widget.fillColor) {
+      case "primary":
+        containerColor = Theme.of(context).colorScheme.primary;
+        break;
+      case "secondary":
+        containerColor = Theme.of(context).colorScheme.secondary;
+        break;
+      case "tertiary":
+        containerColor = Theme.of(context).colorScheme.tertiary;
+        break;
+      case "transparent":
+        containerColor = Colors.transparent;
+        break;
+      case "light":
+        containerColor = Colors.white;
+        break;
+      case "dark":
+        containerColor = Colors.black;
+        break;
+      case "greyShade":
+        containerColor = Colors.grey.shade200;
+        break;
+      default:
+        containerColor = Colors.transparent;
+        break;
+    }
+
     InputDecoration inputDecoration;
     switch (widget.type) {
       case 'filled-circle':
         inputDecoration = InputDecoration(
           filled: true,
-          fillColor: Colors.grey.shade200,
+          fillColor: containerColor,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
@@ -82,6 +120,9 @@ class _TTextAreaState extends State<TTextArea> {
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: !widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
         break;
       case 'outlined-circle':
@@ -97,12 +138,15 @@ class _TTextAreaState extends State<TTextArea> {
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: !widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
         break;
       case 'filled-square':
         inputDecoration = InputDecoration(
           filled: true,
-          fillColor: Colors.grey.shade200,
+          fillColor: containerColor,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.zero,
@@ -113,6 +157,9 @@ class _TTextAreaState extends State<TTextArea> {
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: !widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
         break;
       case 'outlined-square':
@@ -128,6 +175,9 @@ class _TTextAreaState extends State<TTextArea> {
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: !widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
         break;
       case 'underlined':
@@ -142,6 +192,9 @@ class _TTextAreaState extends State<TTextArea> {
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: !widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
         break;
       default:
@@ -157,22 +210,43 @@ class _TTextAreaState extends State<TTextArea> {
           helperText: widget.helperText,
           prefixIcon: widget.prefix,
           suffixIcon: widget.suffix,
+          floatingLabelBehavior: !widget.isFloatLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
         );
     }
 
-    return SizedBox(
-      width: size.width,
-      child: TextFormField(
-        controller: widget.controller,
-        decoration: inputDecoration,
-        keyboardType: widget.keyboardType,
-        textAlign: widget.textAlign,
-        textAlignVertical: widget.textAlignVertical,
-        showCursor: widget.showCursor,
-        enabled: !widget.isDisabled,
-        onChanged: widget.onChanged,
-        validator: widget.validator,
-        maxLines: widget.maxlines,
+    return Visibility(
+      visible: true,
+      child: Column(
+        children: [
+          if (!widget.isFloatLabel)
+            Row(
+              mainAxisAlignment: widget.outerLabelPosition ?? MainAxisAlignment.start,
+              children: [
+                if (widget.labelPrefix != null) Icon(widget.labelPrefix),
+                SizedBox(width: 8),
+                Text(widget.label ?? ''),
+                SizedBox(width: 8),
+                if (widget.labelSuffix != null) Icon(widget.labelSuffix),
+              ],
+            ),
+        SizedBox(height: 8),
+        SizedBox(
+        width: size.width,
+        child: TextFormField(
+          controller: widget.controller,
+          decoration: inputDecoration,
+          keyboardType: widget.keyboardType,
+          textAlign: widget.textAlign,
+          textAlignVertical: widget.textAlignVertical,
+          showCursor: widget.showCursor,
+          enabled: !widget.isDisabled,
+          onChanged: widget.onChanged,
+          validator: widget.validator,
+          maxLines: widget.maxlines),
+          ),
+        ],
       ),
     );
   }

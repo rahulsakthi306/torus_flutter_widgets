@@ -19,6 +19,11 @@ class TDatePicker extends StatefulWidget {
   final void Function(DateTime?)? onChanged;
   final String? helperText;
   final String? dateFormat;
+   final String? fillColor;
+  final bool isFloatLabel;
+  final IconData? labelPrefix;
+  final IconData? labelSuffix;
+  final MainAxisAlignment? outerLabelPosition;
 
   const TDatePicker({
     super.key,
@@ -31,6 +36,11 @@ class TDatePicker extends StatefulWidget {
     this.dateFormat,
     this.label,
     this.onChanged,
+    this.fillColor, 
+    this.isFloatLabel = false,
+    this.labelPrefix,
+    this.labelSuffix,
+    this.outerLabelPosition = MainAxisAlignment.start,
   });
 
   @override
@@ -58,12 +68,40 @@ class _TDatePickerState extends State<TDatePicker> {
       borderRadius = BorderRadius.circular(8);
     }
 
+    Color containerColor;
+    switch (widget.fillColor) {
+      case "primary":
+        containerColor = Theme.of(context).colorScheme.primary;
+        break;
+      case "secondary":
+        containerColor = Theme.of(context).colorScheme.secondary;
+        break;
+      case "tertiary":
+        containerColor = Theme.of(context).colorScheme.tertiary;
+        break;
+      case "transparent":
+        containerColor = Colors.transparent;
+        break;
+      case "light":
+        containerColor = Colors.white;
+        break;
+      case "dark":
+        containerColor = Colors.black;
+        break;
+      case "greyShade":
+        containerColor = Colors.grey.shade200;
+        break;
+      default:
+        containerColor = Colors.transparent;
+        break;
+    }
+
     InputDecoration inputDecoration;
     switch (widget.type) {
       case 'filled-circle':
         inputDecoration = InputDecoration(
           filled: true,
-          fillColor: Colors.grey.shade200,
+          fillColor: containerColor,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: borderRadius,
@@ -90,7 +128,7 @@ class _TDatePickerState extends State<TDatePicker> {
       case 'filled-square':
         inputDecoration = InputDecoration(
           filled: true,
-          fillColor: Colors.grey.shade200,
+          fillColor: containerColor,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.zero,

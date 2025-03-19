@@ -99,6 +99,56 @@
       "enabled": true
     },
     {
+      "name": "isFloatLabel",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": true,
+      "enabled": true
+    },
+    {
+      "name": "labelPrefix",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "labelSuffix",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },  
+    {
+      "name": "outerLabelPosition",
+      "_type": "select",
+      "selectionList": [
+       "start",
+       "end",
+       "center",
+       "spaceBetween",
+       "spaceAround",
+       "spaceEvenly"
+      ],
+      "value": "start",
+      "enabled": true
+    },
+    {
+      "name": "fillColor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
+      ],
+      "value": "greyShade",
+      "enabled": true
+    },
+    {
       "name": "textTheme",
       "_type": "select",
       "selectionList": [
