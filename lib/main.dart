@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/chart.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/DataDisplay/chip.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/dateinput.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/textarea.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/textfield.dart';
@@ -14,6 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        // primarySwatch: Colors.blue,
+        primaryColor: Colors.blue
+      ),
       home: MyHomePage(),
     );
   }
@@ -55,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            PinInputCustom()
+            TChip(),
           ],
         ),
       ),

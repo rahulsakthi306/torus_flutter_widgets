@@ -1,0 +1,85 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Chip",
+    "label": "",
+    "layout": [
+      {
+        "name": "length",
+        "_type": "number",
+        "value": 12,
+        "enabled": true
+      },
+      {
+        "name": "alignment",
+        "_type": "select",
+        "selectionList": [
+          "topLeft",
+          "topCenter",
+          "topRight",
+          "centerLeft",
+          "center",
+          "centerRight",
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight"
+        ],
+        "value": "center",
+        "enabled": true
+      }
+    ],
+    "props": [
+      {
+        "name": "type",
+        "_type": "select",
+        "selectionList": [
+          "capsule",
+          "rectangle",
+          "rounded"
+        ],
+        "value": "rounded",
+        "enabled": true
+      },
+      {
+        "name": "colorType",
+        "_type": "select",
+        "selectionList": [
+            "primary",
+            "secondary",
+            "tertiary",
+            "transparent",
+            "light",
+            "dark",
+            "greyShade"
+        ],
+        "value": "primary",
+        "enabled": true
+      },
+      {
+        "name": "icon",
+        "_type": "string",
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "tooltip",
+        "_type": "string",
+        "value": "",
+        "enabled": true
+      }
+    ],
+    "events": [
+      {
+        "name": "onTap",
+        "enabled": true
+      },
+      {
+        "name": "onLongPress",
+        "enabled": true
+      },
+      {
+        "name": "onDoubleTap",
+        "enabled": true
+      }
+    ]
+  }
