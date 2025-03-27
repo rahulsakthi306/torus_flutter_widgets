@@ -39,6 +39,13 @@
       ],
       "value": "",
       "enabled": true
+    }, 
+    {
+      "name": "padding",
+      "_type": "number",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
     }
   ]
 }

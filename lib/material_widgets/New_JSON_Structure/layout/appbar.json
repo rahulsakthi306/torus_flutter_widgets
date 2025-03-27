@@ -26,11 +26,55 @@
             "enabled": true
         },
         {
-            "name": "centerTitle",
-            "_type": "boolean",
+            "name": "leadingIcon",
+            "_type": "string",
             "selectionList": [],
-            "value": false,
+            "value": "",
             "enabled": true
+        },
+        {
+            "name": "trailingIcon",
+            "_type": "string",
+            "selectionList": [],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "branding",
+            "_type": "string",
+            "selectionList": [],
+            "value": "",
+            "enabled": true,
+            "brandingPosition" : {
+                "name": "brandingPosition",
+                "_type": "select",
+                "selectionList": [
+                    "start",
+                    "center",
+                    "spaceAround",
+                    "spaceBetween",
+                    "spaceEvenly",
+                    "end"
+                ],
+                "value": "center",
+                "enabled": true
+            },
+            "logoPosition" : {
+                "name": "logoPosition",
+                "_type": "select",
+                "selectionList": [
+                    "start",
+                    "end"
+                ],
+                "value": "start",
+                "enabled": true
+            }
+        }
+    ],
+    "events": [
+        {
+          "name": "onTap",
+          "enabled": true
         }
     ]
 }
