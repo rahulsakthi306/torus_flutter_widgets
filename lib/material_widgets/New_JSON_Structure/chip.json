@@ -56,6 +56,22 @@
         "enabled": true
       },
       {
+        "name": "foregroundcolor",
+        "_type": "select",
+        "selectionList": [
+          "primary",
+          "secondary",
+          "tertiary",
+          "transparent",
+          "light",
+          "dark",
+          "greyShade"
+          
+        ],
+        "value": "greyShade",
+        "enabled": true
+      },
+      {
         "name": "icon",
         "_type": "string",
         "value": "",

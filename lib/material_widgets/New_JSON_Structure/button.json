@@ -62,6 +62,22 @@
       "enabled": true
     },
     {
+      "name": "foregroundColor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
+        
+      ],
+      "value": "dark",
+      "enabled": true
+    },
+    {
       "name": "size",
       "_type": "select",
       "selectionList": [
