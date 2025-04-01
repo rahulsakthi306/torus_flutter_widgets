@@ -5,6 +5,17 @@
     "label": "",
     "props": [
       {
+        "name": "alignment",
+        "_type": "select",
+        "selectionList": [
+          "start",
+          "center",
+          "end"
+        ],
+        "value": "center",
+        "enabled": true
+      },
+      {
         "name": "text",
         "_type": "string",
         "value": "",
