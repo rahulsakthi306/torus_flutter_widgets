@@ -1,7 +1,7 @@
 {
     "frameWork": "Flutter",
     "version": "3.27.1",
-    "component": "DocumentViewer",
+    "component": "DocumentUploader",
     "label": "",
     "layout": [
       {
