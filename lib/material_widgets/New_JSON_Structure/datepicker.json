@@ -64,6 +64,13 @@
       "enabled": true
     },
     {
+      "name": "selectbeforeToday",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
       "name": "helperText",
       "_type": "string",
       "selectionList": [],
