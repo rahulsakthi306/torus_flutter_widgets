@@ -36,21 +36,20 @@
     {
       "name": "needPagination",
       "_type": "boolean",
-      "selectionList": [],
+      "selectionList": [
+         "true",
+        "false"
+      ],
       "value": false,
       "enabled": true
     },
     {
-      "name": "needSearchBar",
+      "name": "needSelection",
       "_type": "boolean",
-      "selectionList": [],
-      "value": false,
-      "enabled": true
-    },
-    {
-      "name": "needPerPageSelector",
-      "_type": "boolean",
-      "selectionList": [],
+      "selectionList": [
+        "true",
+        "false"
+      ],
       "value": false,
       "enabled": true
     },
@@ -59,7 +58,6 @@
       "_type": "select",
         "selectionList": [
           "*",
-          "edit",
           "delete"
         ],
       "value": "",

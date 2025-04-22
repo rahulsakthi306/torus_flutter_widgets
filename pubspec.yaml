@@ -29,6 +29,8 @@ dependencies:
   graphic: ^2.5.1
   syncfusion_flutter_charts: ^28.2.11
   pie_chart: ^5.4.0
+  circular_countdown_timer: ^0.2.4
+  flutter_onboarding_slider: ^1.0.11
 
 dev_dependencies:
   flutter_test:
@@ -43,6 +45,11 @@ flutter:
   assets:
     - assets/image/upload.png
     - assets/dumb.json
+    - assets/image/group.jpg
+    - assets/image/pngtree4.png
+    - assets/image/istockph.jpg
+    - assets/image/BEAUTIFUL.png
+    - assets/image/tumblr.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

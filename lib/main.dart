@@ -1,17 +1,13 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/chart.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/DataDisplay/chip.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/dateinput.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/textarea.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/textfield.dart';
-import 'package:torus_flutter_widgets/pinInput_new.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/timer/circular_time.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,6 +21,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -54,14 +52,14 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chart'),
+        title: Text('time'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            TChip(),
-          ],
+        child: Center(
+          child: 
+            CircularTime(),
+          
         ),
       ),
     );
