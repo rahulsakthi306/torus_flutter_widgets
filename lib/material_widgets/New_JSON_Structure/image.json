@@ -44,7 +44,7 @@
     },
     {
       "name": "imageUrl",
-      "_type": "string",
+      "_type": "fileUpload",
       "selectionList": [],
       "value": "",
       "enabled": true
