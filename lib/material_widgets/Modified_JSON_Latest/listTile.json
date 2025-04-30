@@ -1,0 +1,33 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "ListTile",
+    "label": "",
+    "props": [
+      {
+        "name": "alignment",
+        "_type": "select",
+        "selectionList": [
+          "start",
+          "center",
+          "end"
+        ],
+        "value": "center",
+        "enabled": true
+      },
+      {
+        "name": "text",
+        "_type": "string",
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "type",
+        "_type": "select",
+        "selectionList": ["card"],
+        "value": "card",
+        "enabled": true
+      }
+    ],
+    "events": []
+  }

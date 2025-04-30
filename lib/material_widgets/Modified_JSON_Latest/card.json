@@ -1,0 +1,319 @@
+{
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Card",
+  "label": "",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "number",
+      "value": 12,
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ],
+      "value": "center",
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "text",
+      "_type": "string",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "type",
+      "_type": "select",
+      "selectionList": [
+        "filled-rounded",
+        "filled-square",
+        "outlined-rounded",
+        "outlined-square",
+        "elevated-rounded",
+        "elevated-square"
+      ],
+      "value": "elevated-rounded",
+      "enabled": true
+    },
+    {
+      "name": "icon",
+      "_type": "string",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "iconPosition",
+      "_type": "string",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "size",
+      "_type": "select",
+      "selectionList": [
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "tooltip",
+      "_type": "string",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "fillColor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
+      ],
+      "value": "greyShade",
+      "enabled": true
+    },
+    {
+      "name": "foregroundcolor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
+      ],
+      "value": "greyShade",
+      "enabled": true
+    },
+    {
+      "name": "fontWeight",
+      "_type": "select",
+      "selectionList": [
+        "normal",
+        "bold",
+        "w100",
+        "w200",
+        "w300",
+        "w400",
+        "w500",
+        "w600",
+        "w700",
+        "w800",
+        "w900"
+      ],
+      "value": "normal",
+      "enabled": true
+    },
+    {
+      "name": "textTheme",
+      "_type": "select",
+      "selectionList": [
+        "displayLarge",
+        "displayMedium",
+        "displaySmall",
+        "headlineLarge",
+        "headlineMedium",
+        "headlineSmall",
+        "titleLarge",
+        "titleMedium",
+        "titleSmall",
+        "labelLarge",
+        "labelMedium",
+        "labelSmall",
+        "bodyLarge",
+        "bodyMedium",
+        "bodySmall"
+      ],
+      "value": "labelMedium",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onTap",
+      "rise": [
+        {
+          "key": "setValueToMemory",
+          "label": "setValueToMemory",
+          "listenerType": "type1"
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type1"
+        },
+        {
+          "key": "infoMsg",
+          "label": "infoMsg",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "hideElement",
+          "label": "hideElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showElement",
+          "label": "showElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "clearHandler",
+          "label": "clearHandler",
+          "listenerType": "type2"
+        },
+        {
+          "key": "disableElement",
+          "label": "disableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "enableElement",
+          "label": "enableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showArtifact",
+          "label": "showArtifact",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    },
+    {
+      "name": "onLongPress",
+      "rise": [
+        {
+          "key": "setValueToMemory",
+          "label": "setValueToMemory",
+          "listenerType": "type1"
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type1"
+        },
+        {
+          "key": "infoMsg",
+          "label": "infoMsg",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "hideElement",
+          "label": "hideElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showElement",
+          "label": "showElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "clearHandler",
+          "label": "clearHandler",
+          "listenerType": "type2"
+        },
+        {
+          "key": "disableElement",
+          "label": "disableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "enableElement",
+          "label": "enableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showArtifact",
+          "label": "showArtifact",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    },
+    {
+      "name": "onDoubleTap",
+      "rise": [
+        {
+          "key": "setValueToMemory",
+          "label": "setValueToMemory",
+          "listenerType": "type1"
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type1"
+        },
+        {
+          "key": "infoMsg",
+          "label": "infoMsg",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "hideElement",
+          "label": "hideElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showElement",
+          "label": "showElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "clearHandler",
+          "label": "clearHandler",
+          "listenerType": "type2"
+        },
+        {
+          "key": "disableElement",
+          "label": "disableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "enableElement",
+          "label": "enableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showArtifact",
+          "label": "showArtifact",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    }
+  ]
+}

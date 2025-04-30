@@ -1,13 +1,13 @@
 {
     "frameWork": "Flutter",
     "version": "3.27.1",
-    "component": "DocumentUploader",
+    "component": "Chart",
     "label": "",
     "layout": [
       {
         "name": "length",
         "_type": "number",
-        "value": "12",
+        "value": 12,
         "enabled": true
       },
       {
@@ -30,21 +30,16 @@
       ],
       "props": [
         {
-          "name": "option",
-          "_type": "select",
+            "name": "chartType",
+            "_type": "select",
             "selectionList": [
-              "*",
-              "form gallery",
-              "form camera"
+                "line",
+                "bar",
+                "pie"
             ],
-          "value": "",
-          "enabled": true
-        }
+            "value": "pie",
+            "enabled": true
+          }
       ],
-      "events": [
-        {
-          "name": "onTap",
-          "enabled": true
-        }
-    ]
-}
+      "events": [] 
+}      

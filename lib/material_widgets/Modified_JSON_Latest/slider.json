@@ -1,0 +1,158 @@
+{
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Slider",
+  "label": "",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "number",
+      "value": 12,
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ],
+      "value": "center",
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "size",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "value": "medium",
+      "enabled": true
+    },
+    {
+      "name": "max",
+      "_type": "numeric",
+      "selectionList": [],
+      "value": 100,
+      "enabled": true
+    },
+    {
+      "name": "divisions",
+      "_type": "numeric",
+      "selectionList": [],
+      "value": 10,
+      "enabled": true
+    },
+    {
+      "name": "labelPosition",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "value": "start",
+      "enabled": true
+    },
+    {
+      "name": "tooltip",
+      "_type": "string",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "textTheme",
+      "_type": "select",
+      "selectionList": [
+        "displayLarge",
+        "displayMedium",
+        "displaySmall",
+        "headlineLarge",
+        "headlineMedium",
+        "headlineSmall",
+        "titleLarge",
+        "titleMedium",
+        "titleSmall",
+        "labelLarge",
+        "labelMedium",
+        "labelSmall",
+        "bodyLarge",
+        "bodyMedium",
+        "bodySmall"
+      ],
+      "value": "labelMedium",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onChanged",
+      "rise": [
+        {
+          "key": "setValueToMemory",
+          "label": "setValueToMemory",
+          "listenerType": "type1"
+        },
+        {
+          "key": "infoMsg",
+          "label": "infoMsg",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "showArtifact",
+          "label": "showArtifact",
+          "listenerType": "type2"
+        },
+        {
+          "key": "clearHandler",
+          "label": "clearHandler",
+          "listenerType": "type2"
+        },
+        {
+          "key": "enableElement",
+          "label": "enableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "disableElement",
+          "label": "disableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showElement",
+          "label": "showElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "hideElement",
+          "label": "hideElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    }
+  ]
+}

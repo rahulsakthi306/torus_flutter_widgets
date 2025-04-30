@@ -1,0 +1,381 @@
+{
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Timeinput",
+  "label": "",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "number",
+      "value": 12,
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ],
+      "value": "center",
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "filled-circle",
+        "outlined-circle",
+        "filled-square",
+        "outlined-square",
+        "underlined"
+      ],
+      "value": "outlined-square",
+      "enabled": true
+    },
+    {
+      "name": "size",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "small",
+        "medium",
+        "large",
+        "max"
+      ],
+      "value": "medium",
+      "enabled": true
+    },
+    {
+      "name": "hintText",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "isDisabled",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "textAlign",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "start",
+        "end",
+        "center",
+        "justify",
+        "left",
+        "right"
+      ],
+      "value": "start",
+      "enabled": true
+    },
+    {
+      "name": "textAlignVertical",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "top",
+        "center",
+        "bottom"
+      ],
+      "value": "center",
+      "enabled": true
+    },
+    {
+      "name": "showCursor",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": true,
+      "enabled": true
+    },
+    {
+      "name": "helperText",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "prefix",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "suffix",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "needClear",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "isFloatLabel",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": true,
+      "enabled": true
+    },
+    {
+      "name": "labelPrefix",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "labelSuffix",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "outerLabelPosition",
+      "_type": "select",
+      "selectionList": [
+        "start",
+        "end",
+        "center",
+        "spaceBetween",
+        "spaceAround",
+        "spaceEvenly"
+      ],
+      "value": "start",
+      "enabled": true
+    },
+    {
+      "name": "fillColor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
+      ],
+      "value": "greyShade",
+      "enabled": true
+    },
+    {
+      "name": "textTheme",
+      "_type": "select",
+      "selectionList": [
+        "displayLarge",
+        "displayMedium",
+        "displaySmall",
+        "headlineLarge",
+        "headlineMedium",
+        "headlineSmall",
+        "titleLarge",
+        "titleMedium",
+        "titleSmall",
+        "labelLarge",
+        "labelMedium",
+        "labelSmall",
+        "bodyLarge",
+        "bodyMedium",
+        "bodySmall"
+      ],
+      "value": "labelMedium",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onTap",
+      "rise": [
+        {
+          "key": "setValueToMemory",
+          "label": "setValueToMemory",
+          "listenerType": "type1"
+        },
+        {
+          "key": "infoMsg",
+          "label": "infoMsg",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "clearHandler",
+          "label": "clearHandler",
+          "listenerType": "type2"
+        },
+        {
+          "key": "enableElement",
+          "label": "enableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "disableElement",
+          "label": "disableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showElement",
+          "label": "showElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "hideElement",
+          "label": "hideElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    },
+    {
+      "name": "onChanged",
+      "rise": [
+        {
+          "key": "setValueToMemory",
+          "label": "setValueToMemory",
+          "listenerType": "type1"
+        },
+        {
+          "key": "infoMsg",
+          "label": "infoMsg",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "clearHandler",
+          "label": "clearHandler",
+          "listenerType": "type2"
+        },
+        {
+          "key": "enableElement",
+          "label": "enableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "disableElement",
+          "label": "disableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showElement",
+          "label": "showElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "hideElement",
+          "label": "hideElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    }
+  ],
+  "validations": [
+    {
+      "name": "isRequired",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "keyboardType",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "name",
+        "emailAddress",
+        "datetime",
+        "number",
+        "text",
+        "multiline",
+        "phone",
+        "url"
+      ],
+      "value": "datetime",
+      "enabled": true
+    },
+    {
+      "name": "format",
+      "groupLabel": "validation",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "numeric",
+        "email",
+        "uppercase",
+        "lowercase",
+        "password",
+        "ip",
+        "iban",
+        "creditCard",
+        "ssn",
+        "St_Code",
+        "Alphabets With Space",
+        "Alphanumeric With Space",
+        "Numeric With Special Charecters",
+        "Alphanumeric With Underscore Alone",
+        "Alphanumeric With Specific Special Charecters",
+        "Only Numbers With 1 Decimal Values",
+        "Only Numbers With 2 Decimal Values",
+        "Only Numbers With 3 Decimal Values",
+        "Restrict Special Characters",
+        "Email Domain Name With Atleast 2 Characters",
+        "Restrict White Spaces",
+        "Alphabets With Special Characters",
+        "Alphabets With Underscore Alone",
+        "Alphabets With Space And Dot",
+        "First Letter Only Uppercase 0thers Lowercase"
+      ],
+      "enabled": true
+    },
+    {
+      "range": {
+        "minValue": "",
+        "maxValue": ""
+      }
+    },
+    {
+      "length": {
+        "minLength": "",
+        "maxLength": ""
+      }
+    }
+  ]
+}

@@ -44,7 +44,22 @@
       "events": [
         {
           "name": "onTap",
+          "rise": [
+            {
+              "key": "setFormData",
+              "label": "setFormData",
+              "listenerType": "type1"
+            }
+          ],
+          "riseListen": [
+              {
+                  "key": "showElement",
+                  "label": "showElement",
+                  "listenerType": "type2"
+              }
+          ],
+          "self": [],
           "enabled": true
-        }
+      }
     ]
 }

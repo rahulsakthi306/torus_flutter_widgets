@@ -1,13 +1,13 @@
 {
     "frameWork": "Flutter",
     "version": "3.27.1",
-    "component": "DocumentUploader",
+    "component": "StarRating",
     "label": "",
     "layout": [
       {
         "name": "length",
         "_type": "number",
-        "value": "12",
+        "value": 12,
         "enabled": true
       },
       {
@@ -30,20 +30,38 @@
       ],
       "props": [
         {
-          "name": "option",
-          "_type": "select",
-            "selectionList": [
-              "*",
-              "form gallery",
-              "form camera"
-            ],
+          "name": "rating",
+          "_type": "double",
+          "selectionList": [],
           "value": "",
           "enabled": true
-        }
+      },
+      {
+        "name": "size",
+        "_type": "double",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+    },
+    {
+        "name": "filledColor",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+    },
+    {
+        "name": "emptyColor",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+    }
       ],
       "events": [
         {
           "name": "onTap",
+          "_type": "Group",
           "enabled": true
         }
     ]

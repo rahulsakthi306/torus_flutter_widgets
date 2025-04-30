@@ -1,0 +1,289 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "DateTime",
+    "label": "",
+    "layout": [
+      {
+        "name": "length",
+        "_type": "number",
+        "value": 12,
+        "enabled": true
+      },
+      {
+        "name": "alignment",
+        "_type": "select",
+        "selectionList": [
+          "topLeft",
+          "topCenter",
+          "topRight",
+          "centerLeft",
+          "center",
+          "centerRight",
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight"
+        ],
+        "value": "center",
+        "enabled": true
+      }
+      ],
+      "props": [
+        {
+          "name": "type",
+          "_type": "select",
+          "selectionList": [
+            "none",
+            "filled-circle",
+            "outlined-circle",
+            "filled-square",
+            "outlined-square",
+            "underlined"
+          ],
+          "value": "outlined-square",
+          "enabled": true
+        },
+        {
+          "name": "size",
+          "_type": "select",
+          "selectionList": [
+            "none",
+            "small",
+            "medium",
+            "large",
+            "max"
+          ],
+          "value": "medium",
+          "enabled": true
+        },
+        {
+          "name": "isDisabled",
+          "_type": "boolean",
+          "selectionList": [],
+          "value": false,
+          "enabled": true
+        },
+        {
+          "name": "helperText",
+          "_type": "string",
+          "selectionList": [],
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "hintText",
+          "_type": "string",
+          "selectionList": [],
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "datetimeFormat",
+          "_type": "string",
+          "selectionList": [],
+          "value": "",
+          "enabled": true
+      },
+        {
+          "name": "selectedDateTime",
+          "_type": "string",
+          "selectionList": [],
+          "value": "",
+          "enabled": true
+      },
+      {
+        "name": "prefix",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "suffix",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "needClear",
+        "_type": "boolean",
+        "selectionList": [],
+        "value": false,
+        "enabled": true
+      },
+      {
+        "name": "isFloatLabel",
+        "_type": "boolean",
+        "selectionList": [],
+        "value": true,
+        "enabled": true
+      },
+      {
+        "name": "labelPrefix",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+      },
+      {
+        "name": "labelSuffix",
+        "_type": "string",
+        "selectionList": [],
+        "value": "",
+        "enabled": true
+      },  
+      {
+        "name": "outerLabelPosition",
+        "_type": "select",
+        "selectionList": [
+         "start",
+         "end",
+         "center",
+         "spaceBetween",
+         "spaceAround",
+         "spaceEvenly"
+        ],
+        "value": "start",
+        "enabled": true
+      },
+      {
+        "name": "fillColor",
+        "_type": "select",
+        "selectionList": [
+          "primary",
+          "secondary",
+          "tertiary",
+          "transparent",
+          "light",
+          "dark",
+          "greyShade"
+        ],
+        "value": "greyShade",
+        "enabled": true
+      },
+        {
+          "name": "textTheme",
+          "_type": "select",
+          "selectionList": [
+            "displayLarge",
+            "displayMedium",
+            "displaySmall",
+            "headlineLarge",
+            "headlineMedium",
+            "headlineSmall",
+            "titleLarge",
+            "titleMedium",
+            "titleSmall",
+            "labelLarge",
+            "labelMedium",
+            "labelSmall",
+            "bodyLarge",
+            "bodyMedium",
+            "bodySmall"
+          ],
+          "value": "",
+          "enabled": true
+        }
+      ],
+     "events": [
+        {
+          "name": "onTap",
+          "rise": [
+            {
+              "key": "setValueToMemory",
+              "label": "setValueToMemory",
+              "listenerType": "type1"
+            },
+            {
+              "key": "infoMsg",
+              "label": "infoMsg",
+              "listenerType": "type1"
+            }
+          ],
+          "riseListen": [
+            {
+              "key": "clearHandler",
+              "label": "clearHandler",
+              "listenerType": "type2"
+            },
+            {
+              "key": "enableElement",
+              "label": "enableElement",
+              "listenerType": "type2"
+            },
+            {
+              "key": "disableElement",
+              "label": "disableElement",
+              "listenerType": "type2"
+            },
+            {
+              "key": "showElement",
+              "label": "showElement",
+              "listenerType": "type2"
+            }, 
+            {
+              "key": "hideElement",
+              "label": "hideElement",
+              "listenerType": "type2"
+            },
+            {
+              "key": "confirmMsg",
+              "label": "confirmMsg",
+              "listenerType": "type2"
+            }
+          ],
+          "self": [],
+          "enabled": true
+        },
+        {
+          "name": "onChanged",
+          "rise": [
+            {
+              "key": "setValueToMemory",
+              "label": "setValueToMemory",
+              "listenerType": "type1"
+            },
+            {
+              "key": "infoMsg",
+              "label": "infoMsg",
+              "listenerType": "type1"
+            }
+          ],
+          "riseListen": [
+            {
+              "key": "clearHandler",
+              "label": "clearHandler",
+              "listenerType": "type2"
+            },
+            {
+              "key": "enableElement",
+              "label": "enableElement",
+              "listenerType": "type2"
+            },
+            {
+              "key": "disableElement",
+              "label": "disableElement",
+              "listenerType": "type2"
+            },
+            {
+              "key": "showElement",
+              "label": "showElement",
+              "listenerType": "type2"
+            },
+            {
+              "key": "hideElement",
+              "label": "hideElement",
+              "listenerType": "type2"
+            },
+            {
+              "key": "confirmMsg",
+              "label": "confirmMsg",
+              "listenerType": "type2"
+            }
+          ],
+          "self": [],
+          "enabled": true
+        }
+    ]
+}

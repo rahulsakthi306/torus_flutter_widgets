@@ -6,20 +6,31 @@ enum IconPosition {
   rightLeft,
 }
 
+enum TimerMode {
+  forward,
+  backward,
+}
+
 class CountUpTimer extends StatefulWidget {
-  final int seconds; // Target time in seconds
-  final IconData leftIcon;
+  final int seconds; 
+  final IconData Icon;
   final bool showIcons;
   final IconPosition iconPosition;
   final bool startAutomatically;
+  final VoidCallback? onTimerComplete;
+  final int stepSeconds; 
+  final TimerMode timerMode; 
 
   const CountUpTimer({
     super.key,
-    this.seconds = 60,
-    this.leftIcon = Icons.access_time,
+    this.seconds = 30,
+    this.Icon = Icons.access_time,
     this.showIcons = true,
     this.iconPosition = IconPosition.leftRight,
     this.startAutomatically = true,
+    this.onTimerComplete,
+    this.stepSeconds = 1,
+    this.timerMode = TimerMode.forward, 
   });
 
   @override
@@ -28,13 +39,13 @@ class CountUpTimer extends StatefulWidget {
 
 class _CountUpTimerState extends State<CountUpTimer> {
   late int _currentSeconds;
-  async.Timer? _countUpTimer;
+  async.Timer? _timer;
   bool _isRunning = false;
 
   @override
   void initState() {
     super.initState();
-    _currentSeconds = 0;
+    _currentSeconds = widget.timerMode == TimerMode.backward ? widget.seconds : 0;
     if (widget.startAutomatically) {
       _startTimer();
     }
@@ -53,21 +64,30 @@ class _CountUpTimerState extends State<CountUpTimer> {
 
   @override
   void dispose() {
-    _countUpTimer?.cancel();
+    _timer?.cancel();
     super.dispose();
   }
 
   void _startTimer() {
-    if (_isRunning || _currentSeconds >= widget.seconds) return;
+    if (_isRunning) return;
 
-    _countUpTimer = async.Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (_currentSeconds < widget.seconds) {
-        setState(() {
-          _currentSeconds++;
-        });
-      } else {
-        timer.cancel();
-        setState(() => _isRunning = false);
+    _timer = async.Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (widget.timerMode == TimerMode.forward) {
+        if (_currentSeconds < widget.seconds) {
+          setState(() => _currentSeconds++);
+        } else {
+          timer.cancel();
+          setState(() => _isRunning = false);
+          widget.onTimerComplete?.call();
+        }
+      } else if (widget.timerMode == TimerMode.backward) {
+        if (_currentSeconds > 0) {
+          setState(() => _currentSeconds--);
+        } else {
+          timer.cancel();
+          setState(() => _isRunning = false);
+          widget.onTimerComplete?.call();
+        }
       }
     });
 
@@ -77,48 +97,73 @@ class _CountUpTimerState extends State<CountUpTimer> {
   }
 
   void _resetTimer() {
-    _countUpTimer?.cancel();
+    _timer?.cancel();
     setState(() {
-      _currentSeconds = 0;
+      _currentSeconds = widget.timerMode == TimerMode.backward ? widget.seconds : 0;
       _isRunning = false;
     });
   }
 
-  String _formatTimeUnit(int unit) => unit.toString().padLeft(2, '0');
+  void _adjustTime(int change) {
+    setState(() {
+      if (widget.timerMode == TimerMode.forward) {
+        _currentSeconds = (_currentSeconds + change).clamp(0, widget.seconds);
+      } else if (widget.timerMode == TimerMode.backward) {
+        _currentSeconds = (_currentSeconds - change).clamp(0, widget.seconds);
+      }
+    });
+  }
+
+  String _formatTime(int totalSeconds) {
+    final hours = totalSeconds ~/ 3600;
+    final minutes = (totalSeconds % 3600) ~/ 60;
+    final seconds = totalSeconds % 60;
+
+    final parts = <String>[];
+    if (hours > 0) parts.add("${hours}");
+    if (minutes > 0 || hours > 0) parts.add("${minutes}");
+    parts.add("${seconds}");
+
+    return parts.join(' ');
+  }
 
   @override
   Widget build(BuildContext context) {
-    // Format the current seconds
+    final icon = widget.showIcons
+        ? Icon(widget.Icon, size: 32.0)
+        : const SizedBox.shrink();
+
     final timeText = Text(
-      _formatTimeUnit(_currentSeconds),
+      _formatTime(_currentSeconds),
       style: const TextStyle(fontSize: 32.0),
     );
 
-    // Determine which icon to show based on the iconPosition and showIcons flag
-    final icon = widget.showIcons
-        ? Icon(widget.leftIcon, size: 32.0)
-        : const SizedBox.shrink();
-
-    // Create the layout based on iconPosition
     final row = Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: widget.iconPosition == IconPosition.leftRight
+ children: widget.iconPosition == IconPosition.leftRight
           ? [icon, timeText]
           : [timeText, icon],
     );
 
-    return GestureDetector(
-      onTap: () {
-        if (_currentSeconds >= widget.seconds) {
-          _resetTimer();
-        } else {
-          _startTimer();
-        }
-      },
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8.0),
-        child: row,
-      ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        GestureDetector(
+          onTap: () {
+            if ((_currentSeconds >= widget.seconds && widget.timerMode == TimerMode.forward) || 
+                (_currentSeconds <= 0 && widget.timerMode == TimerMode.backward)) {
+              _resetTimer();
+            } else {
+              _startTimer();
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8.0),
+            child: row,
+          ),
+        ),
+      
+      ],
     );
   }
 }
