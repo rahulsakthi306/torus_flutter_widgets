@@ -1,0 +1,36 @@
+{
+    "params": [
+        {
+            "name": "type",
+            "_type": "select",
+            "selectionList": [
+                "with_2FA",
+                "without_2FA"
+            ],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "category",
+            "_type": "select",
+            "selectionList": [
+                "none",
+                "OTP",
+                "Biometric"
+            ],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "stage",
+            "_type": "select",
+            "selectionList": [
+                "none",
+                "verify_otp",
+                "verify_biometric"
+            ],
+            "value": "",
+            "enabled": true
+        }
+    ]
+}

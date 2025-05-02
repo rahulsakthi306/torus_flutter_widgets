@@ -30,12 +30,12 @@
       ],
       "props": [
         {
-          "name": "option",
+          "name": "categories",
           "_type": "select",
             "selectionList": [
               "*",
-              "form gallery",
-              "form camera"
+              "fil;",
+              "camera"
             ],
           "value": "",
           "enabled": true
@@ -52,11 +52,11 @@
             }
           ],
           "riseListen": [
-              {
-                  "key": "showElement",
-                  "label": "showElement",
-                  "listenerType": "type2"
-              }
+            {
+              "key": "showArtifact",
+              "label": "showArtifact",
+              "listenerType": "type2"
+            }
           ],
           "self": [],
           "enabled": true
