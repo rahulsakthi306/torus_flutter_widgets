@@ -34,8 +34,18 @@
           "_type": "select",
             "selectionList": [
               "*",
-              "fil;",
+              "gallery",
               "camera"
+            ],
+          "value": "",
+          "enabled": true
+        },
+        {
+          "name": "uploadStateType",
+          "_type": "select",
+            "selectionList": [
+              "loader",
+              "progress"
             ],
           "value": "",
           "enabled": true
