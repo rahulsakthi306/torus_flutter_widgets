@@ -150,13 +150,18 @@
       "enabled": true
     }
   ],
-  "events": [
+   "events": [
     {
       "name": "onPressed",
       "rise": [
         {
           "key": "saveHandler",
           "label": "saveHandler",
+          "listenerType": "type1"
+        },
+        {
+          "key": "setFormData",
+          "label": "setFormData",
           "listenerType": "type1"
         },
         {
@@ -167,11 +172,6 @@
         {
           "key": "updateHandler",
           "label": "updateHandler",
-          "listenerType": "type1"
-        },
-        {
-          "key": "setFormData",
-          "label": "setFormData",
           "listenerType": "type1"
         },
         {
@@ -189,6 +189,11 @@
         {
           "key": "bindTran",
           "label": "bindTran",
+          "listenerType": "type2"
+        },
+        {
+          "key": "getFormData",
+          "label": "getFormData",
           "listenerType": "type2"
         },
         {
@@ -222,8 +227,8 @@
           "listenerType": "type2"
         },
         {
-          "key": "scan",
-          "label": "scan",
+          "key": "login",
+          "label": "login",
           "listenerType": "type2"
         }
       ],
