@@ -7,116 +7,84 @@
     "type": "",
     "layout": [
         {
-            "label": "length",
             "name": "length",
-            "type": "string",
-            "default": "12",
-            "enum": "",
-            "value": "",
+            "_type": "number",
+            "value": 12,
             "enabled": true
         },
         {
-            "label": "alignment",
             "name": "alignment",
-            "type": "string",
-            "default": "center",
-            "enum": {
-                "label": "enum",
-                "type": "dropdown",
-                "mode": "single",
-                "selectedValue": [],
-                "selectionList": [
-                    "topLeft",
-                    "topCenter",
-                    "topRight",
-                    "centerLeft",
-                    "center",
-                    "centerRight",
-                    "bottomLeft",
-                    "bottomCenter",
-                    "bottomRight"
-                ]
-            },
+            "_type": "select",
+            "selectionList": [
+                "topLeft",
+                "topCenter",
+                "topRight",
+                "centerLeft",
+                "center",
+                "centerRight",
+                "bottomLeft",
+                "bottomCenter",
+                "bottomRight"
+            ],
+            "value": "center",
             "enabled": true
         }
     ],
     "props": [
         {
             "name": "text",
-            "label": "text",
-            "type": "string",
-            "default": "",
-            "enum": "",
+            "_type": "string",
+            "selectionList": [],
             "value": "",
             "enabled": true
         },
         {
             "name": "size",
-            "label": "size",
-            "type": "string",
-            "default": "small",
-            "enum": {
-                "label": "enum",
-                "type": "dropdown",
-                "mode": "single",
-                "selectedValue": [],
-                "selectionList": [
-                    "none",
-                    "small",
-                    "medium",
-                    "large"
-                ]
-            },
-            "value": "",
+            "_type": "string",
+            "selectionList": [
+                "none",
+                "small",
+                "medium",
+                "large"
+            ],
+            "value": "small",
             "enabled": true
         },
         {
             "name": "imageUrl",
-            "label": "imageUrl",
-            "type": "string",
-            "default": "",
-            "enum": "",
+            "_type": "fileUpload",
+            "selectionList": [],
             "value": "",
             "enabled": true
         },
         {
             "name": "icon",
-            "label": "icon",
-            "type": "string",
-            "default": "",
-            "enum": "",
+            "_type": "string",
+            "selectionList": [],
             "value": "",
             "enabled": true
         },
         {
             "name": "textTheme",
-            "label": "textTheme",
-            "type": "string",
-            "default": "titleMedium",
-            "enum": {
-                "label": "enum",
-                "type": "dropdown",
-                "mode": "single",
-                "selectedValue": [],
-                "selectionList": [
-                    "displayLarge",
-                    "displayMedium",
-                    "displaySmall",
-                    "headlineLarge",
-                    "headlineMedium",
-                    "headlineSmall",
-                    "titleLarge",
-                    "titleMedium",
-                    "titleSmall",
-                    "labelLarge",
-                    "labelMedium",
-                    "labelSmall",
-                    "bodyLarge",
-                    "bodyMedium",
-                    "bodySmall"
-                ]
-            },
-            "value": "",
+            "_type": "string",
+            "selectionList": [
+                "displayLarge",
+                "displayMedium",
+                "displaySmall",
+                "headlineLarge",
+                "headlineMedium",
+                "headlineSmall",
+                "titleLarge",
+                "titleMedium",
+                "titleSmall",
+                "labelLarge",
+                "labelMedium",
+                "labelSmall",
+                "bodyLarge",
+                "bodyMedium",
+                "bodySmall"
+            ],
+            "value": "titleMedium",
             "enabled": true
         }
     ],

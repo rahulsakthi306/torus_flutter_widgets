@@ -220,6 +220,11 @@
           "key": "hideElement",
           "label": "hideElement",
           "listenerType": "type2"
+        },
+        {
+          "key": "scan",
+          "label": "scan",
+          "listenerType": "type2"
         }
       ],
       "self": [],

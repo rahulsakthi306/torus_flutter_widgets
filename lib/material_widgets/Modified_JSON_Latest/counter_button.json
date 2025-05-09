@@ -1,0 +1,75 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "CounterButton",
+    "name": "CounterButton",
+    "label": "",
+    "type": "",
+    "layout": [
+        {
+            "name": "length",
+            "_type": "number",
+            "value": 12,
+            "enabled": true
+        },
+        {
+            "name": "alignment",
+            "_type": "select",
+            "selectionList": [
+                "topLeft",
+                "topCenter",
+                "topRight",
+                "centerLeft",
+                "center",
+                "centerRight",
+                "bottomLeft",
+                "bottomCenter",
+                "bottomRight"
+            ],
+            "value": "center",
+            "enabled": true
+        }
+    ],
+    "props": [
+        {
+            "name": "type",
+            "_type": "select",
+            "selectionList": [
+               "filled-circle",
+               "outlined-circle",
+               "filled-square",
+               "outlined-square",
+                "none"
+            ],
+            "value": "medium",
+            "enabled": true
+        },
+        {
+            "name": "size",
+            "_type": "select",
+            "selectionList": [
+               "small",
+               "medium",
+               "large'",
+               "max"
+            ],
+            "value": "medium",
+            "enabled": true
+        },
+        {
+            "name": "prefix",
+            "_type": "string",
+            "selectionList": [],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "suffix",
+            "_type": "string",
+            "selectionList": [],
+            "value": "",
+            "enabled": true
+        }
+    ],
+    "events": []
+}
