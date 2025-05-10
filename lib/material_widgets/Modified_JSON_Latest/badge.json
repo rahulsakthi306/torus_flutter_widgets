@@ -1,8 +1,7 @@
 {
     "frameWork": "Flutter",
     "version": "3.27.1",
-    "component": "Badge",
-    "label": "",
+    "component": "Badge",    
     "layout": [
         {
             "name": "length",

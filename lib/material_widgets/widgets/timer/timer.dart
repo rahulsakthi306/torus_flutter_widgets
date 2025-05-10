@@ -11,6 +11,10 @@ enum TimerMode {
   backward,
 }
 
+// List<String> IconPosition = [ 'leftRight', 'rightLeft' ];
+
+// List<String> TimerMode  = [ 'forward','backward' ];
+
 class CountUpTimer extends StatefulWidget {
   final int seconds; 
   final IconData Icon;

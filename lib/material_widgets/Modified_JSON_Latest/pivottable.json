@@ -3,8 +3,6 @@
     "version": "3.27.1",
     "component": "PivotTable",
     "name": "PivotTable",
-    "label": "",
-    "type": "",
     "layout": [
         {
             "name": "length",

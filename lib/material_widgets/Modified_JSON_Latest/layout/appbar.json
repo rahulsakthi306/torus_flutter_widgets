@@ -3,8 +3,6 @@
     "version": "3.27.1",
     "component": "Appbar",
     "name": "Appbar",
-    "label": "",
-    "type": "",
     "props": [
         {
             "name": "Need Torus App Settings",
@@ -71,10 +69,5 @@
             }
         }
     ],
-    "events": [
-        {
-          "name": "onTap",
-          "enabled": true
-        }
-    ]
+    "events": []
 }

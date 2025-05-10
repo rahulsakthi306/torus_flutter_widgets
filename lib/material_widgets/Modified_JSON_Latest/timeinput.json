@@ -2,7 +2,6 @@
   "frameWork": "Flutter",
   "version": "3.27.1",
   "component": "Timeinput",
-  "label": "",
   "layout": [
     {
       "name": "length",
