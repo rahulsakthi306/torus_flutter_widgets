@@ -229,6 +229,11 @@
           "key": "login",
           "label": "login",
           "listenerType": "type2"
+        },
+        {
+          "key": "scan",
+          "label": "scan",
+          "listenerType": "type2"
         }
       ],
       "self": [],
