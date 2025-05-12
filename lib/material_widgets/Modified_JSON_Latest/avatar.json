@@ -3,7 +3,6 @@
     "version": "3.27.1",
     "component": "Avatar",
     "name": "Avatar",
-    "type": "",
     "layout": [
         {
             "name": "length",
@@ -39,7 +38,7 @@
         },
         {
             "name": "size",
-            "_type": "string",
+            "_type": "select",
             "selectionList": [
                 "none",
                 "small",
@@ -65,7 +64,7 @@
         },
         {
             "name": "textTheme",
-            "_type": "string",
+            "_type": "select",
             "selectionList": [
                 "displayLarge",
                 "displayMedium",
