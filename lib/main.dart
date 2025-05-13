@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/checkbox_group.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/creditecardform.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/placepicker.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/qr_viewer.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/signature.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/slidable_listtile.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/toggleicon.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/scanner/scanner.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/timer/circular_time.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/timer/timer.dart';
+// import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // MobileAds.instance.initialize();
   runApp(MyApp());
 }
 
@@ -54,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   }
 
   @override
-  Widget build(BuildContext context) {
+    Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('test'),
@@ -62,9 +69,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Center(
-          child: 
-            SignaturePage(),
-          
+          child: SignaturePage()
         ),
       ),
     );

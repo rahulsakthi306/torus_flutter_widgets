@@ -151,17 +151,17 @@
       "selectionList": [],
       "value": "",
       "enabled": true
-    },  
+    },
     {
       "name": "outerLabelPosition",
       "_type": "select",
       "selectionList": [
-       "start",
-       "end",
-       "center",
-       "spaceBetween",
-       "spaceAround",
-       "spaceEvenly"
+        "start",
+        "end",
+        "center",
+        "spaceBetween",
+        "spaceAround",
+        "spaceEvenly"
       ],
       "value": "start",
       "enabled": true
@@ -179,6 +179,12 @@
         "greyShade"
       ],
       "value": "greyShade",
+      "enabled": true
+    },
+    {
+      "name": "tooltip",
+      "_type": "string",
+      "value": "",
       "enabled": true
     },
     {
