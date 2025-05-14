@@ -39,18 +39,17 @@
             "name": "foregroundColor",
             "_type": "select",
             "selectionList": [
-              "primary",
-              "secondary",
-              "tertiary",
-              "transparent",
-              "light",
-              "dark",
-              "greyShade"
-              
+                "primary",
+                "secondary",
+                "tertiary",
+                "transparent",
+                "light",
+                "dark",
+                "greyShade"
             ],
             "value": "dark",
             "enabled": true
-          },
+        },
         {
             "name": "textOverflow",
             "_type": "select",
@@ -117,6 +116,12 @@
                 "bodySmall"
             ],
             "value": "labelMedium",
+            "enabled": true
+        },
+        {
+            "name": "tooltip",
+            "_type": "string",
+            "value": "",
             "enabled": true
         }
     ],

@@ -1,9 +1,8 @@
 {
     "frameWork": "Flutter",
     "version": "3.27.1",
-    "component": "Timer",
-    "name": "Timer",
-    "type": "",
+    "component": "QRCode",
+    "name": "QRCode",
     "layout": [
         {
             "name": "length",
@@ -30,7 +29,12 @@
         }
     ],
     "props": [
-        
+        {
+            "name": "data",
+            "_type": "string",
+            "value": "",
+            "enabled": true
+        }
     ],
     "events": []
 }

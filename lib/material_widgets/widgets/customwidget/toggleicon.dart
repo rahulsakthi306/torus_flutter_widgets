@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Toggleicon extends StatefulWidget {
-  final IconData? iconone;
-  final IconData? icontwo;
-  final double? size;
-  final Color? color;
+  final IconData? activeIcon;
+  final IconData? inactiveIcon;
+  final String? size;
 
   const Toggleicon({
     super.key,
-    this.iconone =  Icons.favorite_border,
-    this.icontwo = Icons.favorite,
-    this.size = 30,
-    this.color = Colors.red,
+    this.activeIcon = Icons.done,
+    this.inactiveIcon = Icons.done_all_outlined,
+    this.size = 'medium',
   });
 
   @override
@@ -21,13 +19,35 @@ class Toggleicon extends StatefulWidget {
 class _ToggleiconState extends State<Toggleicon> {
   bool _toggled = false;
 
+  double _mapSize(String sizeLabel) {
+    switch (sizeLabel.toLowerCase()) {
+      case 'none':
+        return 0.0;
+      case 'small':
+        return 16.0;
+      case 'medium':
+        return 24.0;
+      case 'large':
+        return 32.0;
+      case 'max':
+        return 48.0;
+      default:
+        return 24.0;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    final iconSize = _mapSize(widget.size ?? 'medium');
+    final iconColor = Theme.of(context).primaryColor;
+
     return IconButton(
       icon: Icon(
-        _toggled ? (widget.icontwo ?? Icons.visibility_off) : (widget.iconone ?? Icons.visibility),
-        size: widget.size ?? 24.0,
-        color: widget.color ?? Colors.black,
+        _toggled
+            ? (widget.inactiveIcon ?? Icons.visibility_off)
+            : (widget.activeIcon ?? Icons.visibility),
+        size: iconSize,
+        color: iconColor,
       ),
       onPressed: () {
         setState(() {

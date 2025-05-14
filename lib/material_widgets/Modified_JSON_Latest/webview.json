@@ -1,9 +1,8 @@
 {
     "frameWork": "Flutter",
     "version": "3.27.1",
-    "component": "Timer",
-    "name": "Timer",
-    "type": "",
+    "component": "WebView",
+    "name": "WebView",
     "layout": [
         {
             "name": "length",
@@ -30,7 +29,19 @@
         }
     ],
     "props": [
-        
+        {
+            "name": "url",
+            "_type": "string",
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "javascriptEnabled",
+            "_type": "boolean",
+            "selectionList": [],
+            "value": false,
+            "enabled": true
+        }
     ],
     "events": []
 }
