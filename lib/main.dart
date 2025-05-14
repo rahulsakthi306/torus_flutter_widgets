@@ -40,6 +40,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
+  final GlobalKey<FormState> _form = GlobalKey<FormState>();
   late TabController _tabController;
    List<Map<String, String>> rawData = [
       {"name": "Amrish", "value": "6600"},
@@ -66,12 +67,21 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       appBar: AppBar(
         title: Text('test'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Center(
-          child: SignaturePage()
-        ),
-      ),
+      body: Form(
+        key: _form,
+        child: Column(
+          children: [
+            CustomCheckboxGroup(),
+            ElevatedButton(onPressed: () => {
+              if(_form.currentState!.validate()){
+                print('form validation')
+              }
+            } ,
+             child: 
+            Text('text')
+            )
+          ],
+        )),
     );
   }
 }

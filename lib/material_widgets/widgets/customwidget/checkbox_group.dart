@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/checkbox.dart';
-
 
 class CustomCheckboxGroup extends StatefulWidget {
-  final bool isDisable;
+  final bool isDisabled;
   final List<String> options;
-  final String contentPosition;
-  final String checkboxAlignment;
-
+  final String contentPosition; 
+  final String checkboxAlignment; 
+  final ValueChanged<List<bool>>? onChanged;
+  final String? label;
+  final bool required;
+  
 
   const CustomCheckboxGroup({
     super.key,
-    this.isDisable = false,
-    this.options = const ['HI','HELLO','HEY'],
+    this.isDisabled = false,
+    this.options = const ['option1','option2','option3','option4'],
     this.contentPosition = 'right',
     this.checkboxAlignment = 'vertical',
- 
+    this.onChanged,
+    this.label, 
+    this.required = false,
+
   });
 
   @override
@@ -34,55 +38,47 @@ class _CustomCheckboxGroupState extends State<CustomCheckboxGroup> {
   void handleCheckboxChange(int index, bool? value) {
     setState(() {
       values[index] = value!;
-    });
+    }); 
+
+    if (widget.onChanged != null) {
+      widget.onChanged!(values);
+    }
+  }
+
+  Widget _buildCheckbox(int index, String option) {
+    final checkbox = Checkbox(
+      value: values[index],
+      onChanged: widget.isDisabled ? null : (value) => handleCheckboxChange(index, value),
+    );
+
+    final label = Text(option);
+
+    return GestureDetector(
+    onTap: widget.isDisabled
+        ? null
+        : () => handleCheckboxChange(index, !values[index]),
+    child: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+      child: widget.contentPosition == 'left'
+          ? Row(mainAxisSize: MainAxisSize.min, children: [label, checkbox])
+          : Row(mainAxisSize: MainAxisSize.min, children: [checkbox, label]),
+    ),
+  );
   }
 
   @override
   Widget build(BuildContext context) {
-    Widget checkboxGroup;
-    
-    if (widget.checkboxAlignment == 'horizontal') {
-      checkboxGroup = Row(
-        children: widget.options.asMap().entries.map((entry) {
-          int index = entry.key;
-          String option = entry.value;
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: TCheckbox(
-              value: values[index],
-              onChanged: widget.isDisable
-                  ? (bool? value) {}
-                  : (bool? value) => handleCheckboxChange(index, value),
-              label: option,
-              isDisabled: widget.isDisable,
-              contentPosition: widget.contentPosition,
+    final children = widget.options
+        .asMap()
+        .entries
+        .map((entry) => _buildCheckbox(entry.key, entry.value))
+        .toList();
 
-            ),
-          );
-        }).toList(),
-      );
-    } else {
-      checkboxGroup = Column(
-        children: widget.options.asMap().entries.map((entry) {
-          int index = entry.key;
-          String option = entry.value;
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: TCheckbox(
-              value: values[index],
-              onChanged: widget.isDisable
-                  ? (bool? value) {}
-                  : (bool? value) => handleCheckboxChange(index, value),
-              label: option,
-              isDisabled: widget.isDisable,
-              contentPosition: widget.contentPosition,
-
-            ),
-          );
-        }).toList(),
-      );
-    }
-
-    return checkboxGroup;
+    return widget.checkboxAlignment == 'horizontal'
+        ? SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(children: children),
+          )
+        : Column(crossAxisAlignment: CrossAxisAlignment.start,children: children);
   }
 }

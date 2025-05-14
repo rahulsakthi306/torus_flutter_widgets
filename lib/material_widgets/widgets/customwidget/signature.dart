@@ -5,6 +5,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:signature/signature.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:external_path/external_path.dart';
+import 'package:flutter/services.dart';
 
 class SignaturePage extends StatefulWidget {
   const SignaturePage({super.key});
@@ -19,7 +20,9 @@ class _SignaturePageState extends State<SignaturePage> {
     penStrokeWidth: 5,
     exportBackgroundColor: Colors.transparent,
   );
-  
+
+  static const platform = MethodChannel('samples.flutter.dev/mediaScanner');
+
   @override
   void dispose() {
     _controller.dispose();
@@ -27,11 +30,14 @@ class _SignaturePageState extends State<SignaturePage> {
   }
 
   Future<void> _getSignatureData() async {
-    var status = await Permission.storage.request();
-    if (!status.isGranted) {
+    var storagePermission = await Permission.storage.request();
+    var managePermission = await Permission.manageExternalStorage.request();
+
+    if (!storagePermission.isGranted || !managePermission.isGranted) {
       print('Storage permission denied');
       return;
     }
+
     if (_controller.isNotEmpty) {
       Uint8List? signature = await _controller.toPngBytes();
       if (signature != null) {
@@ -48,17 +54,24 @@ class _SignaturePageState extends State<SignaturePage> {
   }
 
   Future<void> saveToDownloads(Uint8List data) async {
-    String downloadsPath = await ExternalPath.getExternalStoragePublicDirectory(
-      "Download",
-    );
+    String downloadsPath =
+        await ExternalPath.getExternalStoragePublicDirectory("Download");
+    String filePath =
+        '$downloadsPath/signature_${DateTime.now().millisecondsSinceEpoch}.png';
 
-    // Create a file in the Downloads folder
-    final file = File(
-        '$downloadsPath/signature_${DateTime.now().millisecondsSinceEpoch}.png');
-
-    // Write the image data
+    final file = File(filePath);
     await file.writeAsBytes(data);
-    print('✅ Signature saved to: ${file.path}');
+    print('✅ Signature saved to: $filePath');
+
+    await scanFile(filePath);
+  }
+
+  Future<void> scanFile(String path) async {
+    try {
+      await platform.invokeMethod('scanFile', {'path': path});
+    } on PlatformException catch (e) {
+      print("Failed to scan file: '${e.message}'.");
+    }
   }
 
   void _clearSignature() {
@@ -68,15 +81,6 @@ class _SignaturePageState extends State<SignaturePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Signature'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.clear),
-            onPressed: _clearSignature,
-          ),
-        ],
-      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -87,10 +91,20 @@ class _SignaturePageState extends State<SignaturePage> {
               backgroundColor: Colors.white,
             ),
             const SizedBox(height: 20),
-            ElevatedButton.icon(
-              onPressed: _getSignatureData,
-              icon: const Icon(Icons.check),
-              label: const Text('Get Signature'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton.icon(
+                  onPressed: _getSignatureData,
+                  icon: const Icon(Icons.check),
+                  label: const Text('Get Signature'),
+                ),
+                ElevatedButton.icon(
+                  onPressed: _clearSignature,
+                  icon: const Icon(Icons.clear),
+                  label: const Text('Clear'),
+                ),
+              ],
             ),
           ],
         ),
