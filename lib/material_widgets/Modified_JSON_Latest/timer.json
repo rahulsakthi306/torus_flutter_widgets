@@ -30,7 +30,55 @@
         }
     ],
     "props": [
-        
+        {
+            "name": "seconds",
+            "_type": "number",
+            "selectionList": [],
+            "value": 10,
+            "enabled": true
+        },
+        {
+            "name": "prefix",
+            "_type": "string",
+            "selectionList": [],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "iconPosition",
+            "_type": "select",
+            "selectionList": [
+                "leftRight",
+                "rightLeft"
+            ],
+            "value": "leftRight",
+            "enabled": true
+        },
+        {
+            "name": "autoStartTimer",
+            "_type": "boolean",
+            "selectionList": [],
+            "value": false,
+            "enabled": true
+        },
+        {
+            "name": "timerMode",
+            "_type": "string",
+            "selectionList": [
+                "forward",
+                "backward"
+            ],
+            "value": "forward",
+            "enabled": true
+        }
     ],
-    "events": []
+    "events": [
+        {
+            "name": "onTimerComplete",
+            "rise": [],
+            "riseListen": [],
+            "self": [],
+            "enabled": true
+        }
+    ]
 }

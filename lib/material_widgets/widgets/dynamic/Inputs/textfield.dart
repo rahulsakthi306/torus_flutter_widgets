@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 
 List<String> type = [
   'filled-circle',
@@ -29,6 +30,8 @@ class TTextField extends StatefulWidget {
   final void Function(String)? onChanged;
   final String? Function(String?)? validator;
   final String? fillColor;
+  final bool isPhoneField;
+  final FocusNode? focusNode;
 
   const TTextField({
     super.key,
@@ -49,9 +52,11 @@ class TTextField extends StatefulWidget {
     this.keyboardType,
     this.isFloatLabel = true,
     this.labelPrefix,
-    this.labelSuffix = Icons.abc,
-    this.outerLabelPosition = MainAxisAlignment.end,
-    this.fillColor,  // Receiving fillColor to decide color
+    this.labelSuffix = Icons.account_balance,
+    this.outerLabelPosition = MainAxisAlignment.start,
+    this.fillColor, 
+    this.isPhoneField = false,
+    this.focusNode,
   });
 
   @override
@@ -256,9 +261,25 @@ class _TTextFieldState extends State<TTextField> {
             ],
           ),
         SizedBox(height: 8),
+
         SizedBox(
-          width: size.width,
-          child: TextFormField(
+      width: double.infinity,
+      child: widget.isPhoneField
+          ? IntlPhoneField(
+              focusNode: widget.focusNode,
+              controller: widget.controller,
+              decoration: inputDecoration.copyWith(
+                labelText: widget.label ?? 'Phone Number',
+              ),
+              initialCountryCode: 'US',
+              languageCode: "en",
+              enabled: !widget.isDisabled,
+              onChanged: (phone) => widget.onChanged?.call(phone.completeNumber),
+              onCountryChanged: (country) {
+                print('Country changed to: ${country.name}');
+              },
+            )
+          : TextFormField(
               controller: widget.controller,
               decoration: inputDecoration,
               keyboardType: widget.keyboardType,
@@ -269,8 +290,26 @@ class _TTextFieldState extends State<TTextField> {
               enabled: !widget.isDisabled,
               onChanged: widget.onChanged,
               validator: widget.validator,
-              onTap: _onTap),
-        ),
+              onTap: 
+               _onTap
+              
+            ),
+    ),
+        // SizedBox(
+        //   width: size.width,
+        //   child: TextFormField(
+        //       controller: widget.controller,
+        //       decoration: inputDecoration,
+        //       keyboardType: widget.keyboardType,
+        //       textAlign: widget.textAlign,
+        //       textAlignVertical: widget.textAlignVertical,
+        //       showCursor: widget.showCursor,
+        //       obscureText: _isObscured,
+        //       enabled: !widget.isDisabled,
+        //       onChanged: widget.onChanged,
+        //       validator: widget.validator,
+        //       onTap: _onTap),
+        // ),
       ],
     );
   }

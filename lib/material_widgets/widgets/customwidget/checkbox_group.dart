@@ -19,7 +19,6 @@ class CustomCheckboxGroup extends StatefulWidget {
     this.onChanged,
     this.label, 
     this.required = false,
-
   });
 
   @override
