@@ -40,7 +40,7 @@
                "outlined-square",
                 "none"
             ],
-            "value": "medium",
+            "value": "outlined-square",
             "enabled": true
         },
         {

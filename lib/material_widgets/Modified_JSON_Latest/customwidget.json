@@ -1,0 +1,36 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "CustomWidget",
+    "name": "CustomWidget",
+    "type": "",
+    "layout": [
+        {
+            "name": "length",
+            "_type": "number",
+            "value": 12,
+            "enabled": true
+        },
+        {
+            "name": "alignment",
+            "_type": "select",
+            "selectionList": [
+                "topLeft",
+                "topCenter",
+                "topRight",
+                "centerLeft",
+                "center",
+                "centerRight",
+                "bottomLeft",
+                "bottomCenter",
+                "bottomRight"
+            ],
+            "value": "center",
+            "enabled": true
+        }
+    ],
+    "props": [],
+    "events": [
+        
+    ]
+}
