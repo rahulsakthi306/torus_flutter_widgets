@@ -63,7 +63,7 @@
         },
         {
             "name": "timerMode",
-            "_type": "string",
+            "_type": "select",
             "selectionList": [
                 "forward",
                 "backward"
