@@ -10,6 +10,8 @@ import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/te
 import 'package:torus_flutter_widgets/material_widgets/widgets/scanner/scanner.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/timer/circular_time.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/timer/timer.dart';
+
+import 'material_widgets/widgets/form/formfield.dart';
 // import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 void main() {
@@ -91,7 +93,17 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            TTextField(),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, 
+                  MaterialPageRoute(builder: (context) =>  Formfield())
+                );
+              } ,
+              child: const Text('Submit'),
+            ),
+
+
+            // TTextField(),
             // CreditCardForm(key: _creditCardFormKey),
             // const SizedBox(height: 24),
             // ElevatedButton(

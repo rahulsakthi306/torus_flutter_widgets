@@ -3,7 +3,6 @@
     "version": "3.27.1",
     "component": "CounterButton",
     "name": "CounterButton",
-    "type": "",
     "layout": [
         {
             "name": "length",
