@@ -1,7 +1,7 @@
 {
   "frameWork": "Flutter",
   "version": "3.27.1",
-  "component": "Progress",
+  "component": "Indicator",
   "layout": [
     {
       "name": "length",
@@ -36,55 +36,38 @@
       "enabled": true
     },
     {
-      "name": "size",
+      "name": "sizeCategory",
       "_type": "select",
       "selectionList": [
         "small",
         "large",
-        "medium",
-        "max"
+        "medium"
       ],
-      "value": "medium",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "color",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "backgroundColor",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
       "enabled": true
     },
     {
       "name": "type",
-      "_type": "select",
+      "_type": "string",
       "selectionList": [
         "none",
         "linear",
         "circular"
       ],
-      "value": "linear",
-      "enabled": true
-    },
-    {
-      "name": "color",
-      "_type": "select",
-      "selectionList": [
-        "primary",
-        "secondary",
-        "tertiary",
-        "transparent"
-      ],
-      "value": "primary",
-      "enabled": true
-    },
-    {
-      "name": "backgroundColor",
-      "_type": "select",
-      "selectionList": [
-        "primary",
-        "secondary",
-        "tertiary",
-        "transparent"
-      ],
-      "value": "transparent",
-      "enabled": true
-    },
-    {
-      "name": "tooltip",
-      "_type": "string",
       "value": "",
       "enabled": true
     }

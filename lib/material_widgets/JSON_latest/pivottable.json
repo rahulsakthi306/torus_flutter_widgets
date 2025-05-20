@@ -1,9 +1,8 @@
 {
     "frameWork": "Flutter",
     "version": "3.27.1",
-    "component": "Timer",
-    "name": "Timer",
-    "type": "",
+    "component": "PivotTable",
+    "name": "PivotTable",
     "layout": [
         {
             "name": "length",
@@ -31,60 +30,44 @@
     ],
     "props": [
         {
-            "name": "seconds",
-            "_type": "number",
-            "selectionList": [],
-            "value": 10,
-            "enabled": true
-        },
-        {
-            "name": "prefix",
+            "name": "tableName",
             "_type": "string",
             "selectionList": [],
             "value": "",
             "enabled": true
         },
         {
-            "name": "iconPosition",
-            "_type": "select",
-            "selectionList": [
-                "start",
-                "end"
-            ],
-            "value": "leftRight",
-            "enabled": true
-        },
-        {
-            "name": "autoStartTimer",
-            "_type": "boolean",
-            "selectionList": [],
-            "value": false,
-            "enabled": true
-        },
-        {
-            "name": "timerMode",
-            "_type": "select",
-            "selectionList": [
-                "forward",
-                "backward"
-            ],
-            "value": "forward",
-            "enabled": true
-        },
-        {
-            "name": "tooltip",
+            "name": "primaryKey",
             "_type": "string",
+            "selectionList": [],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "parentTabelName",
+            "_type": "string",
+            "selectionList": [],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "parentTablePrimaryKey",
+            "_type": "string",
+            "selectionList": [],
+            "value": "",
+            "enabled": true
+        },
+        {
+            "name": "actions",
+            "_type": "select",
+            "selectionList": [
+                "*",
+                "edit",
+                "delete"
+            ],
             "value": "",
             "enabled": true
         }
     ],
-    "events": [
-        {
-            "name": "onTimerComplete",
-            "rise": [],
-            "riseListen": [],
-            "self": [],
-            "enabled": true
-        }
-    ]
+    "events": []
 }

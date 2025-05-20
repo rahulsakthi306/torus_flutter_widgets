@@ -1,0 +1,102 @@
+{
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "List",
+  "layout": [
+    {
+      "name": "length",
+      "_type": "number",
+      "value": 12,
+      "enabled": true
+    },
+    {
+      "name": "alignment",
+      "_type": "select",
+      "selectionList": [
+        "topLeft",
+        "topCenter",
+        "topRight",
+        "centerLeft",
+        "center",
+        "centerRight",
+        "bottomLeft",
+        "bottomCenter",
+        "bottomRight"
+      ],
+      "value": "center",
+      "enabled": true
+    }
+  ],
+  "props": [
+    {
+      "name": "showSearchBar",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "showSearchHistory",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "showPagination",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "showItemperPageSelector",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "searchBorderStyle",
+      "_type": "select",
+      "selectionList": [
+        "rounded",
+        "underlined",
+        "outlined"
+      ],
+      "value": "outlined",
+      "enabled": true
+    },
+    {
+      "name": "loaderType",
+      "_type": "select",
+      "selectionList": [
+        "circular",
+        "skeleton"
+      ],
+      "value": "circular",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onTap",
+      "rise": [
+        {
+          "key": "setFormData",
+          "label": "setFormData",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "bindTran",
+          "label": "bindTran",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    }
+  ]
+}

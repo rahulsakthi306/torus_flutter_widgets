@@ -1,9 +1,8 @@
 {
     "frameWork": "Flutter",
     "version": "3.27.1",
-    "component": "Timer",
-    "name": "Timer",
-    "type": "",
+    "component": "CheckBoxGroup",
+    "name": "Checkbox",
     "layout": [
         {
             "name": "length",
@@ -31,60 +30,54 @@
     ],
     "props": [
         {
-            "name": "seconds",
-            "_type": "number",
-            "selectionList": [],
-            "value": 10,
-            "enabled": true
-        },
-        {
-            "name": "prefix",
-            "_type": "string",
-            "selectionList": [],
-            "value": "",
-            "enabled": true
-        },
-        {
-            "name": "iconPosition",
-            "_type": "select",
-            "selectionList": [
-                "start",
-                "end"
-            ],
-            "value": "leftRight",
-            "enabled": true
-        },
-        {
-            "name": "autoStartTimer",
+            "name": "isDisabled",
             "_type": "boolean",
             "selectionList": [],
             "value": false,
             "enabled": true
         },
         {
-            "name": "timerMode",
+            "name": "options",
+            "_type": "boolean",
+            "selectionList": [],
+            "value": false,
+            "staticProps": [
+                {
+                    "name": "value",
+                    "_type": "array",
+                    "selectionList": [],
+                    "items": [],
+                    "enabled": true
+                }
+            ]
+        },
+         {
+            "name": "contentPosition",
             "_type": "select",
             "selectionList": [
-                "forward",
-                "backward"
+                "right",
+                "left"
             ],
-            "value": "forward",
+            "value": "center",
+            "enabled": true
+        },
+         {
+            "name": "checkboxAlignment",
+            "_type": "select",
+            "selectionList": [
+               "horizontal",
+               "vertical"
+            ],
+            "value": "center",
             "enabled": true
         },
         {
-            "name": "tooltip",
-            "_type": "string",
-            "value": "",
+            "name": "required",
+            "_type": "boolean",
+            "selectionList": [],
+            "value": false,
             "enabled": true
         }
     ],
-    "events": [
-        {
-            "name": "onTimerComplete",
-            "rise": [],
-            "riseListen": [],
-            "self": [],
-            "enabled": true
-        }
-    ]
+    "events": []
 }

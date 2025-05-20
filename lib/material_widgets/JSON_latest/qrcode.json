@@ -60,7 +60,7 @@
                 "dark",
                 "greyShade"
             ],
-            "value": "primary",
+            "value": "light",
             "enabled": true
         },
          {
@@ -70,7 +70,7 @@
               "circle",
               "square"
             ],
-            "value": "",
+            "value": "square",
             "enabled": true
         }
     ],

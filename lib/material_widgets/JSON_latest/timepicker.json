@@ -1,7 +1,7 @@
 {
   "frameWork": "Flutter",
   "version": "3.27.1",
-  "component": "DateTime",
+  "component": "TimePicker",
   "layout": [
     {
       "name": "length",
@@ -77,24 +77,23 @@
       "enabled": true
     },
     {
-      "name": "datetimeFormat",
+      "name": "timeFormat",
       "_type": "string",
       "selectionList": [
-        "YYYY-MM-DD HH:mm",
-        "YYYY-MM-DD hh:mm A",
-        "YYYY-MM-DD HH:mm:ss",
-        "YYYY-MM-DD hh:mm:ss A",
-        "YYYY-MM-DDTHH:mm:ss",
-        "YYYY-MM-DDTHH:mm:ssZ",
-        "YYYY-MM-DDTHH:mm:ss.SSSZ",
-        "MM/DD/YYYY HH:mm:ss",
-        "DD/MM/YYYY HH:mm:ss"
+        "HH:mm",  
+        "hh:mm A",
+        "HH:mm:ss",
+        "hh:mm:ss A",
+        "HH:mm:ss.SSS",
+        "hh:mm:ss.SSS A",
+        "HH:mm:ssZ",
+        "HH:mm:ss.SSSZ"
       ],
-      "value": "",
+      "value": "HH:mm",
       "enabled": true
     },
     {
-      "name": "selectedDateTime",
+      "name": "selectedTime",
       "_type": "string",
       "selectionList": [],
       "value": "",
@@ -2485,20 +2484,6 @@
       "enabled": true
     },
     {
-      "name": "labelPrefix",
-      "_type": "string",
-      "selectionList": [],
-      "value": "",
-      "enabled": true
-    },
-    {
-      "name": "labelSuffix",
-      "_type": "string",
-      "selectionList": [],
-      "value": "",
-      "enabled": true
-    },
-    {
       "name": "FloatingLabelPosition",
       "_type": "select",
       "selectionList": [
@@ -2547,10 +2532,10 @@
         "bodyMedium",
         "bodySmall"
       ],
-      "value": "",
+      "value": "labelMedium",
       "enabled": true
     },
-    {
+     {
       "name": "tooltip",
       "_type": "string",
       "value": "",
