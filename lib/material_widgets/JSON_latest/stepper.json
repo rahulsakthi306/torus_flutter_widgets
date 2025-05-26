@@ -1,0 +1,66 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "Stepper",
+    "name": "Stepper",
+    "layout": [
+        {
+            "name": "length",
+            "_type": "number",
+            "value": 12,
+            "enabled": true
+        },
+        {
+            "name": "alignment",
+            "_type": "select",
+            "selectionList": [
+                "topLeft",
+                "topCenter",
+                "topRight",
+                "centerLeft",
+                "center",
+                "centerRight",
+                "bottomLeft",
+                "bottomCenter",
+                "bottomRight"
+            ],
+            "value": "center",
+            "enabled": true
+        }
+    ],
+    "props": [
+        {
+            "name": "type",
+            "_type": "select",
+            "selectionList": [
+                "none",
+                "horizontal",
+                "vertical"
+            ],
+            "value": "vertical",
+            "enabled": true
+        },
+        {
+            "name": "stepTitles",
+            "_type": "array",
+            "selectionList": [],
+            "value": [],
+            "enabled": true
+        }
+    ],
+    "events": [
+        {
+            "name": "onCompleted",
+            "rise": [],
+            "riseListen": [
+                {
+                    "key": "showArtifact",
+                    "label": "showArtifact",
+                    "listenerType": "type2"
+                }
+            ],
+            "self": [],
+            "enabled": true
+        }
+    ]
+}

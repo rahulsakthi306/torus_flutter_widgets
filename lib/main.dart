@@ -8,6 +8,7 @@ import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/slid
 import 'package:torus_flutter_widgets/material_widgets/widgets/customwidget/toggleicon.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/dynamic/Inputs/textfield.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/scanner/scanner.dart';
+import 'package:torus_flutter_widgets/material_widgets/widgets/stepper.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/timer/circular_time.dart';
 import 'package:torus_flutter_widgets/material_widgets/widgets/timer/timer.dart';
 
@@ -27,9 +28,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        // primarySwatch: Colors.blue,
-        primaryColor: Colors.blue
-      ),
+          // primarySwatch: Colors.blue,
+          primaryColor: Colors.blue),
       home: MyHomePage(),
     );
   }
@@ -42,17 +42,18 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
   // final GlobalKey<FormState> _form = GlobalKey<FormState>();
   // final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final GlobalKey<CreditCardFormState> _creditCardFormKey = GlobalKey();
   late TabController _tabController;
-   List<Map<String, String>> rawData = [
-      {"name": "Amrish", "value": "6600"},
-      {"name": "Dominic", "value": "4600"},
-      {"name": "Parama", "value": "3600"},
-      {"name": "Mari", "value": "3600"},
-    ];
+  List<Map<String, String>> rawData = [
+    {"name": "Amrish", "value": "6600"},
+    {"name": "Dominic", "value": "4600"},
+    {"name": "Parama", "value": "3600"},
+    {"name": "Mari", "value": "3600"},
+  ];
 
   @override
   void initState() {
@@ -84,52 +85,14 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   }
 
   @override
-    Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('test'),
       ),
-         body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, 
-                  MaterialPageRoute(builder: (context) =>  Formfield())
-                );
-              } ,
-              child: const Text('Submit'),
-            ),
-
-
-            // TTextField(),
-            // CreditCardForm(key: _creditCardFormKey),
-            // const SizedBox(height: 24),
-            // ElevatedButton(
-            //   onPressed: _submitForm,
-            //   child: const Text('Submit'),
-            // ),
-          ],
-        ),
-      ),
-        
-        
-        //  Column(
-        //   children: [
-        //     CreditCardForm(),
-        //     ElevatedButton(onPressed: () => {
-        //       if(_form.currentState!.validate()){
-        //         print('form validation')
-        //       }
-        //     } ,
-        //      child: 
-        //     Text('text')
-        //     )
-        //   ],
-        // )
-        
-        );
-    
+      body: TorusStepper(
+      
+      )
+    );
   }
 }

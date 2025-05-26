@@ -1,0 +1,14 @@
+{
+    "params": [
+        {
+            "name": "type",
+            "_type": "select",
+            "selectionList": [
+                "QR",
+                "BarCode"
+            ],
+            "value": "",
+            "enabled": true
+        }
+    ]
+}
