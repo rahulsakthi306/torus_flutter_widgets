@@ -2395,7 +2395,7 @@
         },
         {
             "name": "branding",
-            "_type": "string",
+            "_type": "fileUpload",
             "selectionList": [],
             "value": "",
             "enabled": true,

@@ -8,11 +8,12 @@
             "name": "showAs",
             "_type": "select",
             "selectionList": [
-              "badge"
+                "none",
+                "badge"
             ],
-            "value": "badge",
+            "value": "",
             "enabled": true
-          },
+        },
         {
             "name": "colors",
             "_type": "array",
@@ -25,6 +26,13 @@
             "_type": "array",
             "selectionList": [],
             "items": [],
+            "enabled": true
+        },
+        {
+            "name": "isSummable",
+            "_type": "boolean",
+            "selectionList": [],
+            "value": false,
             "enabled": true
         }
     ],

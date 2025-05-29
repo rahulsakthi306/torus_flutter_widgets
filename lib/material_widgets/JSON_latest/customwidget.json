@@ -28,7 +28,14 @@
             "enabled": true
         }
     ],
-    "props": [],
+    "props": [
+        {
+            "name": "filename",
+            "_type": "string",
+            "value": "",
+            "enabled": true
+        }
+    ],
     "events": [
         
     ]
