@@ -50,6 +50,19 @@
     ],
     "events": [
         {
+            "name": "onStepChange",
+            "rise": [],
+            "riseListen": [
+                {
+                    "key": "showArtifact",
+                    "label": "showArtifact",
+                    "listenerType": "type2"
+                }
+            ],
+            "self": [],
+            "enabled": true
+        },
+        {
             "name": "onCompleted",
             "rise": [],
             "riseListen": [

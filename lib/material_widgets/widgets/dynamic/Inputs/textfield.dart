@@ -23,20 +23,17 @@ class TTextField extends StatefulWidget {
   final Widget? suffix;
   final String? label;
   final bool isFloatLabel;
-  final IconData? labelPrefix;
-  final IconData? labelSuffix;
   final MainAxisAlignment? outerLabelPosition;
   final TextEditingController? controller;
   final void Function(String)? onChanged;
   final String? Function(String?)? validator;
   final String? fillColor;
-  final bool isPhoneField;
   final FocusNode? focusNode;
 
   const TTextField({
     super.key,
-    this.type = 'outlined-square',
-    this.size = 'block',
+    this.type = 'outlined-circle',
+    this.size = 'small',
     this.hintText,
     this.isDisabled = false,
     this.textAlign = TextAlign.start,
@@ -49,13 +46,10 @@ class TTextField extends StatefulWidget {
     this.onChanged,
     this.validator,
     this.label,
-    this.keyboardType,
+    this.keyboardType = TextInputType.name,
     this.isFloatLabel = true,
-    this.labelPrefix,
-    this.labelSuffix = Icons.account_balance,
     this.outerLabelPosition = MainAxisAlignment.start,
-    this.fillColor, 
-    this.isPhoneField = false,
+    this.fillColor = 'greyShade', 
     this.focusNode,
   });
 
@@ -124,8 +118,8 @@ class _TTextFieldState extends State<TTextField> {
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
-          prefixIcon: widget.prefix,
-          suffixIcon: widget.suffix,
+          prefixIcon: !widget.isFloatLabel ? widget.prefix : null,
+          suffixIcon: !widget.isFloatLabel ? widget.suffix : null,
           floatingLabelBehavior: widget.isFloatLabel
               ? FloatingLabelBehavior.auto
               : FloatingLabelBehavior.never,
@@ -143,8 +137,8 @@ class _TTextFieldState extends State<TTextField> {
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
-          prefixIcon: widget.prefix,
-          suffixIcon: widget.suffix,
+          prefixIcon: !widget.isFloatLabel ? widget.prefix : null,
+          suffixIcon: !widget.isFloatLabel ? widget.suffix : null,
           floatingLabelBehavior: widget.isFloatLabel
               ? FloatingLabelBehavior.auto
               : FloatingLabelBehavior.never,
@@ -162,8 +156,8 @@ class _TTextFieldState extends State<TTextField> {
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
-          prefixIcon: widget.prefix,
-          suffixIcon: widget.suffix,
+           prefixIcon: !widget.isFloatLabel ? widget.prefix : null,
+          suffixIcon: !widget.isFloatLabel ? widget.suffix : null,
           floatingLabelBehavior: widget.isFloatLabel
               ? FloatingLabelBehavior.auto
               : FloatingLabelBehavior.never,
@@ -181,8 +175,8 @@ class _TTextFieldState extends State<TTextField> {
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
-          prefixIcon: widget.prefix,
-          suffixIcon: widget.suffix,
+          prefixIcon: !widget.isFloatLabel ? widget.prefix : null,
+          suffixIcon: !widget.isFloatLabel ? widget.suffix : null,
           floatingLabelBehavior: widget.isFloatLabel
               ? FloatingLabelBehavior.auto
               : FloatingLabelBehavior.never,
@@ -199,8 +193,8 @@ class _TTextFieldState extends State<TTextField> {
           labelText: widget.label ?? 'Enter text here',
           hintText: widget.hintText,
           helperText: widget.helperText,
-          prefixIcon: widget.prefix,
-          suffixIcon: widget.suffix,
+          prefixIcon: !widget.isFloatLabel ? widget.prefix : null,
+          suffixIcon: !widget.isFloatLabel ? widget.suffix : null,
           floatingLabelBehavior: widget.isFloatLabel
               ? FloatingLabelBehavior.auto
               : FloatingLabelBehavior.never,
@@ -218,8 +212,8 @@ class _TTextFieldState extends State<TTextField> {
           labelText: labelText,
           hintText: widget.hintText,
           helperText: widget.helperText,
-          prefixIcon: widget.prefix,
-          suffixIcon: widget.suffix,
+          prefixIcon: !widget.isFloatLabel ? widget.prefix : null,
+          suffixIcon: !widget.isFloatLabel ? widget.suffix : null,
           floatingLabelBehavior: widget.isFloatLabel
               ? FloatingLabelBehavior.auto
               : FloatingLabelBehavior.never,
@@ -253,18 +247,18 @@ class _TTextFieldState extends State<TTextField> {
           Row(
             mainAxisAlignment: widget.outerLabelPosition ?? MainAxisAlignment.start,
             children: [
-              if (widget.labelPrefix != null) Icon(widget.labelPrefix),
+              if (widget.prefix != null) widget.prefix ?? SizedBox(),
               SizedBox(width: 8),
               Text(widget.label ?? ''),
               SizedBox(width: 8),
-              if (widget.labelSuffix != null) Icon(widget.labelSuffix),
+              if (widget.suffix != null) widget.suffix ?? SizedBox(),
             ],
           ),
         SizedBox(height: 8),
 
         SizedBox(
       width: double.infinity,
-      child: widget.isPhoneField
+      child: widget.keyboardType == TextInputType.phone
           ? IntlPhoneField(
               focusNode: widget.focusNode,
               controller: widget.controller,
@@ -322,7 +316,7 @@ class _TTextFieldState extends State<TTextField> {
         return Size(200, 48);
       case 'large':
         return Size(300, 56);
-      case 'block':
+      case 'max':
         return Size(double.infinity, 56);
       default:
         return Size(200, 48);

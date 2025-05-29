@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dropdown_search/dropdown_search.dart';
 
 List<String> type = [
  'filled-circle',
@@ -19,17 +20,22 @@ class TDropdown extends StatefulWidget {
   final List<String> items;
   final String? selectedItem;
   final void Function(String?)? onChanged;
+  final String? helperText;
+  final bool searchable;
+
 
   const TDropdown({
     super.key,
-    this.type = 'outlined-square',
-    this.size = 'medium',
+    this.type = 'underlined',
+    this.size = 'max',
     this.hintText,
     this.isDisabled = false,
     this.label,
-    this.items = const [],
+    this.items = const ['ko','egh','ertger'],
     this.selectedItem,
     this.onChanged,
+     this.helperText,
+      this.searchable = false,
   });
 
   @override
@@ -65,6 +71,7 @@ class _TDropdownState extends State<TDropdown> {
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: labelText,
           hintText: widget.hintText,
+          helperText: widget.helperText,
         );
         break;
       case 'outlined-circle':
@@ -77,6 +84,7 @@ class _TDropdownState extends State<TDropdown> {
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: labelText,
           hintText: widget.hintText,
+          helperText: widget.helperText,
         );
         break;
 
@@ -91,6 +99,7 @@ class _TDropdownState extends State<TDropdown> {
           contentPadding: EdgeInsets.symmetric(horizontal: 4.0),
           labelText: labelText,
           hintText: widget.hintText,
+          helperText: widget.helperText,
         );
         break;
       case 'outlined-square':
@@ -103,6 +112,7 @@ class _TDropdownState extends State<TDropdown> {
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: labelText,
           hintText: widget.hintText,
+          helperText: widget.helperText,
         );
         break;
       case 'underlined':
@@ -114,6 +124,7 @@ class _TDropdownState extends State<TDropdown> {
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: labelText,
           hintText: widget.hintText,
+           helperText: widget.helperText,
         );
         break;
       default:
@@ -126,6 +137,7 @@ class _TDropdownState extends State<TDropdown> {
           contentPadding: EdgeInsets.symmetric(vertical: 16,horizontal: 12),
           labelText: labelText,
           hintText: widget.hintText,
+           helperText: widget.helperText,
         );
     }
 
