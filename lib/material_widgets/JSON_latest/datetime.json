@@ -2485,20 +2485,6 @@
       "enabled": true
     },
     {
-      "name": "labelPrefix",
-      "_type": "string",
-      "selectionList": [],
-      "value": "",
-      "enabled": true
-    },
-    {
-      "name": "labelSuffix",
-      "_type": "string",
-      "selectionList": [],
-      "value": "",
-      "enabled": true
-    },
-    {
       "name": "FloatingLabelPosition",
       "_type": "select",
       "selectionList": [
