@@ -92,7 +92,7 @@
     },
     {
       "name": "dateFormat",
-      "_type": "string",
+      "_type": "select",
       "selectionList": [
         "YYYY-MM-DD",
         "MM/DD/YYYY",
