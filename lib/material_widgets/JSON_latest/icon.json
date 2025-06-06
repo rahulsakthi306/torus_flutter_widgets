@@ -2,31 +2,6 @@
     "frameWork": "Flutter",
     "version": "3.27.1",
     "component": "Icon",
-    "layout": [
-        {
-            "name": "length",
-            "_type": "number",
-            "value": 12,
-            "enabled": true
-        },
-        {
-            "name": "alignment",
-            "_type": "select",
-            "selectionList": [
-                "topLeft",
-                "topCenter",
-                "topRight",
-                "centerLeft",
-                "center",
-                "centerRight",
-                "bottomLeft",
-                "bottomCenter",
-                "bottomRight"
-            ],
-            "value": "center",
-            "enabled": true
-        }
-    ],
     "props": [
         {
             "name": "icon",
@@ -1226,13 +1201,16 @@
             "enabled": true
         },
         {
-            "name": "type",
+            "name": "appearance",
             "_type": "select",
             "selectionList": [
                 "primary",
                 "secondary",
                 "tertiary",
-                "transparent"
+                "transparent",
+                "light",
+                "dark",
+                "greyShade"
             ],
             "value": "primary",
             "enabled": true

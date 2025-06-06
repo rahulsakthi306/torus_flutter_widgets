@@ -37,7 +37,7 @@
             "enabled": true
         },
         {
-            "name": "type",
+            "name": "shape",
             "_type": "select",
             "selectionList": [
                 "card"

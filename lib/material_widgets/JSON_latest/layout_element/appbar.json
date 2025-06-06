@@ -18,7 +18,10 @@
                 "primary",
                 "secondary",
                 "tertiary",
-                "transparent"
+                "transparent",
+                "light",
+                "dark",
+                "greyShade"
             ],
             "value": "primary",
             "enabled": true

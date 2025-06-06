@@ -2,31 +2,6 @@
   "frameWork": "Flutter",
   "version": "3.27.1",
   "component": "Progress",
-  "layout": [
-    {
-      "name": "length",
-      "_type": "number",
-      "value": 12,
-      "enabled": true
-    },
-    {
-      "name": "alignment",
-      "_type": "select",
-      "selectionList": [
-        "topLeft",
-        "topCenter",
-        "topRight",
-        "centerLeft",
-        "center",
-        "centerRight",
-        "bottomLeft",
-        "bottomCenter",
-        "bottomRight"
-      ],
-      "value": "center",
-      "enabled": true
-    }
-  ],
   "props": [
     {
       "name": "value",
@@ -48,7 +23,7 @@
       "enabled": true
     },
     {
-      "name": "type",
+      "name": "shape",
       "_type": "select",
       "selectionList": [
         "none",
@@ -65,7 +40,10 @@
         "primary",
         "secondary",
         "tertiary",
-        "transparent"
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
       ],
       "value": "primary",
       "enabled": true
@@ -77,7 +55,10 @@
         "primary",
         "secondary",
         "tertiary",
-        "transparent"
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
       ],
       "value": "transparent",
       "enabled": true

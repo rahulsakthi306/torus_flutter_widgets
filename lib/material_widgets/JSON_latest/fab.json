@@ -2,34 +2,9 @@
   "frameWork": "Flutter",
   "version": "3.27.1",
   "component": "Fab",
-  "layout": [
-    {
-      "name": "length",
-      "_type": "number",
-      "value": 12,
-      "enabled": true
-    },
-    {
-      "name": "alignment",
-      "_type": "select",
-      "selectionList": [
-        "topLeft",
-        "topCenter",
-        "topRight",
-        "centerLeft",
-        "center",
-        "centerRight",
-        "bottomLeft",
-        "bottomCenter",
-        "bottomRight"
-      ],
-      "value": "bottomRight",
-      "enabled": true
-    }
-  ],
   "props": [
     {
-      "name": "type",
+      "name": "appearance",
       "_type": "select",
       "selectionList": [
         "none",
@@ -1251,7 +1226,8 @@
         "tertiary",
         "transparent",
         "light",
-        "dark"
+        "dark",
+        "greyShade"
       ],
       "value": "primary",
       "enabled": true
@@ -1265,7 +1241,8 @@
         "tertiary",
         "transparent",
         "light",
-        "dark"
+        "dark",
+        "greyShade"
       ],
       "value": "transparent",
       "enabled": true

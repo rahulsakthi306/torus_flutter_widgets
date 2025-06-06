@@ -2,31 +2,6 @@
   "frameWork": "Flutter",
   "version": "3.27.1",
   "component": "Card",
-  "layout": [
-    {
-      "name": "length",
-      "_type": "number",
-      "value": 12,
-      "enabled": true
-    },
-    {
-      "name": "alignment",
-      "_type": "select",
-      "selectionList": [
-        "topLeft",
-        "topCenter",
-        "topRight",
-        "centerLeft",
-        "center",
-        "centerRight",
-        "bottomLeft",
-        "bottomCenter",
-        "bottomRight"
-      ],
-      "value": "center",
-      "enabled": true
-    }
-  ],
   "props": [
     {
       "name": "title",
@@ -41,7 +16,7 @@
       "enabled": true
     },
     {
-      "name": "type",
+      "name": "appearance",
       "_type": "select",
       "selectionList": [
         "filled-rounded",
@@ -1262,7 +1237,7 @@
       "enabled": true
     },
     {
-      "name": "fillColor",
+      "name": "backgroundColor",
       "_type": "select",
       "selectionList": [
         "primary",
