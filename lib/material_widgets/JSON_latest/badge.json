@@ -34,18 +34,6 @@
             "enabled": true
         },
         {
-            "name": "smallSize",
-            "type": "double",
-            "value": "",
-            "enabled": true
-        },
-        {
-            "name": "largeSize",
-            "type": "double",
-            "value": "",
-            "enabled": true
-        },
-        {
             "name": "isLabelVisible",
             "_type": "boolean",
             "selectionList": [],

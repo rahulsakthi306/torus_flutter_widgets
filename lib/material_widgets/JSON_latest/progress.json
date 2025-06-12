@@ -11,18 +11,6 @@
       "enabled": true
     },
     {
-      "name": "size",
-      "_type": "select",
-      "selectionList": [
-        "small",
-        "large",
-        "medium",
-        "max"
-      ],
-      "value": "medium",
-      "enabled": true
-    },
-    {
       "name": "shape",
       "_type": "select",
       "selectionList": [

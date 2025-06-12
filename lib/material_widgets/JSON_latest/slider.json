@@ -4,19 +4,6 @@
   "component": "Slider",
   "props": [
     {
-      "name": "size",
-      "_type": "select",
-      "selectionList": [
-        "none",
-        "small",
-        "medium",
-        "large",
-        "max"
-      ],
-      "value": "medium",
-      "enabled": true
-    },
-    {
       "name": "max",
       "_type": "numeric",
       "selectionList": [],

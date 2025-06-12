@@ -1189,18 +1189,6 @@
             "enabled": true
         },
         {
-            "name": "size",
-            "_type": "select",
-            "selectionList": [
-                "none",
-                "small",
-                "medium",
-                "large"
-            ],
-            "value": "medium",
-            "enabled": true
-        },
-        {
             "name": "appearance",
             "_type": "select",
             "selectionList": [

@@ -18,18 +18,6 @@
             "enabled": true
         },
         {
-            "name": "size",
-            "_type": "select",
-            "selectionList": [
-                "small",
-                "medium",
-                "large",
-                "max"
-            ],
-            "value": "medium",
-            "enabled": true
-        },
-        {
             "name": "prefix",
             "_type": "iconsearch",
             "selectionList": [

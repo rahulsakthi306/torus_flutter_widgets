@@ -10,13 +10,6 @@
           "value": "",
           "enabled": true
       },
-      {
-        "name": "size",
-        "_type": "double",
-        "selectionList": [],
-        "value": "",
-        "enabled": true
-    },
     {
         "name": "filledColor",
         "_type": "string",

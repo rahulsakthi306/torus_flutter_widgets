@@ -12,18 +12,6 @@
             "enabled": true
         },
         {
-            "name": "size",
-            "_type": "select",
-            "selectionList": [
-                "none",
-                "small",
-                "medium",
-                "large"
-            ],
-            "value": "small",
-            "enabled": true
-        },
-        {
             "name": "imageUrl",
             "_type": "fileUpload",
             "selectionList": [],

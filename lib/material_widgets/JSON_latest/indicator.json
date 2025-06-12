@@ -11,17 +11,6 @@
       "enabled": true
     },
     {
-      "name": "sizeCategory",
-      "_type": "select",
-      "selectionList": [
-        "small",
-        "large",
-        "medium"
-      ],
-      "value": "",
-      "enabled": true
-    },
-    {
       "name": "color",
       "_type": "string",
       "selectionList": [],
