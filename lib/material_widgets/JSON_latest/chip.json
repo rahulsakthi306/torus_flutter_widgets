@@ -1270,6 +1270,11 @@
                     "key": "infoMsg",
                     "label": "infoMsg",
                     "listenerType": "type1"
+                },
+                {
+                    "key": "filter",
+                    "label": "filter",
+                    "listenerType": "type1"
                 }
             ],
             "riseListen": [

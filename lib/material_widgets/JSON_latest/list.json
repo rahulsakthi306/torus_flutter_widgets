@@ -3,53 +3,93 @@
   "version": "3.27.1",
   "component": "List",
   "props": [
-    {
-      "name": "showSearchBar",
+     {
+      "name": "dense",
       "_type": "boolean",
-      "selectionList": [],
       "value": false,
       "enabled": true
     },
     {
-      "name": "showSearchHistory",
-      "_type": "boolean",
-      "selectionList": [],
-      "value": false,
-      "enabled": true
-    },
-    {
-      "name": "showPagination",
-      "_type": "boolean",
-      "selectionList": [],
-      "value": false,
-      "enabled": true
-    },
-    {
-      "name": "showItemperPageSelector",
-      "_type": "boolean",
-      "selectionList": [],
-      "value": false,
-      "enabled": true
-    },
-    {
-      "name": "searchBorderStyle",
+      "name": "titleTextStyle",
       "_type": "select",
       "selectionList": [
-        "rounded",
-        "underlined",
-        "outlined"
+        "displayLarge",
+        "displayMedium",
+        "displaySmall",
+        "headlineLarge",
+        "headlineMedium",
+        "headlineSmall",
+        "titleLarge",
+        "titleMedium",
+        "titleSmall",
+        "labelLarge",
+        "labelMedium",
+        "labelSmall",
+        "bodyLarge",
+        "bodyMedium",
+        "bodySmall"
       ],
-      "value": "outlined",
+      "value": "labelMedium",
       "enabled": true
     },
     {
-      "name": "loaderType",
+      "name": "subTitleTextStyle",
       "_type": "select",
       "selectionList": [
-        "circular",
-        "skeleton"
+        "displayLarge",
+        "displayMedium",
+        "displaySmall",
+        "headlineLarge",
+        "headlineMedium",
+        "headlineSmall",
+        "titleLarge",
+        "titleMedium",
+        "titleSmall",
+        "labelLarge",
+        "labelMedium",
+        "labelSmall",
+        "bodyLarge",
+        "bodyMedium",
+        "bodySmall"
       ],
-      "value": "circular",
+      "value": "labelMedium",
+      "enabled": true
+    },
+    {
+      "name": "contentPadding",
+      "_type": "number",
+      "value": 8,
+      "enabled": true
+    },
+    {
+      "name": "isDisabled",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "horizontalTitleGap",
+      "_type": "number",
+      "value": 16,
+      "enabled": true
+    },
+    {
+      "name": "verticalPadding",
+      "_type": "number",
+      "value": 16,
+      "enabled": true
+    },
+    {
+      "name": "titleAlignment",
+      "_type": "select",
+      "selectionList": [
+        "threeLine",
+        "titleHeight",
+        "top",
+        "center",
+        "bottom"
+      ],
+      "value": "center",
       "enabled": true
     }
   ],

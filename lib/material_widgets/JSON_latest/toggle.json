@@ -2373,7 +2373,45 @@
             ],
             "value": "",
             "enabled": true
+        },
+         {
+            "name": "size",
+            "_type": "select",
+            "selectionList": [
+                "none",
+                "small",
+                "large",
+                "medium",
+                "max"
+            ],
+            "value": "medium",
+            "enabled": true
         }
     ],
-    "events": []
+    "events": [
+        {
+            "name": "onPressed",
+            "rise": [
+                {
+                    "key": "confirmMsg",
+                    "label": "confirmMsg",
+                    "listenerType": "type1"
+                },
+                {
+                    "key": "infoMsg",
+                    "label": "infoMsg",
+                    "listenerType": "type1"
+                }
+            ],
+            "riseListen": [
+                {
+                    "key": "mask",
+                    "label": "mask",
+                    "listenerType": "type2"
+                }
+            ],
+            "self": [],
+            "enabled": true
+        }
+    ]
 }
