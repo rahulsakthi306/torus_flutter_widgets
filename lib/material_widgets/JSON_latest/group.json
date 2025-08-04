@@ -38,7 +38,7 @@
       ],
       "value": "",
       "enabled": true
-    }, 
+    },
     {
       "name": "padding",
       "_type": "number",
@@ -47,5 +47,24 @@
       "enabled": true
     }
   ],
-  "events": [] 
+  "events": [
+    {
+      "name": "onSubmitted",
+      "rise": [],
+      "riseListen": [
+        {
+          "key": "setFormData",
+          "label": "setFormData",
+          "listenerType": "type2"
+        },
+        {
+          "key": "getFormData",
+          "label": "getFormData",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    }
+  ]
 }

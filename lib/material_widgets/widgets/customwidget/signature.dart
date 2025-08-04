@@ -80,19 +80,18 @@ class _SignaturePageState extends State<SignaturePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
+    return  Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             Signature(
               controller: _controller,
-              height: 300,
+              height: 50,
               backgroundColor: Colors.white,
             ),
             const SizedBox(height: 20),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton.icon(
                   onPressed: _getSignatureData,
@@ -108,7 +107,7 @@ class _SignaturePageState extends State<SignaturePage> {
             ),
           ],
         ),
-      ),
-    );
+      );
+    
   }
 }
