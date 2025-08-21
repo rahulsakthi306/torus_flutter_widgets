@@ -1342,6 +1342,11 @@
           "listenerType": "type2"
         },
         {
+          "key": "setFormData",
+          "label": "setFormData",
+          "listenerType": "type2"
+        },
+        {
           "key": "showArtifact",
           "label": "showArtifact",
           "listenerType": "type2"

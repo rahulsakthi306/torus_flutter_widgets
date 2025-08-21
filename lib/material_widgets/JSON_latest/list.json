@@ -108,6 +108,11 @@
           "key": "bindTran",
           "label": "bindTran",
           "listenerType": "type2"
+        },
+        {
+          "key": "showArtifact",
+          "label": "showArtifact",
+          "listenerType": "type2"
         }
       ],
       "self": [],

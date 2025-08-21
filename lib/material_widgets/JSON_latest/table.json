@@ -65,6 +65,11 @@
           "key": "getFormData",
           "label": "getFormData",
           "listenerType": "type1"
+        },
+        {
+          "key": "showArtifact",
+          "label": "showArtifact",
+          "listenerType": "type2"
         }
       ],
       "self": [],

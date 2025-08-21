@@ -1,56 +1,10 @@
 {
     "frameWork": "Flutter",
     "version": "3.27.1",
-    "component": "QRCode",
-    "name": "QRCode",
-    "props": [
-        {
-            "name": "data",
-            "_type": "string",
-            "value": "",
-            "enabled": true
-        },
-        {
-            "name": "size",
-            "_type": "select",
-            "selectionList": [
-                "small",
-                "medium",
-                "large",
-                "max",
-                "default"
-            ],
-            "value": "medium",
-            "enabled": true
-        },
-        {
-            "name": "backgroundColor",
-            "_type": "select",
-            "selectionList": [
-                "primary",
-                "secondary",
-                "tertiary",
-                "transparent",
-                "light",
-                "dark",
-                "greyShade"
-            ],
-            "value": "light",
-            "enabled": true
-        },
-        {
-            "name": "shape",
-            "_type": "select",
-            "selectionList": [
-                "circle",
-                "square"
-            ],
-            "value": "square",
-            "enabled": true
-        }
-    ],
-    "events": [
-        {
+    "component": "PieChart",
+      "props": [ ],
+      "events": [
+          {
             "name": "onTap",
             "rise": [
                 {
@@ -104,5 +58,5 @@
             "self": [],
             "enabled": true
         }
-    ]
-}
+      ] 
+}      
