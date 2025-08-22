@@ -2,7 +2,7 @@
     "frameWork": "Flutter",
     "version": "3.27.1",
     "component": "Chart",
-      "props": [
+    "props": [
         {
             "name": "chartType",
             "_type": "select",
@@ -13,10 +13,10 @@
             ],
             "value": "pie",
             "enabled": true
-          }
-      ],
-      "events": [
-          {
+        }
+    ],
+    "events": [
+        {
             "name": "onTap",
             "rise": [
                 {
@@ -70,5 +70,5 @@
             "self": [],
             "enabled": true
         }
-      ] 
-}      
+    ]
+}

@@ -54,49 +54,49 @@
           "key": "setValueToMemory",
           "label": "setValueToMemory",
           "listenerType": "type1"
-      },
-      {
+        },
+        {
           "key": "infoMsg",
           "label": "infoMsg",
           "listenerType": "type1"
-      }
+        }
       ],
       "riseListen": [
         {
           "key": "hideElement",
           "label": "hideElement",
           "listenerType": "type2"
-      },
-      {
+        },
+        {
           "key": "showElement",
           "label": "showElement",
           "listenerType": "type2"
-      },
-      {
+        },
+        {
           "key": "clearHandler",
           "label": "clearHandler",
           "listenerType": "type2"
-      },
-      {
+        },
+        {
           "key": "disableElement",
           "label": "disableElement",
           "listenerType": "type2"
-      },
-      {
+        },
+        {
           "key": "enableElement",
           "label": "enableElement",
           "listenerType": "type2"
-      },
-      {
+        },
+        {
           "key": "showArtifact",
           "label": "showArtifact",
           "listenerType": "type2"
-      },
-      {
-        "key": "confirmMsg",
-        "label": "confirmMsg",
-        "listenerType": "type2"
-    }
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type2"
+        }
       ],
       "self": [],
       "enabled": true

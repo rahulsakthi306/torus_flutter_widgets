@@ -28,6 +28,13 @@
       "enabled": true
     },
     {
+      "name": "isPivotTable",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
       "name": "actions",
       "_type": "select",
         "selectionList": [
@@ -35,13 +42,6 @@
           "delete"
         ],
       "value": "",
-      "enabled": true
-    },
-    {
-      "name": "isPivotTable",
-      "_type": "boolean",
-      "selectionList": [],
-      "value": false,
       "enabled": true
     }
   ],

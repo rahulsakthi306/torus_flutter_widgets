@@ -2,7 +2,7 @@
     "frameWork": "Flutter",
     "version": "3.27.1",
     "component": "BarChart",
-      "props": [ ],
+      "props": [],
       "events": [
           {
             "name": "onTap",
