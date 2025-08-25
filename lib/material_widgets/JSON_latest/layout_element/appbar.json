@@ -29,7 +29,7 @@
         {
             "name": "leadingIcon",
             "_type": "iconsearch",
-            "selectionList": [
+"selectionList" : [
                 "Abc",
                 "AbcOutlined",
                 "AbcRounded",
@@ -10811,7 +10811,7 @@
         {
             "name": "trailingIcon",
             "_type": "iconsearch",
-            "selectionList": [
+"selectionList" : [
                 "Abc",
                 "AbcOutlined",
                 "AbcRounded",
