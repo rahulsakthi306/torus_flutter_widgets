@@ -9,11 +9,9 @@
             "selectionList": [
                 "primary",
                 "secondary",
-                "tertiary",
                 "transparent",
                 "light",
-                "dark",
-                "greyShade"
+                "dark"
             ],
             "value": "dark",
             "enabled": true
