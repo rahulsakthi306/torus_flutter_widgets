@@ -10936,6 +10936,11 @@
           "key": "setValueToMemory",
           "label": "setValueToMemory",
           "listenerType": "type1"
+        },
+        {
+          "key": "verify",
+          "label": "verify",
+          "listenerType": "type1"
         }
       ],
       "riseListen": [

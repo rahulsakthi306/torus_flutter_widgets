@@ -1,0 +1,13 @@
+{ 
+    "params": [
+        {
+            "name": "type",
+            "_type": "select",
+            "selectionList": [
+                "liveness"
+            ],
+            "value": "",
+            "enabled": true
+        }
+    ]   
+}
