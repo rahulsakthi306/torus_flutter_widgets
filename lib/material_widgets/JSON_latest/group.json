@@ -28,16 +28,16 @@
       "name": "backgroundColor",
       "_type": "select",
       "selectionList": [
-                "primary",
-                "secondary",
-                "tertiary",
-                "primaryAccent",
-                "secondaryAccent",
-                "transparent",
-                "light",
-                "dark",
-                "greyShade"
-            ],
+        "primary",
+        "secondary",
+        "tertiary",
+        "primaryAccent",
+        "secondaryAccent",
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
+      ],
       "value": "",
       "enabled": true
     },
@@ -45,7 +45,7 @@
       "name": "padding",
       "_type": "number",
       "selectionList": [],
-      "value": "",
+      "value": 0,
       "enabled": true
     }
   ],
