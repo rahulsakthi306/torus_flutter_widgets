@@ -30,6 +30,8 @@
                 "primary",
                 "secondary",
                 "tertiary",
+                "primaryAccent",
+                "secondaryAccent",
                 "transparent",
                 "light",
                 "dark",
