@@ -1,0 +1,45 @@
+{
+    "frameWork": "Flutter",
+    "version": "3.27.1",
+    "component": "LivenessDetector",
+    "name": "LivenessDetector",
+    "props": [
+        {
+            "name": "options",
+            "_type": "multiSelect",
+            "selectionList": [
+                "blink eyes",
+                "turn head left",
+                "turn head right",
+                "smile"
+            ],
+            "value": [
+                "blink eyes",
+                "turn head left",
+                "turn head right"
+            ],
+            "enabled": true
+        }
+    ],
+    "events": [
+        {
+            "name": "onLivenessConfirmed",
+            "rise": [
+                {
+                    "key": "infoMsg",
+                    "label": "infoMsg",
+                    "listenerType": "type1"
+                }
+            ],
+            "riseListen": [
+                {
+                    "key": "showArtifact",
+                    "label": "showArtifact",
+                    "listenerType": "type2"
+                }
+            ],
+            "self": [],
+            "enabled": true
+        }
+    ]
+}
