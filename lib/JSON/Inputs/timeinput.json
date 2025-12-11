@@ -1,0 +1,607 @@
+{
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Timeinput",
+  "props": [
+    {
+      "name": "appearance",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "filled-circle",
+        "outlined-circle",
+        "filled-square",
+        "outlined-square",
+        "underlined"
+      ],
+      "value": "outlined-square",
+      "enabled": true
+    },
+    {
+      "name": "hintText",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "isDisabled",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "textAlign",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "start",
+        "end",
+        "center",
+        "justify",
+        "left",
+        "right"
+      ],
+      "value": "start",
+      "enabled": true
+    },
+    {
+      "name": "textAlignVertical",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "top",
+        "center",
+        "bottom"
+      ],
+      "value": "center",
+      "enabled": true
+    },
+    {
+      "name": "showCursor",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": true,
+      "enabled": true
+    },
+    {
+      "name": "helperText",
+      "_type": "string",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "prefix",
+      "_type": "iconsearch",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "suffix",
+      "_type": "iconsearch",
+      "selectionList": [],
+      "value": "",
+      "enabled": true
+    },
+    {
+      "name": "needClear",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "isFloatLabel",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": true,
+      "enabled": true
+    },
+    {
+      "name": "FloatingLabelPosition",
+      "_type": "select",
+      "selectionList": [
+        "start",
+        "end",
+        "center",
+        "spaceBetween",
+        "spaceAround",
+        "spaceEvenly"
+      ],
+      "value": "start",
+      "enabled": true
+    },
+    {
+      "name": "backgroundColor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "primaryAccent",
+        "secondaryAccent",
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
+      ],
+      "value": "greyShade",
+      "enabled": true
+    },
+    {
+      "name": "textTheme",
+      "_type": "select",
+      "selectionList": [
+        "displayLarge",
+        "displayMedium",
+        "displaySmall",
+        "headlineLarge",
+        "headlineMedium",
+        "headlineSmall",
+        "titleLarge",
+        "titleMedium",
+        "titleSmall",
+        "labelLarge",
+        "labelMedium",
+        "labelSmall",
+        "bodyLarge",
+        "bodyMedium",
+        "bodySmall"
+      ],
+      "value": "labelMedium",
+      "enabled": true
+    },
+    {
+      "name": "tooltip",
+      "_type": "string",
+      "value": "",
+      "enabled": true
+    }
+  ],
+  "styles": [
+    {
+      "name": "linearGradient",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "begin": {
+        "name": "begin",
+        "_type": "select",
+        "selectionList": [
+          "topLeft",
+          "topCenter",
+          "topRight",
+          "centerLeft",
+          "center",
+          "centerRight",
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight"
+        ],
+        "value": "topLeft",
+        "enabled": true
+      },
+      "end": {
+        "name": "end",
+        "_type": "select",
+        "selectionList": [
+          "topLeft",
+          "topCenter",
+          "topRight",
+          "centerLeft",
+          "center",
+          "centerRight",
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight"
+        ],
+        "value": "bottomRight",
+        "enabled": true
+      },
+      "colorProps": {
+        "name": "colors",
+        "_type": "array",
+        "selectionList": [],
+        "items": [
+          {
+            "name": "color",
+            "_type": "select",
+            "selectionList": [
+              "primary",
+              "secondary",
+              "tertiary",
+              "primaryAccent",
+              "secondaryAccent",
+              "transparent",
+              "light",
+              "dark",
+              "greyShade"
+            ],
+            "value": "",
+            "enabled": true
+          }
+        ],
+        "enabled": true
+      }
+    },
+    {
+      "name": "customStyles",
+      "_type": "textArea",
+      "value": "",
+      "enabled": true
+    }
+  ],
+  "animations": [
+    {
+      "name": "fade",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "fadeProps": {
+        "animationCurve": {
+          "name": "animationCurve",
+          "_type": "select",
+          "selectionList": [
+            "ease in",
+            "ease in out",
+            "ease out",
+            "bounce",
+            "elastic",
+            "linear"
+          ],
+          "value": "ease in",
+          "enabled": true
+        },
+        "duration": {
+          "name": "duration",
+          "_type": "number",
+          "value": 600,
+          "enabled": true
+        },
+        "initialOpacity": {
+          "name": "initialOpacity",
+          "_type": "number",
+          "value": 0,
+          "enabled": true
+        },
+        "finalOpacity": {
+          "name": "finalOpacity",
+          "_type": "number",
+          "value": 1,
+          "enabled": true
+        }
+      },
+      "enabled": true
+    },
+    {
+      "name": "slide",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "slideProps": {
+        "animationCurve": {
+          "name": "animationCurve",
+          "_type": "select",
+          "selectionList": [
+            "ease in",
+            "ease in out",
+            "ease out",
+            "bounce",
+            "elastic",
+            "linear"
+          ],
+          "value": "ease in",
+          "enabled": true
+        },
+        "duration": {
+          "name": "duration",
+          "_type": "number",
+          "value": 600,
+          "enabled": true
+        },
+        "horizontalSlide": [
+          {
+            "name": "initial",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          },
+          {
+            "name": "final",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          }
+        ],
+        "verticalSlide": [
+          {
+            "name": "initial",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          },
+          {
+            "name": "final",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          }
+        ]
+      },
+      "enabled": true
+    },
+    {
+      "name": "scale",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "scaleProps": {
+        "animationCurve": {
+          "name": "animationCurve",
+          "_type": "select",
+          "selectionList": [
+            "ease in",
+            "ease in out",
+            "ease out",
+            "bounce",
+            "elastic",
+            "linear"
+          ],
+          "value": "ease in",
+          "enabled": true
+        },
+        "duration": {
+          "name": "duration",
+          "_type": "number",
+          "value": 600,
+          "enabled": true
+        },
+        "initialScale": [
+          {
+            "name": "X",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          },
+          {
+            "name": "Y",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          }
+        ],
+        "finalScale": [
+          {
+            "name": "X",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          },
+          {
+            "name": "Y",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          }
+        ]
+      },
+      "enabled": true
+    },
+    {
+      "name": "rotate",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "rotateProps": {
+        "animationCurve": {
+          "name": "animationCurve",
+          "_type": "select",
+          "selectionList": [
+            "ease in",
+            "ease in out",
+            "ease out",
+            "bounce",
+            "elastic",
+            "linear"
+          ],
+          "value": "ease in",
+          "enabled": true
+        },
+        "duration": {
+          "name": "duration",
+          "_type": "number",
+          "value": 600,
+          "enabled": true
+        },
+        "initialTurn": {
+          "name": "initialTurn",
+          "_type": "number",
+          "value": 0,
+          "enabled": true
+        },
+        "finalTurn": {
+          "name": "finalTurn",
+          "_type": "number",
+          "value": 0,
+          "enabled": true
+        }
+      },
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onTap",
+      "rise": [
+        {
+          "key": "setValueToMemory",
+          "label": "setValueToMemory",
+          "listenerType": "type1"
+        },
+        {
+          "key": "infoMsg",
+          "label": "infoMsg",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "clearHandler",
+          "label": "clearHandler",
+          "listenerType": "type2"
+        },
+        {
+          "key": "enableElement",
+          "label": "enableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "disableElement",
+          "label": "disableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showElement",
+          "label": "showElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "hideElement",
+          "label": "hideElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    },
+    {
+      "name": "onChanged",
+      "rise": [
+        {
+          "key": "setValueToMemory",
+          "label": "setValueToMemory",
+          "listenerType": "type1"
+        },
+        {
+          "key": "infoMsg",
+          "label": "infoMsg",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "clearHandler",
+          "label": "clearHandler",
+          "listenerType": "type2"
+        },
+        {
+          "key": "enableElement",
+          "label": "enableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "disableElement",
+          "label": "disableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showElement",
+          "label": "showElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "hideElement",
+          "label": "hideElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    }
+  ],
+  "validations": [
+    {
+      "name": "isRequired",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "enabled": true
+    },
+    {
+      "name": "keyboardType",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "name",
+        "emailAddress",
+        "datetime",
+        "number",
+        "text",
+        "multiline",
+        "phone",
+        "url"
+      ],
+      "value": "datetime",
+      "enabled": true
+    },
+    {
+      "name": "format",
+      "groupLabel": "validation",
+      "_type": "select",
+      "selectionList": [
+        "none",
+        "numeric",
+        "email",
+        "uppercase",
+        "lowercase",
+        "password",
+        "ip",
+        "iban",
+        "creditCard",
+        "ssn",
+        "St_Code",
+        "Alphabets With Space",
+        "Alphanumeric With Space",
+        "Numeric With Special Charecters",
+        "Alphanumeric With Underscore Alone",
+        "Alphanumeric With Specific Special Charecters",
+        "Only Numbers With 1 Decimal Values",
+        "Only Numbers With 2 Decimal Values",
+        "Only Numbers With 3 Decimal Values",
+        "Restrict Special Characters",
+        "Email Domain Name With Atleast 2 Characters",
+        "Restrict White Spaces",
+        "Alphabets With Special Characters",
+        "Alphabets With Underscore Alone",
+        "Alphabets With Space And Dot",
+        "First Letter Only Uppercase 0thers Lowercase"
+      ],
+      "enabled": true
+    },
+    {
+      "range": {
+        "minValue": "",
+        "maxValue": ""
+      }
+    },
+    {
+      "length": {
+        "minLength": "",
+        "maxLength": ""
+      }
+    }
+  ]
+}

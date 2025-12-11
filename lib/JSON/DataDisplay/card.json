@@ -1,0 +1,570 @@
+{
+  "frameWork": "Flutter",
+  "version": "3.27.1",
+  "component": "Card",
+  "props": [
+    {
+      "name": "title",
+      "_type": "string",
+      "value": "Title",
+      "enabled": true
+    },
+    {
+      "name": "subtitle",
+      "_type": "string",
+      "value": "Subtitle",
+      "enabled": true
+    },
+    {
+      "name": "appearance",
+      "_type": "select",
+      "selectionList": [
+        "filled-rounded",
+        "filled-square",
+        "outlined-rounded",
+        "outlined-square",
+        "elevated-rounded",
+        "elevated-square"
+      ],
+      "value": "elevated-rounded",
+      "enabled": true
+    },
+    {
+      "name": "icon",
+      "_type": "iconsearch",
+      "selectionList": [],
+      "value": "AccountCircle",
+      "enabled": true
+    },
+    {
+      "name": "size",
+      "_type": "select",
+      "selectionList": [
+        "small",
+        "medium",
+        "large",
+        "max",
+        "default"
+      ],
+      "value": "medium",
+      "enabled": true
+    },
+    {
+      "name": "backgroundColor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "primaryAccent",
+        "secondaryAccent",
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
+      ],
+      "value": "light",
+      "enabled": true
+    },
+    {
+      "name": "foregroundcolor",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "primaryAccent",
+        "secondaryAccent",
+        "transparent",
+        "light",
+        "dark",
+        "greyShade"
+      ],
+      "value": "dark",
+      "enabled": true
+    },
+    {
+      "name": "fontWeight",
+      "_type": "select",
+      "selectionList": [
+        "normal",
+        "bold",
+        "w100",
+        "w200",
+        "w300",
+        "w400",
+        "w500",
+        "w600",
+        "w700",
+        "w800",
+        "w900"
+      ],
+      "value": "normal",
+      "enabled": true
+    },
+    {
+      "name": "textTheme",
+      "_type": "select",
+      "selectionList": [
+        "displayLarge",
+        "displayMedium",
+        "displaySmall",
+        "headlineLarge",
+        "headlineMedium",
+        "headlineSmall",
+        "titleLarge",
+        "titleMedium",
+        "titleSmall",
+        "labelLarge",
+        "labelMedium",
+        "labelSmall",
+        "bodyLarge",
+        "bodyMedium",
+        "bodySmall"
+      ],
+      "value": "labelMedium",
+      "enabled": true
+    },
+    {
+      "name": "tooltip",
+      "_type": "string",
+      "value": "",
+      "enabled": true
+    }
+  ],
+  "styles": [
+    {
+      "name": "linearGradient",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "begin": {
+        "name": "begin",
+        "_type": "select",
+        "selectionList": [
+          "topLeft",
+          "topCenter",
+          "topRight",
+          "centerLeft",
+          "center",
+          "centerRight",
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight"
+        ],
+        "value": "topLeft",
+        "enabled": true
+      },
+      "end": {
+        "name": "end",
+        "_type": "select",
+        "selectionList": [
+          "topLeft",
+          "topCenter",
+          "topRight",
+          "centerLeft",
+          "center",
+          "centerRight",
+          "bottomLeft",
+          "bottomCenter",
+          "bottomRight"
+        ],
+        "value": "bottomRight",
+        "enabled": true
+      },
+      "colorProps": {
+        "name": "colors",
+        "_type": "array",
+        "selectionList": [],
+        "items": [
+          {
+            "name": "color",
+            "_type": "select",
+            "selectionList": [
+              "primary",
+              "secondary",
+              "tertiary",
+              "primaryAccent",
+              "secondaryAccent",
+              "transparent",
+              "light",
+              "dark",
+              "greyShade"
+            ],
+            "value": "",
+            "enabled": true
+          }
+        ],
+        "enabled": true
+      }
+    },
+    {
+      "name": "customStyles",
+      "_type": "textArea",
+      "value": "",
+      "enabled": true
+    }
+  ],
+  "animations": [
+    {
+      "name": "fade",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "fadeProps": {
+        "animationCurve": {
+          "name": "animationCurve",
+          "_type": "select",
+          "selectionList": [
+            "ease in",
+            "ease in out",
+            "ease out",
+            "bounce",
+            "elastic",
+            "linear"
+          ],
+          "value": "ease in",
+          "enabled": true
+        },
+        "duration": {
+          "name": "duration",
+          "_type": "number",
+          "value": 600,
+          "enabled": true
+        },
+        "initialOpacity": {
+          "name": "initialOpacity",
+          "_type": "number",
+          "value": 0,
+          "enabled": true
+        },
+        "finalOpacity": {
+          "name": "finalOpacity",
+          "_type": "number",
+          "value": 1,
+          "enabled": true
+        }
+      },
+      "enabled": true
+    },
+    {
+      "name": "slide",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "slideProps": {
+        "animationCurve": {
+          "name": "animationCurve",
+          "_type": "select",
+          "selectionList": [
+            "ease in",
+            "ease in out",
+            "ease out",
+            "bounce",
+            "elastic",
+            "linear"
+          ],
+          "value": "ease in",
+          "enabled": true
+        },
+        "duration": {
+          "name": "duration",
+          "_type": "number",
+          "value": 600,
+          "enabled": true
+        },
+        "horizontalSlide": [
+          {
+            "name": "initial",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          },
+          {
+            "name": "final",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          }
+        ],
+        "verticalSlide": [
+          {
+            "name": "initial",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          },
+          {
+            "name": "final",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          }
+        ]
+      },
+      "enabled": true
+    },
+    {
+      "name": "scale",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "scaleProps": {
+        "animationCurve": {
+          "name": "animationCurve",
+          "_type": "select",
+          "selectionList": [
+            "ease in",
+            "ease in out",
+            "ease out",
+            "bounce",
+            "elastic",
+            "linear"
+          ],
+          "value": "ease in",
+          "enabled": true
+        },
+        "duration": {
+          "name": "duration",
+          "_type": "number",
+          "value": 600,
+          "enabled": true
+        },
+        "initialScale": [
+          {
+            "name": "X",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          },
+          {
+            "name": "Y",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          }
+        ],
+        "finalScale": [
+          {
+            "name": "X",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          },
+          {
+            "name": "Y",
+            "_type": "number",
+            "value": 0,
+            "enabled": true
+          }
+        ]
+      },
+      "enabled": true
+    },
+    {
+      "name": "rotate",
+      "_type": "boolean",
+      "selectionList": [],
+      "value": false,
+      "rotateProps": {
+        "animationCurve": {
+          "name": "animationCurve",
+          "_type": "select",
+          "selectionList": [
+            "ease in",
+            "ease in out",
+            "ease out",
+            "bounce",
+            "elastic",
+            "linear"
+          ],
+          "value": "ease in",
+          "enabled": true
+        },
+        "duration": {
+          "name": "duration",
+          "_type": "number",
+          "value": 600,
+          "enabled": true
+        },
+        "initialTurn": {
+          "name": "initialTurn",
+          "_type": "number",
+          "value": 0,
+          "enabled": true
+        },
+        "finalTurn": {
+          "name": "finalTurn",
+          "_type": "number",
+          "value": 0,
+          "enabled": true
+        }
+      },
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "name": "onTap",
+      "rise": [
+        {
+          "key": "setValueToMemory",
+          "label": "setValueToMemory",
+          "listenerType": "type1"
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type1"
+        },
+        {
+          "key": "infoMsg",
+          "label": "infoMsg",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "hideElement",
+          "label": "hideElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showElement",
+          "label": "showElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "clearHandler",
+          "label": "clearHandler",
+          "listenerType": "type2"
+        },
+        {
+          "key": "disableElement",
+          "label": "disableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "enableElement",
+          "label": "enableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showArtifact",
+          "label": "showArtifact",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    },
+    {
+      "name": "onLongPress",
+      "rise": [
+        {
+          "key": "setValueToMemory",
+          "label": "setValueToMemory",
+          "listenerType": "type1"
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type1"
+        },
+        {
+          "key": "infoMsg",
+          "label": "infoMsg",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "hideElement",
+          "label": "hideElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showElement",
+          "label": "showElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "clearHandler",
+          "label": "clearHandler",
+          "listenerType": "type2"
+        },
+        {
+          "key": "disableElement",
+          "label": "disableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "enableElement",
+          "label": "enableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showArtifact",
+          "label": "showArtifact",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    },
+    {
+      "name": "onDoubleTap",
+      "rise": [
+        {
+          "key": "setValueToMemory",
+          "label": "setValueToMemory",
+          "listenerType": "type1"
+        },
+        {
+          "key": "confirmMsg",
+          "label": "confirmMsg",
+          "listenerType": "type1"
+        },
+        {
+          "key": "infoMsg",
+          "label": "infoMsg",
+          "listenerType": "type1"
+        }
+      ],
+      "riseListen": [
+        {
+          "key": "hideElement",
+          "label": "hideElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showElement",
+          "label": "showElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "clearHandler",
+          "label": "clearHandler",
+          "listenerType": "type2"
+        },
+        {
+          "key": "disableElement",
+          "label": "disableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "enableElement",
+          "label": "enableElement",
+          "listenerType": "type2"
+        },
+        {
+          "key": "showArtifact",
+          "label": "showArtifact",
+          "listenerType": "type2"
+        }
+      ],
+      "self": [],
+      "enabled": true
+    }
+  ]
+}
