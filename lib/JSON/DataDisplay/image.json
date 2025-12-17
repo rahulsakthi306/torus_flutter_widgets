@@ -11,19 +11,6 @@
       "enabled": true
     },
     {
-      "name": "size",
-      "_type": "select",
-      "selectionList": [
-        "small",
-        "medium",
-        "large",
-        "max",
-        "default"
-      ],
-      "value": "medium",
-      "enabled": true
-    },
-    {
       "name": "tooltip",
       "_type": "string",
       "value": "",

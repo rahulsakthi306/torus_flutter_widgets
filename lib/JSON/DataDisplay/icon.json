@@ -4,19 +4,6 @@
     "component": "Icon",
     "props": [
         {
-            "name": "size",
-            "_type": "select",
-            "selectionList": [
-                "small",
-                "medium",
-                "large",
-                "max",
-                "default"
-            ],
-            "value": "medium",
-            "enabled": true
-        },
-        {
             "name": "icon",
             "_type": "iconsearch",
             "selectionList":[],

@@ -17,19 +17,6 @@
             "selectionList": [],
             "value": "",
             "enabled": true
-        },
-        {
-            "name": "size",
-            "_type": "select",
-            "selectionList": [
-                "none",
-                "small",
-                "large",
-                "medium",
-                "max"
-            ],
-            "value": "medium",
-            "enabled": true
         }
     ],
     "styles": [

@@ -31,19 +31,6 @@
       "enabled": true
     },
     {
-      "name": "size",
-      "_type": "select",
-      "selectionList": [
-        "small",
-        "medium",
-        "large",
-        "max",
-        "default"
-      ],
-      "value": "max",
-      "enabled": true
-    },
-    {
       "name": "textTheme",
       "_type": "select",
       "selectionList": [
