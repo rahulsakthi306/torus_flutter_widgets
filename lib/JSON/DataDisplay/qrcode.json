@@ -11,27 +11,9 @@
             "enabled": true
         },
         {
-            "name": "backgroundColor",
-            "_type": "select",
-            "selectionList": [
-                "primary",
-                "secondary",
-                "tertiary",
-                "primaryAccent",
-                "secondaryAccent",
-                "transparent",
-                "light",
-                "dark",
-                "greyShade"
-            ],
-            "value": "light",
-            "enabled": true
-        },
-        {
             "name": "shape",
             "_type": "select",
             "selectionList": [
-                "circle",
                 "square"
             ],
             "value": "square",

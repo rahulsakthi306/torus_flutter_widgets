@@ -8,8 +8,7 @@
             "_type": "select",
             "selectionList": [
                 "capsule",
-                "rectangle",
-                "rounded"
+                "rectangle"
             ],
             "value": "rounded",
             "enabled": true

@@ -20,7 +20,7 @@
             "enabled": true
         },
         {
-            "name": "iconPosition",
+            "name": "textPosition",
             "_type": "select",
             "selectionList": [
                 "start",

@@ -97,7 +97,7 @@
       "name": "isFloatLabel",
       "_type": "boolean",
       "selectionList": [],
-      "value": false,
+      "value": true,
       "enabled": true
     },
     {

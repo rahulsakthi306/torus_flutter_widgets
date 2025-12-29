@@ -14,7 +14,6 @@
       "name": "shape",
       "_type": "select",
       "selectionList": [
-        "none",
         "linear",
         "circular"
       ],

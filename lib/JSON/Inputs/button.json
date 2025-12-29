@@ -70,7 +70,6 @@
       "name": "iconPosition",
       "_type": "select",
       "selectionList": [
-        "center",
         "left",
         "right"
       ],
