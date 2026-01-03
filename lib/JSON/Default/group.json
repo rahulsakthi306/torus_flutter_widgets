@@ -25,20 +25,6 @@
       "enabled": true
     },
     {
-      "name": "backgroundColor",
-      "_type": "select",
-      "selectionList": [
-        "primary",
-        "secondary",
-        "tertiary",
-        "primaryAccent",
-        "secondaryAccent",
-        "transparent"
-      ],
-      "value": "",
-      "enabled": true
-    },
-    {
       "name": "padding",
       "_type": "number",
       "selectionList": [],
