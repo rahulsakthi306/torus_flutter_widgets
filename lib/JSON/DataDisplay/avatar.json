@@ -34,10 +34,7 @@
                 "tertiary",
                 "primaryAccent",
                 "secondaryAccent",
-                "transparent",
-                "light",
-                "dark",
-                "greyShade"
+                "transparent"
             ],
             "value": "primary",
             "enabled": true
@@ -51,10 +48,7 @@
                 "tertiary",
                 "primaryAccent",
                 "secondaryAccent",
-                "transparent",
-                "light",
-                "dark",
-                "greyShade"
+                "transparent"
             ],
             "value": "light",
             "enabled": true
@@ -143,10 +137,7 @@
                             "tertiary",
                             "primaryAccent",
                             "secondaryAccent",
-                            "transparent",
-                            "light",
-                            "dark",
-                            "greyShade"
+                            "transparent"
                         ],
                         "value": "",
                         "enabled": true

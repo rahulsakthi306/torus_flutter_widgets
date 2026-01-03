@@ -77,10 +77,7 @@
                             "tertiary",
                             "primaryAccent",
                             "secondaryAccent",
-                            "transparent",
-                            "light",
-                            "dark",
-                            "greyShade"
+                            "transparent"
                         ],
                         "value": "",
                         "enabled": true

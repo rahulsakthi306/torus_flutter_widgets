@@ -9,9 +9,7 @@
             "selectionList": [
                 "primary",
                 "secondary",
-                "transparent",
-                "light",
-                "dark"
+                "transparent"
             ],
             "value": "dark",
             "enabled": true
@@ -111,10 +109,7 @@
                             "tertiary",
                             "primaryAccent",
                             "secondaryAccent",
-                            "transparent",
-                            "light",
-                            "dark",
-                            "greyShade"
+                            "transparent"
                         ],
                         "value": "",
                         "enabled": true
