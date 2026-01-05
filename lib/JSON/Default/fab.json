@@ -50,7 +50,7 @@
         "secondaryAccent",
         "transparent"
       ],
-      "value": "light",
+      "value": "primary",
       "enabled": true
     },
     {
@@ -64,7 +64,7 @@
         "secondaryAccent",
         "transparent"
       ],
-      "value": "primary",
+      "value": "transparent",
       "enabled": true
     },
     {

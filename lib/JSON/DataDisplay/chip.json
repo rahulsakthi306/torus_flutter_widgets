@@ -24,7 +24,7 @@
                 "secondaryAccent",
                 "transparent"
             ],
-            "value": "primary",
+            "value": "transparent",
             "enabled": true
         },
         {
@@ -38,7 +38,7 @@
                 "secondaryAccent",
                 "transparent"
             ],
-            "value": "greyShade",
+            "value": "primary",
             "enabled": true
         },
         {

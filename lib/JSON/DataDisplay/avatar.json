@@ -50,7 +50,7 @@
                 "secondaryAccent",
                 "transparent"
             ],
-            "value": "light",
+            "value": "tertiary",
             "enabled": true
         },
         {
